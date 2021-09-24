@@ -7,6 +7,7 @@
 ## General Info
 This browser based web application to ...
 This is Christie Tsang.  I am excited about the project because we get to create an app
+Testing conflict commit from Stan
 	
 ## Technologies
 Technologies used for this project:
