@@ -8,7 +8,8 @@
 This browser based web application to ...
 This is Belal Kourkmas. I am excited about this project because I think the output will help me out.
 This is Christie Tsang.  I am excited about the project because we get to create an app
-	
+Testing conflict commit from Stan.  Yay! Boo
+
 ## Technologies
 Technologies used for this project:
 * HTML, CSS
