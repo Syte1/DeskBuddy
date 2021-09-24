@@ -6,9 +6,12 @@
 
 ## General Info
 This browser based web application to ...
-This is Belal Kourkmas and I'm excited about the project <br>
-This is Christie Tsang.  I am excited about the project because we get to create an app <br>
-Testing conflict commit from Stan. This is a change <br>
+This is Belal Kourkmas and I'm excited about the project
+<br>
+This is Christie Tsang.  I am excited about the project because we get to create an app
+<br>
+Testing conflict commit from Stan. This is a change
+<br>
 
 ## Technologies
 Technologies used for this project:
