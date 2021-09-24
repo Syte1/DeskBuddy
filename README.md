@@ -6,9 +6,9 @@
 
 ## General Info
 This browser based web application to ...
+This is Belal Kourkmas.
 This is Christie Tsang.  I am excited about the project because we get to create an app
-Testing conflict commit from Stan.  I'm trying to create a conflict!
-No
+Testing conflict commit from Stan.  Yay! Boo
 
 ## Technologies
 Technologies used for this project:
