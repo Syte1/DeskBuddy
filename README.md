@@ -6,7 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-This is Belal Kourkmas.
+This is Belal Kourkmas and I'm excite about the project
 This is Christie Tsang.  I am excited about the project because we get to create an app
 Testing conflict commit from Stan.  Yay! THis is a another change
 
