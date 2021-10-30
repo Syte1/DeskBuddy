@@ -17,7 +17,7 @@ function sayHello() {
         }
     });
 }
-//sayHello();
+sayHello();
 
 function writeWebcamData() {
     //this is an array of JSON objects copied from open source data
