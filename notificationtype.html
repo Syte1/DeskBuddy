@@ -89,32 +89,35 @@
     </div>
     
     <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
-    <div style="padding-top: 10vh">
-        <div class="form-check form-check-inline">
-            <div class="col-md-1">
-                <label class="form-check-label" for="inlineRadio1" style="padding-bottom: 5vh">Vibrate & Sound</label>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" style="margin-left: 1.5vw">
+
+    <div class="container" style="padding-top:5%">
+        <div class="row row-cols-4">
+          <div class="col">        
+              <label class="form-check-label" for="inlineRadio1">Vibrate & Sound</label>
+          </div>
+          <div class="col">
+            <label class="form-check-label" for="inlineRadio2">Sound Only</label>
+          </div>
+          <div class="col">
+            <label class="form-check-label" for="inlineRadio3">Vibrate Only</label>
+          </div>
+          <div class="col">
+            <label class="form-check-label" for="inlineRadio3">Silent</label>
+          </div>
+          <div class="col">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
             </div>
+          <div class="col">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          </div>
+          <div class="col">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+          </div>
+          <div class="col">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option4">
+          </div>
         </div>
-        <div class="form-check form-check-inline">
-            <div class="col-md-1">
-                <label class="form-check-label" for="inlineRadio2"  style="margin-left: -3.6vw; padding-bottom: 5vh">Sound</label>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            </div>
-        </div>
-        <div class="form-check form-check-inline">
-            <div class="col-md-1">
-                <label class="form-check-label" for="inlineRadio2" style="padding-bottom: 5vh">Vibrate</label>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"  style="margin-left: 1.5vw">
-            </div>
-        </div>
-        <div class="form-check form-check-inline">
-            <div class="col-md-1">
-                <label class="form-check-label" for="inlineRadio2" style="padding-bottom: 5vh">Silent</label>
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" style="margin-left: 1.5vw">
-            </div>
-        </div>
-    </div>
+      </div>
 
     <div style="padding-top: 15%; position: center">
         <button type="submit" class="btn btn-primary">Next</button>
