@@ -61,21 +61,7 @@
                     <li class="nav-item">
                         <a class="nav-link active text-dark" aria-current="page" href="#">Tips and Tricks</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Settings
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item text-dark" href="#">Monday</a></li>
-                            <li><a class="dropdown-item text-dark" href="#">Tuesday</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
+
                         <!---<a class="nav-link disabled text-dark" href="#" tabindex="-1" aria-disabled="true">Disabled</a> --->
                     </li>
                 </ul>
@@ -136,22 +122,22 @@
             <label class="form-check-label p-3" for="inlineRadio4">Silent</label>
           </div>
           <div class="col">
-              <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="vibrate_sound">
           </div>
           <div class="col">
-            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="sound">
           </div>
           <div class="col">
-            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="vibrate">
           </div>
           <div class="col">
-            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4">
+            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="silent">
           </div>
         </div>
       </div>
 
-    <div style="padding-top: 200px; position: center">
-        <button type="submit" class="btn btn-primary btn-lg active">Next</button>
+    <div style="padding-top: 100px; position: center">
+        <button type="submit" class="btn btn-primary btn-lg active" onclick="saveUserInfo()">Next</button>
     </div>
 
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
@@ -160,6 +146,28 @@
         </button>
     </footer>
 </body>
+<script>
+    function saveUserInfo(){
+        let type = document.querySelector('input[name="type"]:checked').value;
 
+        firebase.auth().onAuthStateChanged(user=>{
+            if(user){
+                var currentUser = db.collection("users").doc(user.uid)
+                var userID = user.uid;
+
+                currentUser.get()
+                    .then(userDoc=>{
+                        var userEmail = userDoc.data().email;
+
+                        db.collection("notificationType").add({
+                            notificationType: notificationType
+                        });
+                    })
+            } else{
+                console.log("No user signed in");
+            }
+        });
+    }
+</script>
 
 </html>
