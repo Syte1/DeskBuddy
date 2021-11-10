@@ -61,3 +61,9 @@ html {
     width: 100px;
     height: auto;
 }
+
+.accordion-filler {
+    padding: unset;
+    height: 40vh;
+    background-color: gray;
+}
