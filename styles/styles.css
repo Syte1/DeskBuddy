@@ -6,10 +6,6 @@
     box-sizing: border-box;
 }
 
-html {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 #main-body {
 	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
 	background-size: 200% 200%;
@@ -35,4 +31,9 @@ html {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+#desk-buddy {
+	font-family: 'Andada Pro', serif;
+    font-family: 'Lato', sans-serif;
 }
