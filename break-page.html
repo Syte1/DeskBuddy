@@ -66,76 +66,49 @@
             </div>
         </div>
     </nav>
-    <h1 style="padding-top: 5%; padding-bottom: 5%; position: center">Types of Notification:</h1>
-    <div style="border: 1px solid lightgrey; padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: lightgrey;">
-        <h1 style="font-size: 20px; float: left; padding-left: 5vw;">Notifications On/Off Toggle</h1>
-        <div class="form-check form-switch" style="width: 50px; margin: 0 0; padding-left: 80%;">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" style="height: 30px; width: 65px;">
-        </div>
-    </div>
-    
-    <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
+   <h1 style="padding-top: 5%; padding-bottom: 5%; position: center">Types of Breaks:</h1>
 
-    <div class="container">
-        <div class="row row-cols-4">
-            <div class="col">        
-                <label class="form-check-label pt-5" for="inlineRadio1">
-                    <span class="material-icons" style="font-size: 40px;">
-                        volume_up
-                        vibration
-                    </span>
-                </label>
+   <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Food Breaks
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div class="accordion-grid">
+                <div class="accordionpic" style="grid-column: 1;"></div>
+            
+            
             </div>
-            <div class="col">        
-                <label class="form-check-label pt-5" for="inlineRadio2">
-                    <span class="material-icons" style="font-size: 40px;">
-                        volume_up
-                    </span>
-                </label>
-            </div>
-            <div class="col">        
-                <label class="form-check-label pt-5" for="inlineRadio3">
-                    <span class="material-icons" style="font-size: 40px;">
-                        vibration
-                    </span>
-                </label>
-            </div>
-            <div class="col">        
-                <label class="form-check-label pt-5" for="inlineRadio4">
-                    <span class="material-icons" style="font-size: 40px;">
-                        volume_off
-                    </span>
-                </label>
-            </div>  
-          <div class="col">        
-              <label class="form-check-label p-3" for="inlineRadio1">Vibrate & Sound</label>
-          </div>
-          <div class="col">
-            <label class="form-check-label p-3" for="inlineRadio2">Sound Only</label>
-          </div>
-          <div class="col">
-            <label class="form-check-label p-3" for="inlineRadio3">Vibrate Only</label>
-          </div>
-          <div class="col">
-            <label class="form-check-label p-3" for="inlineRadio4">Silent</label>
-          </div>
-          <div class="col">
-              <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="vibrate_sound">
-          </div>
-          <div class="col">
-            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="sound">
-          </div>
-          <div class="col">
-            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="vibrate">
-          </div>
-          <div class="col">
-            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="silent">
-          </div>
         </div>
       </div>
-
-    <div style="padding-top: 100px; position: center">
-        <button type="submit" class="btn btn-primary btn-lg active" onclick="saveUserInfo()">Next</button>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Relaxation Breaks
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Exercise Breaks
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
     </div>
 
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
