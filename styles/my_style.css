@@ -51,13 +51,25 @@ html {
 
 .accordiongrid {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: 50% 50%;
 }
 
 .accordionpic {
     grid-column: 1;
     background-image: url("..//background.jpg");
-    width: 100px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
+    padding-top: 10%;
+    padding-right: 5px;
+}
+
+.accordion-filler {
+    padding: unset;
+    height: 40vh;
+}
+
+.accordion-description {
+    grid-column: 2;
 }
