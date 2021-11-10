@@ -119,9 +119,10 @@
         <label class="btn btn-outline-secondary" for="btn-check-7-outlined"
             style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
-        <a href="notificationtype.html" style="grid-row: 11; grid-column: 2 /span 5;"><button
-                class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
-            </button></a>
+        <!-- <a href="notificationtype.html" style="grid-row: 11; grid-column: 2 /span 5;"> -->
+            <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
+            </button>
+        <!-- </a> -->
 
     </container>
     <footer class="fixed-bottom navbar justify-content-evenly py-3 bg-dark">
@@ -147,20 +148,17 @@
                                     //get user Email
                                     var userEmail = userDoc.data().email;
                                     // Start a new collection and add all data in it.
-                                    db.collection("Reviews").add({
+                                    db.collection("Days Notified").add({
                                         UserID: userID,
-                                        Days: days,
+                                        Days: Days,
                                     });
                                 })
                         } else {
                             // No user is signed in.
                             console.log("no user signed in");
                         }
-
-                    }
+                    })
+                }
     </script>
-
 </body>
-
-
 </html>
