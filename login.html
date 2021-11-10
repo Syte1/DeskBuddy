@@ -4,10 +4,9 @@
 <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <link rel="stylesheet" href="styles\styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -35,7 +34,7 @@
 
 <body style="text-align: center;">
     <script>
-        // Initialize the FirebaseUI Widget using Firebase.
+        <!-- // Initialize the FirebaseUI Widget using Firebase.
         var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
         var uiConfig = {
@@ -106,11 +105,11 @@
             </div>
         </div>
     </nav>
-    <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="p-5 mb-4 rounded-3" id="main-body">
         <div class="container-fluid text-center">
             <img src="images/DeskBuddy logo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
-            <h1 class="display-5 fw-bold mx-auto" style="text-align: center;">Log in</h1>
+            <h1 class="display-5 fw-bold mx-auto pt-5 pb-4" style="text-align: center;" id="log-in-title">Log in</h1>
         </div>
         <div id="firebaseui-auth-container"></div>
         <div id="loader">Loading...</div>
@@ -187,7 +186,7 @@
         };
 
         ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
+    </script> 
 </body>
 
 </html>
