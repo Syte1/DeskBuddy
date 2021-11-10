@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&family=Lato:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-body {
+	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
+	background-size: 200% 200%;
+	animation: gradient 10s ease-in-out infinite;
+	height: 100vh;
+    position: relative;
+}
+
+#log-in-title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Andada Pro', serif;
+    font-family: 'Lato', sans-serif;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#desk-buddy {
+	font-family: 'Andada Pro', serif;
+    font-family: 'Lato', sans-serif;
+}
