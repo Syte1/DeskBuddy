@@ -86,10 +86,10 @@
         <h1 id="bigHeader">Notification Time:</h1>
         <h1 id="from">From:</h1>
         <input type="text" class="timepicker" style="grid-column: 4 / 7;
-        grid-row: 4;" />
+        grid-row: 4;" id="firstclock"/>
         <h1 id="to">To:</h1>
         <input type="text" class="timepicker" style="grid-column: 4 / 7;
-        grid-row: 6;" />
+        grid-row: 6;" id="secondclock"/>
 
         <input type="checkbox" class="btn-check" id="btn-check-1-outlined" checked autocomplete="off" name="Monday">
         <label class="btn btn-outline-secondary" for="btn-check-1-outlined"
@@ -179,7 +179,23 @@
                 value;
             }
             else var Sunday = "off"
-            
+
+            if (document.getElementById('firstclock') != undefined) {
+                console.log("this is not null")
+                var starttime = document.getElementById('firstclock').value;
+            }
+            else document.getElementById('firstclock').value.update = "pick a time"
+            var starttime = document.getElementById('firstclock').value;
+            var endtime = document.getElementById('secondclock').value;
+            console.log(starttime)
+            console.log(endtime)
+            if (!starttime) {
+                document.getElementById('firstclock').value = "enter a proper time";
+            }
+            if (!starttime) {
+                document.getElementById('secondclock').value = "enter a proper time";
+            }
+
             console.log(Monday)
             console.log(Tuesday)
             console.log(Wednesday)
