@@ -91,31 +91,31 @@
         <input type="text" class="timepicker" style="grid-column: 4 / 7;
         grid-row: 6;" />
 
-        <input type="checkbox" class="btn-check" id="btn-check-1-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-1-outlined" checked autocomplete="off" name="Monday">
         <label class="btn btn-outline-secondary" for="btn-check-1-outlined"
             style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%">M</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off" name="Tuesday">
         <label class="btn btn-outline-secondary" for="btn-check-2-outlined"
             style="grid-row: 8; grid-column: 2; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-3-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-3-outlined" checked autocomplete="off" name="Wednesday">
         <label class="btn btn-outline-secondary" for="btn-check-3-outlined"
             style="grid-row: 8; grid-column: 3; margin-left: 5px; margin-right: 5px; font-size: 150%;">W</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-4-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-4-outlined" checked autocomplete="off" name="Thursday">
         <label class="btn btn-outline-secondary" for="btn-check-4-outlined"
             style="grid-row: 8; grid-column: 4; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-5-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-5-outlined" checked autocomplete="off" name="Friday">
         <label class="btn btn-outline-secondary" for="btn-check-5-outlined"
             style="grid-row: 8; grid-column: 5; margin-left: 5px; margin-right: 5px; font-size: 150%">F</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-6-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-6-outlined" checked autocomplete="off" name="Saturday">
         <label class="btn btn-outline-secondary" for="btn-check-6-outlined"
             style="grid-row: 8; grid-column: 6; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-7-outlined" checked autocomplete="off" name="days">
+        <input type="checkbox" class="btn-check" id="btn-check-7-outlined" checked autocomplete="off" name="Sunday">
         <label class="btn btn-outline-secondary" for="btn-check-7-outlined"
             style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
@@ -137,7 +137,55 @@
         });
 
         function SubmitInformation() {
-            let Days = document.querySelector('input[name="days"]:checked').value;
+            if (document.querySelector('input[name="Monday"]:checked') != null) {
+                let Monday = document.querySelector('input[name="Monday"]:checked').
+                value;
+            }
+            else let Monday = "Off"
+
+            if (document.querySelector('input[name="Tuesday"]:checked') != null) {
+                let Tuesday = document.querySelector('input[name="Tuesday"]:checked').
+                value;
+            }
+            else let Tuesday = "Off"
+
+            if (document.querySelector('input[name="Wednesday"]:checked') != null) {
+                let Wednesday = document.querySelector('input[name="Wednesday"]:checked').
+                value;
+            }
+            else let Wednesday = "Off"
+
+            if (document.querySelector('input[name="Thursday"]:checked') != null) {
+                let Thursday = document.querySelector('input[name="Thursday"]:checked').
+                value;
+            }
+            else let Thursday = "Off"
+
+            if (document.querySelector('input[name="Friday"]:checked') != null) {
+                let Friday = document.querySelector('input[name="Friday"]:checked').
+                value;
+            }
+            else let Friday = "Off"
+
+            if (document.querySelector('input[name="Saturday"]:checked') != null) {
+                let Saturday = document.querySelector('input[name="Saturday"]:checked').
+                value;
+            }
+            else let Saturday = "Off"
+
+            if (document.querySelector('input[name="Sunday"]:checked') != null) {
+                let Sunday = document.querySelector('input[name="Sunday"]:checked').
+                value;
+            }
+            else let Sunday = "Off"
+            
+            console.log(Monday)
+            console.log(Tuesday)
+            console.log(Wednesday)
+            console.log(Thursday)
+            console.log(Friday)
+            console.log(Saturday)
+            console.log(Sunday)
             firebase.auth().onAuthStateChanged(user => {
                         if (user) {
                             var currentUser = db.collection("users").doc(user.uid)
