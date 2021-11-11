@@ -120,8 +120,8 @@
             style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
         <!-- <a href="notificationtype.html" style="grid-row: 11; grid-column: 2 /span 5;"> -->
-            <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
-            </button>
+        <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
+        </button>
         <!-- </a> -->
 
     </container>
@@ -140,45 +140,38 @@
             if (document.querySelector('input[name="Monday"]:checked') != null) {
                 let Monday = document.querySelector('input[name="Monday"]:checked').
                 value;
-            }
-            else let Monday = "Off"
+            } else let Monday = "Off"
 
             if (document.querySelector('input[name="Tuesday"]:checked') != null) {
                 let Tuesday = document.querySelector('input[name="Tuesday"]:checked').
                 value;
-            }
-            else let Tuesday = "Off"
+            } else let Tuesday = "Off"
 
             if (document.querySelector('input[name="Wednesday"]:checked') != null) {
                 let Wednesday = document.querySelector('input[name="Wednesday"]:checked').
                 value;
-            }
-            else let Wednesday = "Off"
+            } else let Wednesday = "Off"
 
             if (document.querySelector('input[name="Thursday"]:checked') != null) {
                 let Thursday = document.querySelector('input[name="Thursday"]:checked').
                 value;
-            }
-            else let Thursday = "Off"
+            } else let Thursday = "Off"
 
             if (document.querySelector('input[name="Friday"]:checked') != null) {
                 let Friday = document.querySelector('input[name="Friday"]:checked').
                 value;
-            }
-            else let Friday = "Off"
+            } else let Friday = "Off"
 
             if (document.querySelector('input[name="Saturday"]:checked') != null) {
                 let Saturday = document.querySelector('input[name="Saturday"]:checked').
                 value;
-            }
-            else let Saturday = "Off"
+            } else let Saturday = "Off"
 
             if (document.querySelector('input[name="Sunday"]:checked') != null) {
                 let Sunday = document.querySelector('input[name="Sunday"]:checked').
                 value;
-            }
-            else let Sunday = "Off"
-            
+            } else let Sunday = "Off"
+
             console.log(Monday)
             console.log(Tuesday)
             console.log(Wednesday)
@@ -187,26 +180,27 @@
             console.log(Saturday)
             console.log(Sunday)
             firebase.auth().onAuthStateChanged(user => {
-                        if (user) {
-                            var currentUser = db.collection("users").doc(user.uid)
-                            var userID = user.uid;
-                            //get the document for current user.
-                            currentUser.get()
-                                .then(userDoc => {
-                                    //get user Email
-                                    var userEmail = userDoc.data().email;
-                                    // Start a new collection and add all data in it.
-                                    db.collection("Days Notified").add({
-                                        UserID: userID,
-                                        Days: Days,
-                                    });
-                                })
-                        } else {
-                            // No user is signed in.
-                            console.log("no user signed in");
-                        }
-                    })
+                if (user) {
+                    var currentUser = db.collection("users").doc(user.uid)
+                    var userID = user.uid;
+                    //get the document for current user.
+                    currentUser.get()
+                        .then(userDoc => {
+                            //get user Email
+                            var userEmail = userDoc.data().email;
+                            // Start a new collection and add all data in it.
+                            db.collection("Days Notified").add({
+                                UserID: userID,
+                                Days: Days,
+                            });
+                        })
+                } else {
+                    // No user is signed in.
+                    console.log("no user signed in");
                 }
+            })
+        }
     </script>
 </body>
+
 </html>
