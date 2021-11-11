@@ -138,6 +138,7 @@
 
         function SubmitInformation() {
             let Days = document.querySelector('input[name="days"]:checked').value;
+            console.log(Days);
             firebase.auth().onAuthStateChanged(user => {
                         if (user) {
                             var currentUser = db.collection("users").doc(user.uid)
