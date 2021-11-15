@@ -86,48 +86,61 @@
         <h1 id="bigHeader">Notification Time:</h1>
         <h1 id="from">From:</h1>
         <input type="text" class="timepicker" style="grid-column: 4 / 7;
-        grid-row: 4;" id="firstclock"/>
+        grid-row: 4;" id="firstclock" />
         <h1 id="to">To:</h1>
         <input type="text" class="timepicker" style="grid-column: 4 / 7;
-        grid-row: 6;" id="secondclock"/>
+        grid-row: 6;" id="secondclock" />
 
-        <input type="checkbox" class="btn-check" id="btn-check-1-outlined" checked autocomplete="off" name="Monday">
-        <label class="btn btn-outline-secondary" for="btn-check-1-outlined"
-            style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%">M</label><br>
+        <div class="btn-group btn-group-toggle" data-toggle="buttons"></div>
+            <input type="checkbox" class="btn-check" id="btn-check-1-outlined" autocomplete="off" name="Monday">
+            <label class="btn btn-outline-success" for="btn-check-1-outlined"
+                style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%; ">Mon</label><br>
+            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off" name="Tuesday">
+            <label class="btn btn-outline-success" for="btn-check-2-outlined"
+                style="grid-row: 8; grid-column: 2; margin-left: 5px; margin-right: 5px; font-size: 150%">Tues</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-2-outlined" checked autocomplete="off" name="Tuesday">
-        <label class="btn btn-outline-secondary" for="btn-check-2-outlined"
-            style="grid-row: 8; grid-column: 2; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
+            <input type="checkbox" class="btn-check" id="btn-check-3-outlined" autocomplete="off" name="Wednesday">
+            <label class="btn btn-outline-success" for="btn-check-3-outlined"
+                style="grid-row: 8; grid-column: 3; margin-left: 5px; margin-right: 5px; font-size: 150%;">Wed</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-3-outlined" checked autocomplete="off" name="Wednesday">
-        <label class="btn btn-outline-secondary" for="btn-check-3-outlined"
-            style="grid-row: 8; grid-column: 3; margin-left: 5px; margin-right: 5px; font-size: 150%;">W</label><br>
+            <input type="checkbox" class="btn-check" id="btn-check-4-outlined" autocomplete="off" name="Thursday">
+            <label class="btn btn-outline-success" for="btn-check-4-outlined"
+                style="grid-row: 8; grid-column: 4; margin-left: 5px; margin-right: 5px; font-size: 150%">Thur</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-4-outlined" checked autocomplete="off" name="Thursday">
-        <label class="btn btn-outline-secondary" for="btn-check-4-outlined"
-            style="grid-row: 8; grid-column: 4; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
+            <input type="checkbox" class="btn-check" id="btn-check-5-outlined" autocomplete="off" name="Friday">
+            <label class="btn btn-outline-success" for="btn-check-5-outlined"
+                style="grid-row: 8; grid-column: 5; margin-left: 5px; margin-right: 5px; font-size: 150%">Fri</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-5-outlined" checked autocomplete="off" name="Friday">
-        <label class="btn btn-outline-secondary" for="btn-check-5-outlined"
-            style="grid-row: 8; grid-column: 5; margin-left: 5px; margin-right: 5px; font-size: 150%">F</label><br>
+            <input type="checkbox" class="btn-check" id="btn-check-6-outlined" autocomplete="off" name="Saturday">
+            <label class="btn btn-outline-success" for="btn-check-6-outlined"
+                style="grid-row: 8; grid-column: 6; margin-left: 5px; margin-right: 5px; font-size: 150%">Sat</label><br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-6-outlined" checked autocomplete="off" name="Saturday">
-        <label class="btn btn-outline-secondary" for="btn-check-6-outlined"
-            style="grid-row: 8; grid-column: 6; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
+            <input type="checkbox" class="btn-check" id="btn-check-7-outlined" autocomplete="off" name="Sunday">
+            <label class="btn btn-outline-success" for="btn-check-7-outlined"
+                style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">Sun</label>
+        </div>
+        <br>
 
-        <input type="checkbox" class="btn-check" id="btn-check-7-outlined" checked autocomplete="off" name="Sunday">
-        <label class="btn btn-outline-secondary" for="btn-check-7-outlined"
-            style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
-        <!-- <a href="notificationtype.html" style="grid-row: 11; grid-column: 2 /span 5;"> -->
+
+        <a href="#" style="grid-row: 11; grid-column: 2 /span 5;">
             <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
             </button>
-        <!-- </a> -->
+        </a>
 
     </container>
-    <footer class="fixed-bottom navbar justify-content-evenly py-3 bg-dark">
+    <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
         <button class="btn material-icons bg-dark">
-            <a href="main.html" class="material-icons" style="color: whitesmoke; text-decoration: unset;">home</a>
+            <a href="break-types.html" class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">grade</a>
+        </button>
+        <button class="btn material-icons bg-dark">
+            <a href="main.html" class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+        </button>
+        <button class="btn material-icons bg-dark">
+            <a href="main.html" class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">arrow_back</a>
         </button>
     </footer>
 
@@ -141,59 +154,51 @@
             if (document.querySelector('input[name="Monday"]:checked') != null) {
                 var Monday = document.querySelector('input[name="Monday"]:checked').
                 value;
-            }
-            else var Monday = "off"
+            } else var Monday = "off"
 
             if (document.querySelector('input[name="Tuesday"]:checked') != null) {
                 var Tuesday = document.querySelector('input[name="Tuesday"]:checked').
                 value;
-            }
-            else var Tuesday = "off"
+            } else var Tuesday = "off"
 
             if (document.querySelector('input[name="Wednesday"]:checked') != null) {
                 var Wednesday = document.querySelector('input[name="Wednesday"]:checked').
                 value;
-            }
-            else var Wednesday = "off"
+            } else var Wednesday = "off"
 
             if (document.querySelector('input[name="Thursday"]:checked') != null) {
                 var Thursday = document.querySelector('input[name="Thursday"]:checked').
                 value;
-            }
-            else var Thursday = "off"
+            } else var Thursday = "off"
 
             if (document.querySelector('input[name="Friday"]:checked') != null) {
                 var Friday = document.querySelector('input[name="Friday"]:checked').
                 value;
-            }
-            else var Friday = "off"
+            } else var Friday = "off"
 
             if (document.querySelector('input[name="Saturday"]:checked') != null) {
                 var Saturday = document.querySelector('input[name="Saturday"]:checked').
                 value;
-            }
-            else var Saturday = "off"
+            } else var Saturday = "off"
 
             if (document.querySelector('input[name="Sunday"]:checked') != null) {
                 var Sunday = document.querySelector('input[name="Sunday"]:checked').
                 value;
-            }
-            else var Sunday = "off"
+            } else var Sunday = "off"
 
             if (document.getElementById('firstclock') != undefined) {
                 console.log("this is not null")
                 var starttime = document.getElementById('firstclock').value;
-            }
-            else document.getElementById('firstclock').value.update = "pick a time"
+            } else document.getElementById('firstclock').value.update = "pick a time"
             var starttime = document.getElementById('firstclock').value;
             var endtime = document.getElementById('secondclock').value;
             console.log(starttime)
             console.log(endtime)
             if (!starttime) {
-                document.getElementById('firstclock').value = "enter a proper time";
+                document.getElementById('firstclock').value = "Enter a proper time";
             }
             if (!starttime) {
-                document.getElementById('secondclock').value = "enter a proper time";
+                document.getElementById('secondclock').value = "Enter a proper time";
             }
 
             console.log(Monday)
@@ -204,33 +209,34 @@
             console.log(Saturday)
             console.log(Sunday)
             firebase.auth().onAuthStateChanged(user => {
-                        if (user) {
-                            var currentUser = db.collection("users").doc(user.uid)
-                            var userID = user.uid;
-                            console.log(userID)
-                            //get the document for current user.
-                            currentUser.get()
-                                .then(userDoc => {
-                                    //get user Email
-                                    // var userEmail = userDoc.data().email;
-                                    // Start a new collection and add all data in it.
-                                    db.collection("Days Notified").doc(userID).set({
-                                        "UserID": userID,
-                                        "Monday": Monday,
-                                        "Tuesday": Tuesday,
-                                        "Wednesday": Wednesday,
-                                        "Thursday": Thursday,
-                                        "Friday": Friday,
-                                        "Saturday": Saturday,
-                                        "Sunday": Sunday
-                                    });
-                                })
-                        } else {
-                            // No user is signed in.
-                            console.log("no user signed in");
-                        }
-                    })
+                if (user) {
+                    var currentUser = db.collection("users").doc(user.uid)
+                    var userID = user.uid;
+                    console.log(userID)
+                    //get the document for current user.
+                    currentUser.get()
+                        .then(userDoc => {
+                            //get user Email
+                            // var userEmail = userDoc.data().email;
+                            // Start a new collection and add all data in it.
+                            db.collection("Days Notified").doc(userID).set({
+                                "UserID": userID,
+                                "Monday": Monday,
+                                "Tuesday": Tuesday,
+                                "Wednesday": Wednesday,
+                                "Thursday": Thursday,
+                                "Friday": Friday,
+                                "Saturday": Saturday,
+                                "Sunday": Sunday
+                            });
+                        })
+                } else {
+                    // No user is signed in.
+                    console.log("no user signed in");
                 }
+            })
+        }
     </script>
 </body>
+
 </html>
