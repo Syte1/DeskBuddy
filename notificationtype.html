@@ -78,12 +78,12 @@
 
         <div class="form-check form-switch" style="width: 50px; margin: 0 2px; padding-left: 80%">
             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                style="height: 30px; width: 65px;" name="toggle" >
+                style="height: 30px; width: 65px;" name="toggle" value="off">
         </div>
     </div>
 
     <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
-
+    
     <div class="container">
         <div class="row row-cols-4">
             <div class="col">
@@ -128,16 +128,16 @@
                 <label class="form-check-label p-3" for="inlineRadio4">Silent</label>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio1" value="vibrate_sound" name="type">
+                <input class="form-check-input p-3" type="radio" id="inlineRadio1" value="vibrate_sound" name="type" disabled>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio2" value="sound" name="type">
+                <input class="form-check-input p-3" type="radio" id="inlineRadio2" value="sound" name="type" disabled>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio3" value="vibrate" name="type">
+                <input class="form-check-input p-3" type="radio" id="inlineRadio3" value="vibrate" name="type" disabled>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio4" value="silent" name="type">
+                <input class="form-check-input p-3" type="radio" id="inlineRadio4" value="silent" name="type" disabled>
             </div>
         </div>
     </div>
@@ -162,12 +162,13 @@
     </footer>
 </body>
 <script>
+    
     function saveUserInfo() {
         let NotificationType = document.querySelector('input[name="type"]:checked').value;
 
-        if (document.querySelector('input[name="toggle"]:checked') != null){
+        if (document.querySelector('input[name="toggle"]:checked') != null) {
             var ToggleOnOff = document.querySelector('input[name="toggle"]:checked').value;
-        }else{
+        } else {
             var ToggleOnOff = "off"
         }
 
@@ -185,7 +186,7 @@
                             NotificationType: NotificationType,
                             UserID: userID,
                             UserEmail: userEmail,
-                            ToggleOnOff : ToggleOnOff
+                            ToggleOnOff: ToggleOnOff
                         });
                     })
             } else {
@@ -194,7 +195,6 @@
             }
         });
     }
-
 </script>
 
 </html>
