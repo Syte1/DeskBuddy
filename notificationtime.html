@@ -137,40 +137,41 @@
         });
 
         function SubmitInformation() {
+            console.log('test')
             if (document.querySelector('input[name="Monday"]:checked') != null) {
-                let Monday = document.querySelector('input[name="Monday"]:checked').
+                var Monday = document.querySelector('input[name="Monday"]:checked').
                 value;
-            } else let Monday = "Off"
+            } else var Monday = "Off"
 
             if (document.querySelector('input[name="Tuesday"]:checked') != null) {
-                let Tuesday = document.querySelector('input[name="Tuesday"]:checked').
+                var Tuesday = document.querySelector('input[name="Tuesday"]:checked').
                 value;
-            } else let Tuesday = "Off"
+            } else var Tuesday = "Off"
 
             if (document.querySelector('input[name="Wednesday"]:checked') != null) {
-                let Wednesday = document.querySelector('input[name="Wednesday"]:checked').
+                var Wednesday = document.querySelector('input[name="Wednesday"]:checked').
                 value;
-            } else let Wednesday = "Off"
+            } else var Wednesday = "Off"
 
             if (document.querySelector('input[name="Thursday"]:checked') != null) {
-                let Thursday = document.querySelector('input[name="Thursday"]:checked').
+                var Thursday = document.querySelector('input[name="Thursday"]:checked').
                 value;
-            } else let Thursday = "Off"
+            } else var Thursday = "Off"
 
             if (document.querySelector('input[name="Friday"]:checked') != null) {
-                let Friday = document.querySelector('input[name="Friday"]:checked').
+                var Friday = document.querySelector('input[name="Friday"]:checked').
                 value;
-            } else let Friday = "Off"
+            } else var Friday = "Off"
 
             if (document.querySelector('input[name="Saturday"]:checked') != null) {
-                let Saturday = document.querySelector('input[name="Saturday"]:checked').
+                var Saturday = document.querySelector('input[name="Saturday"]:checked').
                 value;
-            } else let Saturday = "Off"
+            } else var Saturday = "Off"
 
             if (document.querySelector('input[name="Sunday"]:checked') != null) {
-                let Sunday = document.querySelector('input[name="Sunday"]:checked').
+                var Sunday = document.querySelector('input[name="Sunday"]:checked').
                 value;
-            } else let Sunday = "Off"
+            } else var Sunday = "Off"
 
             console.log(Monday)
             console.log(Tuesday)
@@ -187,11 +188,17 @@
                     currentUser.get()
                         .then(userDoc => {
                             //get user Email
-                            var userEmail = userDoc.data().email;
+                            // var userEmail = userDoc.data().email;
                             // Start a new collection and add all data in it.
-                            db.collection("Days Notified").add({
+                            db.collection("Days Notified").doc(userID).update({
                                 UserID: userID,
-                                Days: Days,
+                                Monday: Monday,
+                                Tuesday: Tuesday,
+                                Wednesday: Wednesday,
+                                Thursday: Thursday,
+                                Friday: Friday,
+                                Saturday: Saturday,
+                                Sunday: Sunday
                             });
                         })
                 } else {
