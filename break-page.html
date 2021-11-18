@@ -152,6 +152,7 @@
 <script>
     function saveUserInfo(){
         let type = document.querySelector('input[name="type"]:checked').value;
+        console.log(type)
 
         firebase.auth().onAuthStateChanged(user=>{
             if(user){
