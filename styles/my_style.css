@@ -73,3 +73,11 @@ html {
 .accordion-description {
     grid-column: 2;
 }
+
+
+/* Toggle buttons for notificationtime.html */
+.btn{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

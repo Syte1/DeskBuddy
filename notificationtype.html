@@ -34,7 +34,8 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 </head>
 
-<body style="text-align: center;">
+<body style="text-align: center;" >
+    <div style="background-image: url('images/surface.png'); background-size: cover; background-position: center">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -71,20 +72,21 @@
             </div>
         </div>
     </nav>
-    <h1 style="padding-top: 5%; padding-bottom: 5%; position: center">Types of Notification:</h1>
+    
+    <h1 style="padding-top: 5%; padding-bottom: 5%; position: center;">Notification Method:</h1>
     <div
-        style="border: 1px solid rgb(163, 163, 163); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: lightgrey;">
-        <h1 style="font-size: 15px; float: left; padding-left: 5vw;">Notifications On/Off Toggle</h1>
+        style="border: 1px solid rgb(45, 45, 49); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: rgb(45, 45, 49); ">
+        <h1 style="font-size: 15px; float: left; padding-left: 5vw; color: white">Notifications On/Off Toggle</h1>
 
         <div class="form-check form-switch" style="width: 50px; margin: 0 2px; padding-left: 80%">
             <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                style="height: 30px; width: 65px;" value="on_off">
+                style="height: 30px; width: 65px;" name="toggle" value="off" onchange="enablebtn()">
         </div>
     </div>
 
     <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
 
-    <div class="container">
+    <div class="container" id="testcolor" style="color:grey;">
         <div class="row row-cols-4">
             <div class="col">
                 <label class="form-check-label pt-5" for="inlineRadio1">
@@ -128,22 +130,23 @@
                 <label class="form-check-label p-3" for="inlineRadio4">Silent</label>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio1" value="vibrate_sound" name="type">
+                <input class="form-check-input p-3" type="radio" id="vibrateSound" value="vibrate_sound" name="type"
+                style="border: 2px solid rgb(145, 144, 144)" disabled>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio2" value="sound" name="type">
+                <input class="form-check-input p-3" type="radio" id="soundOnly" value="sound" name="type"  style="border: 2px solid rgb(145, 144, 144)" disabled>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio3" value="vibrate" name="type">
+                <input class="form-check-input p-3" type="radio" id="vibrateOnly" value="vibrate" name="type"  style="border: 2px solid rgb(145, 144, 144)" disabled>
             </div>
             <div class="col">
-                <input class="form-check-input p-3" type="radio" id="inlineRadio4" value="silent" name="type">
+                <input class="form-check-input p-3" type="radio" id="mute" value="silent" name="type" style="border: 2px solid rgb(145, 144, 144)" disabled>
             </div>
         </div>
     </div>
-
+</div>
     <div style="padding-top: 100px; position: center">
-        <button type="submit" class="btn btn-primary btn-lg active" onclick="saveUserInfo()">Next</button>
+        <button type="submit" class="btn btn-primary btn-lg active" onclick="saveUserInfo()"> Next </button>
     </div>
 
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
@@ -162,8 +165,37 @@
     </footer>
 </body>
 <script>
+    var vibrateSound = document.getElementById("vibrateSound");
+    var sound = document.getElementById("soundOnly");
+    var vibrate = document.getElementById("vibrateOnly");
+    var mute = document.getElementById("mute");
+    var text = document.getElementById("testcolor");
+
+    function enablebtn() {
+        if (vibrateSound.disabled == false && sound.disabled == false && vibrate.disabled == false && mute.disabled == false) {
+            vibrateSound.disabled = true;
+            sound.disabled = true;
+            vibrate.disabled = true;
+            mute.disabled = true;
+            text.style.color = "grey";
+        } else{
+            vibrateSound.disabled = false;
+            sound.disabled = false;
+            vibrate.disabled = false;
+            mute.disabled = false;
+            text.style.color = "black";
+        };
+
+    };
+
     function saveUserInfo() {
         let NotificationType = document.querySelector('input[name="type"]:checked').value;
+
+        if (document.querySelector('input[name="toggle"]:checked') != null) {
+            var ToggleOnOff = document.querySelector('input[name="toggle"]:checked').value;
+        } else {
+            var ToggleOnOff = "off"
+        }
 
         firebase.auth().onAuthStateChanged(user => {
             if (user) {
@@ -178,7 +210,8 @@
                         db.collection("Notifications").add({
                             NotificationType: NotificationType,
                             UserID: userID,
-                            UserEmail: userEmail
+                            UserEmail: userEmail,
+                            ToggleOnOff: ToggleOnOff
                         });
                     })
             } else {
