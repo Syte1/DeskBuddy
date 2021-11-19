@@ -15,7 +15,7 @@
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <!-- Our CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="./styles/my_style.css">
 
     <!-- Firebase 8 CDNs-->
@@ -41,7 +41,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">Desk Buddy</a>
+            <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">DeskBuddy</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
@@ -79,7 +79,7 @@
         <div class="p-5 bg-light rounded-3">
             <img src="images/DeskBuddy logo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
-            <h1 class="display-5 fw-bold pt-5">Welcome back to Desk Buddy,</h1>
+            <h1 class="display-5 fw-bold pt-5">Welcome Back</h1>
             <p class="pb-2" id="username" style="font-size: 30px">Username</p>
             <p class="col-md-12 fs-4">Click below to adjust your existing notifications</p>
             <br>
@@ -121,15 +121,15 @@
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
         <button class="btn material-icons bg-dark">
             <a href="break-types.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">grade</a>
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
         </button>
         <button class="btn material-icons bg-dark">
             <a href="main.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
         </button>
         <button class="btn material-icons bg-dark">
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">arrow_back</a>
+            <a class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
         </button>
     </footer>
     

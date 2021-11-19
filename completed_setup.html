@@ -6,6 +6,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- External CSS-->
+        <link rel="stylesheet" href="styles\styles.css">
 
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -32,7 +35,7 @@
         <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"/>
 
 </head>
-<body style="text-align: center;">
+<body style="text-align: center;" id="completed-body">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,7 +43,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">Desk Buddy</a>
+            <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">DeskBuddy</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
@@ -70,31 +73,28 @@
         </div>
     </nav>
     <div class="mb-4">
-        <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="p-5 mb-1 rounded-3">
             <img src="images/DeskBuddy logo.png" class="img-fluid" alt="Responsive image" style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
-            <br>
-            <div class="material-icons display-5 fw-bold pt-5" style="font-size: 55px;">
-                thumb_up
-            </div>
-            <h1 class="display-5 fw-bold pt-5">You're all done!</h1>
+            <h1 class="display-5 fw-bold pt-5">That was easy!</h1>
             <br>
         </div>
         <div>
-            <button class="btn btn-primary btn-lg mb-5" type="button">Finish</button>
+            <a href="main.html" class="display-5 btn btn-primary btn-lg " role="button" aria-pressed="true">Return to Main Menu</a>
         </div>
     </div>
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
         <button class="btn material-icons bg-dark">
             <a href="break-types.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">grade</a>
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
         </button>
         <button class="btn material-icons bg-dark">
             <a href="main.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
         </button>
         <button class="btn material-icons bg-dark">
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">arrow_back</a>
+            <a class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
+            
         </button>
     </footer>
 </body>
