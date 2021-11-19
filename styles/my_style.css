@@ -52,7 +52,6 @@ html {
 .accordiongrid {
     display: grid;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 50% 50%;
 }
 
 .accordionpic {
@@ -67,7 +66,6 @@ html {
 
 .accordion-filler {
     padding: unset;
-    height: 40vh;
 }
 
 .accordion-description {
@@ -75,17 +73,9 @@ html {
 }
 
 
-/* Toggle buttons for notificationtime.html
+/* Toggle buttons for notificationtime.html */
 .btn{
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: clip;
-}
-*/
-
-
-.shortText{display:none;}
-@media (max-width: 760px){
-    .shortText{display: inline;}
-    .longText{display: none;}
+    text-overflow: ellipsis;
 }
