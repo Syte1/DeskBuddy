@@ -75,9 +75,34 @@ html {
 }
 
 
-/* Toggle buttons for notificationtime.html */
+/* Toggle buttons for notificationtime.html
 .btn{
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
+}
+*/
+
+#MonShort{display:none;}
+#TuesShort{display:none;}
+#WedShort{display:none;}
+#ThurShort{display:none;}
+#FriShort{display:none;}
+#SatShort{display:none;}
+#SunShort{display:none;}
+@media (max-width: 760px){
+    #MonLong{display:none;}
+    #MonShort{display:inline-block;}
+    #TuesLong{display:none;}
+    #TuesShort{display:inline-block;}
+    #WedLong{display:none;}
+    #WedShort{display:inline-block;}
+    #ThurLong{display:none;}
+    #ThurShort{display:inline-block;}
+    #FriLong{display:none;}
+    #FriShort{display:inline-block;}
+    #SatLong{display:none;}
+    #SatShort{display:inline-block;}
+    #SunLong{display:none;}
+    #SunShort{display:inline-block;}
 }
