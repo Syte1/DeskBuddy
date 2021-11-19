@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 #main-body {
@@ -46,10 +47,4 @@
 	animation: gradient 10s ease-in-out infinite;
 	height: 100vh;
     position: relative;
-}
-
-p {
-	color: white;
-	font-size: 8pt;
-	
 }
