@@ -7,6 +7,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.time-element {
+    font-size: 25px;
+}
 html {
     font-family: Arial, Helvetica, sans-serif;
 }
