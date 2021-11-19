@@ -75,9 +75,17 @@ html {
 }
 
 
-/* Toggle buttons for notificationtime.html */
+/* Toggle buttons for notificationtime.html
 .btn{
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: clip;
+}
+*/
+
+
+.shortText{display:none;}
+@media (max-width: 760px){
+    .shortText{display: inline;}
+    .longText{display: none;}
 }
