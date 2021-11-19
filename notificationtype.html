@@ -87,7 +87,7 @@
     <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
 
     <div class="container" id="testcolor" style="color:grey;">
-        <div class="row row-cols-4">
+        <div class="row row-cols-4" required>
             <div class="col">
                 <label class="form-check-label pt-5" for="inlineRadio1">
                     <span class="material-icons" style="font-size: 25px;">
@@ -219,6 +219,7 @@
                 console.log("No user signed in");
             }
         });
+        window.location.href = "completed_setup.html";
     }
 </script>
 
