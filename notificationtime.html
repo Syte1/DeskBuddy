@@ -78,16 +78,16 @@
             </div>
         </div>
     </nav>
-    <div style="background-image: url('images/clockbanner1.jpg'); width: 100%">
+    <div style="background-image: url('images/clockbanner1.jpg'); background-size: cover; background-position: center">
     <container id="bigGrid">
 
         <h1 class="fw-bold" id="bigHeader">Notification Time:</h1>
         <h1 id="from">From:</h1>
         <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
-        grid-row: 4;" id="firstclock" />
+        grid-row: 4;" id="firstclock" placeholder="12:01 AM"/>
         <h1 id="to">To:</h1>
         <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
-        grid-row: 6;" id="secondclock" />
+        grid-row: 6;" id="secondclock" placeholder="11:59 PM"/>
 
 
         <div class="btn-group btn-group-toggle" data-toggle="buttons"></div>
@@ -124,7 +124,6 @@
             <input type="checkbox" class="btn-check" id="btn-check-7-outlined" autocomplete="off" name="Sunday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-7-outlined"
                 style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label>
-        </div>
 
         <br>
  
@@ -200,10 +199,10 @@
             console.log(starttime)
             console.log(endtime)
             if (!starttime) {
-                document.getElementById('firstclock').value = "Enter a proper time";
+                document.getElementById('firstclock').value = "Please enter a time";
             }
             if (!starttime) {
-                document.getElementById('secondclock').value = "Enter a proper time";
+                document.getElementById('secondclock').value = "Please enter a time";
             }
 
             console.log(Monday)
@@ -240,6 +239,7 @@
                     console.log("no user signed in");
                 }
             })
+            window.location.href = "notificationtype.html";
         }
     </script>
 </body>
