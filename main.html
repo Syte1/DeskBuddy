@@ -143,11 +143,11 @@
         insertName();
     // The data/time we want to countdown to
     // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-    var frequency = 1800000
+    var frequency = 5000
 
     var countDownDate = new Date().getTime() + frequency;
     // Run myfunc every second
-    setInterval(function() {
+    funcname = setInterval(function() {
 
     
     var now = new Date().getTime();
@@ -164,14 +164,15 @@
     document.getElementById("hours").innerHTML = hours + "h " 
     document.getElementById("mins").innerHTML = minutes + "m " 
     document.getElementById("secs").innerHTML = seconds + "s " 
-        
+    
     // Display the message when countdown is over
     if (timeleft < 0) {
-
-        document.getElementById("days").innerHTML = ""
-        document.getElementById("hours").innerHTML = "" 
-        document.getElementById("mins").innerHTML = ""
-        document.getElementById("secs").innerHTML = ""
+        var hours = 1
+        
+        // document.getElementById("days").innerHTML = ""
+        // document.getElementById("hours").innerHTML = "" 
+        // document.getElementById("mins").innerHTML = ""
+        // document.getElementById("secs").innerHTML = ""
         // document.getElementById("end").innerHTML = "TIME UP!!"
     }
     }, 1000);
