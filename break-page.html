@@ -1,186 +1,181 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <title>DeskBuddy|Choose Break Type</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <!-- Our CSS -->
-        <link rel="stylesheet" href="/styles/my_style.css">
+  <meta charset="utf-8">
+  <title>DeskBuddy|Choose Break Type</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Our CSS -->
+  <link rel="stylesheet" href="/styles/my_style.css">
 
-        <!-- Firebase 8 CDNs-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
+  <!-- Firebase 8 CDNs-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-        <!-- Link to the api keys for your firebase project -->
-        
-        <script src="scripts/firebaseAPI.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Link to the api keys for your firebase project -->
+
+  <script src="scripts/firebaseAPI.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 </head>
+
 <body style="text-align: center;">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">Desk Buddy</a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                    <a class="nav-link active text-dark" aria-current="page" href="#">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Settings
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">Profile</a></li>
-                        <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
-                    </ul>
-                </li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">Desk Buddy</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Settings
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
+              <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
+              <li><a class="dropdown-item text-dark" href="#">Profile</a></li>
+              <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
     </div>
-</nav>
-   <h1 style="padding-top: 5%; padding-bottom: 5%; position: center">Types of Breaks:</h1>
-   <div class="accordion accordion-flush" id="accordionFlushExample">
+  </nav>
+  <h1 style="padding-top: 5%; padding-bottom: 5%; position: center">Types of Breaks:</h1>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
           Nutritional Breaks
         </button>
       </h2>
-      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+        data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <div class="accordion-filler accordiongrid">
             <section style="grid-column: 2;">
-              <h1>Food Break</h1>
-              <p style="text-align: left; margin-left: 10px;">Eating is almost as important as breathing. Don't forget that.</p>
+              <h1>Water Break</h1>
+              <p id="water" style="text-align: left; margin-left: 10px;">empty</p>
             </section>
-            <img class="accordionpic" src="./images/fruits.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
-            
+            <img class="accordionpic" src="./images/water.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
+
             <section style="grid-column: 2;">
               <h1>Food Break</h1>
-              <p style="text-align: left; margin-left: 10px;">Eating is almost as important as breathing. Don't forget that.</p>
+              <p id="food" style="text-align: left; margin-left: 10px;">empty</p>
             </section>
-            <img class="accordionpic" src="./images/fruits.jpg" alt="deskbuddy" width="100%" style="grid-row: 2;">
+            <img class="accordionpic" src="./images/nutrition.jpg" alt="deskbuddy" width="100%" style="grid-row: 2;">
           </div>
+        </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-          Exercise Breaks
-        </button>
-      </h2>
-      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <div class="accordion-filler accordiongrid">
-            <section style="grid-column: 2;">
-              <h1>Food Break</h1>
-              <span style="text-align: left; margin-left: 10px;">Eating is almost as important as breathing. Don't forget that.</span>
-            </section>
-            <img class="accordionpic" src="./images/fruits.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
-            
-            <section style="grid-column: 2;">
-              <h1>Food Break</h1>
-              <p style="text-align: left; margin-left: 10px;">Eating is almost as important as breathing. Don't forget that.</p>
-            </section>
-            <img class="accordionpic" src="./images/fruits.jpg" alt="deskbuddy" width="100%" style="grid-row: 2;">
-          </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Exercise Breaks
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+      data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div class="accordion-filler accordiongrid">
+          <section style="grid-column: 2;">
+            <h1>Stretch Break</h1>
+            <span id="stretch" style="text-align: left; margin-left: 10px;">empty</span>
+          </section>
+          <img class="accordionpic" src="./images/stretch.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
+        </div>
       </div>
     </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="flush-headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-          Relaxation Breaks
-        </button>
-      </h2>
-      <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-        <div class="accordion-body">
-          <div class="accordion-filler accordiongrid">
-            <section style="grid-column: 2;">
-              <h1>Food Break</h1>
-              <p style="text-align: left; margin-left: 10px;">Eating is almost as important as breathing. Don't forget that.</p>
-            </section>
-            <img class="accordionpic" src="./images/fruits.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
-            
-            <section style="grid-column: 2;">
-              <h1>Food Break</h1>
-              <p style="text-align: left; margin-left: 10px;">Eating is almost as important as breathing. Don't forget that.</p>
-            </section>
-            <img class="accordionpic" src="./images/fruits.jpg" alt="deskbuddy" width="100%" style="grid-row: 2;">
-          </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Relaxation Breaks
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+      data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div class="accordion-filler accordiongrid">
+          <section style="grid-column: 2;">
+            <h1>Meditation Break</h1>
+            <p id="meditation" style="text-align: left; margin-left: 10px;">empty</p>
+          </section>
+          <img class="accordionpic" src="./images/meditation.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
+        </div>
       </div>
     </div>
   </div>
 
   <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
     <button class="btn material-icons bg-dark">
-        <a href="break-types.html" class="material-icons"
-            style="color: whitesmoke; text-decoration: unset; font-size: 35px;">grade</a>
+      <a href="break-types.html" class="material-icons"
+        style="color: whitesmoke; text-decoration: unset; font-size: 35px;">grade</a>
     </button>
     <button class="btn material-icons bg-dark">
-        <a href="main.html" class="material-icons"
-            style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+      <a href="main.html" class="material-icons"
+        style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
     </button>
     <button class="btn material-icons bg-dark">
-        <a href="main.html" class="material-icons"
-            style="color: whitesmoke; text-decoration: unset; font-size: 35px;">arrow_back</a>
+      <a href="main.html" class="material-icons"
+        style="color: whitesmoke; text-decoration: unset; font-size: 35px;">arrow_back</a>
     </button>
-</footer>
+  </footer>
 </body>
 <script>
-    function saveUserInfo(){
-        let type = document.querySelector('input[name="type"]:checked').value;
-        console.log(type)
+  function displayBreaks() {
+    // pull information from nutritional breaks
+    db.collection("Break Types").doc("Nutritional Breaks")
+      .onSnapshot(BreaksDoc => {
+        document.getElementById("water").innerText = BreaksDoc.data().water;
+        document.getElementById("food").innerText = BreaksDoc.data().food;
+      })
+    // pull information from exercise breaks
+    db.collection("Break Types").doc("Exercise Breaks")
+      .onSnapshot(BreaksDoc => {
+        document.getElementById("stretch").innerText = BreaksDoc.data().stretch;
+      })
+    // pull information from relaxation breaks
+    db.collection("Break Types").doc("Relaxation Breaks")
+    .onSnapshot(BreaksDoc => {
+      document.getElementById("meditation").innerText = BreaksDoc.data().meditation;
+    })
 
-        firebase.auth().onAuthStateChanged(user=>{
-            if(user){
-                var currentUser = db.collection("users").doc(user.uid)
-                var userID = user.uid;
-
-                currentUser.get()
-                    .then(userDoc=>{
-                        var userEmail = userDoc.data().email;
-
-                        db.collection("notificationType").add({
-                            notificationType: notificationType
-                        });
-                    })
-            } else{
-                console.log("No user signed in");
-            }
-        });
-    }
+  }
+  displayBreaks();
 </script>
 
 </html>
