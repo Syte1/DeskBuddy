@@ -131,16 +131,17 @@ body{
 }
 
 .slides img {
-    width: 96.5vw;
+    width: 80vw;
     height: 50vh;
     padding-bottom: 10vh;
+    border-radius: 2%;
 }
 
 .navigation-manual {
     position: absolute;
     width: 96.5vw;
     margin-top: 230px;
-    margin-left: -1900px;
+    margin-left: -1920px;
     display: flex;
     justify-content: center;
 }
