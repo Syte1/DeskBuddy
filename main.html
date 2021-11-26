@@ -194,7 +194,7 @@
         //     })
         // }
         // readquote();
-        function displayRandomCity() {
+        function displayRandomQuote() {
             db.collection("quotes")
                 .where("position", ">", Math.floor(Math.random() * 70))
                 .limit(1)
@@ -208,7 +208,7 @@
                     })
                 })
         }
-        displayRandomCity();
+        displayRandomQuote();
 
         insertName();
         // The data/time we want to countdown to
