@@ -119,8 +119,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-        aria-hidden="true" onclick="hide_button()">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" onclick="hide_button()">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -184,17 +183,32 @@
                 }
             });
         }
-        var random_number = Math.floor(Math.random() * 10);
-        function readquote() {
-            db.collection("quotes").doc("Example")
-            .onSnapshot(ExampleDoc => {
-                console.log("current document data: " + ExampleDoc.data().quote);
-                console.log("current document data: " + ExampleDoc.data().author);
-                document.getElementById("quote-goes-here").innerHTML = ExampleDoc.data().quote
-                document.getElementById("author-goes-here").innerHTML = ExampleDoc.data().author
-            })
+        // var random_number = Math.floor(Math.random() * 10);
+        // function readquote() {
+        //     db.collection("quotes").doc("Example")
+        //     .onSnapshot(ExampleDoc => {
+        //         console.log("current document data: " + ExampleDoc.data().quote);
+        //         console.log("current document data: " + ExampleDoc.data().author);
+        //         document.getElementById("quote-goes-here").innerHTML = ExampleDoc.data().quote
+        //         document.getElementById("author-goes-here").innerHTML = ExampleDoc.data().author
+        //     })
+        // }
+        // readquote();
+        function displayRandomCity() {
+            db.collection("quotes")
+                .where("position", ">", Math.floor(Math.random() * 70))
+                .limit(1)
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function (doc) {
+                        var n = doc.data().name;
+                        console.log(n);
+                        var quote = "<p> " + n + "</p";
+                        $("#quote-goes-here").append(quote);
+                    })
+                })
         }
-        readquote();
+        displayRandomCity();
 
         insertName();
         // The data/time we want to countdown to
@@ -205,6 +219,7 @@
             document.getElementById("end").innerHTML = ""
             $('#myModal').modal('hide');
         }
+
         function refreshtime() {
             countDownDate = new Date().getTime() + frequency
         }
@@ -235,7 +250,7 @@
                 $('#myModal').modal('show');
 
                 document.getElementById("days").innerHTML = ""
-                document.getElementById("hours").innerHTML = "" 
+                document.getElementById("hours").innerHTML = ""
                 document.getElementById("mins").innerHTML = ""
                 document.getElementById("secs").innerHTML = ""
                 document.getElementById("end").innerHTML = "Time to take a break!"
