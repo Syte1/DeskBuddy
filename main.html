@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <title>DeskBuddy|Main</title>
@@ -129,19 +129,12 @@
             <span aria-hidden="true">&times;</span>
           </button> -->
                 </div>
-<<<<<<< HEAD
                 <div class="modal-body text-center" onclick="hide_button()">
                     <p id="quote-goes-here" style="font-weight: bold; font-size: 15pt;"></p>
                     <p id="author-goes-here" style="font-style: italic; text-align: center;"></p>
                     <p>Check the breaks page for suggestions</p>
                     <p style="font-size: 8pt;"> Click anywhere to close</p>
 
-=======
-                <div class="modal-body text-center">
-                    <p> It's time for a break!</p>
-                    <p> Check the breaks page for suggestions.</p>
-                    <p> Click anywhere to close</p>
->>>>>>> 647e6dabe9b8dcc363315e8e319fee3483da06a1
                 </div>
                 <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#myModal').modal('hide');" >Close</button>
@@ -220,69 +213,6 @@
 
         setInterval(function () {
 
-<<<<<<< HEAD
-            // The data/time we want to countdown to
-            // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-            var frequency = 5000
-
-            function hide_button() {
-                $('#myModal').modal('hide');
-            }
-
-            setInterval(function () {
-
-
-                var now = new Date().getTime();
-                var timeleft = countDownDate - now;
-
-                // Calculating the days, hours, minutes and seconds left
-                // var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-
-                // Result is output to the specific element
-                // document.getElementById("days").innerHTML = days + "d "
-                document.getElementById("hours").innerHTML = hours + "h "
-                document.getElementById("mins").innerHTML = minutes + "m "
-                document.getElementById("secs").innerHTML = seconds + "s "
-
-                // Display the message when countdown is over
-
-                if (timeleft < 1) {
-                    refreshtime()
-                    $('#myModal').modal('show');
-
-                    // document.getElementById("days").innerHTML = ""
-                    // document.getElementById("hours").innerHTML = "" 
-                    // document.getElementById("mins").innerHTML = ""
-                    // document.getElementById("secs").innerHTML = ""
-                    // document.getElementById("end").innerHTML = "Time to take a break!"
-                    return;
-                }
-            }, 1000)
-
-            async function getCSVdata() {
-                const response = await fetch('quotes.csv'); //send get request
-                const data = await response.text(); //get file response
-                const list = data.split('\n').slice(1); //get line 
-                list.forEach(row => {
-                    const columns = row.split(','); //get token 
-                    const id = columns[0]; // get id
-                    const author = columns[1]; // author name
-                    const quote = columns[2]; //quote
-                    console.log(author, quote)
-                    db.collection("quotes").add({ //write to firestore
-                        id: id,
-                        name: author,
-                        quote: quote,
-                    })
-                });
-            }
-            // getCSVdata();
-
-        })
-=======
             var now = new Date().getTime();
             var timeleft = countDownDate - now;
 
@@ -330,7 +260,6 @@
         }
 
         getCSVdata()
->>>>>>> 647e6dabe9b8dcc363315e8e319fee3483da06a1
     </script>
 </body>
 
