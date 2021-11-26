@@ -96,10 +96,10 @@
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <div class="slide first">
-                <img src="images\exercise.jpg" alt="exercise">
+                <img src="images\exercise.jpg" alt="exercise" id="first-picture">
             </div>
-            <div class="slide">
-                <img src="images\stretch.jpg" alt="stretching">
+            <div class="slide" id="pictures2">
+                <img src="images\stretch.jpg" alt="stretching" id="second-picture">
             </div>
             <div class="slide">
                 <img src="images\meditation.jpg" alt="meditation">
@@ -190,6 +190,11 @@
         document.getElementById("end").innerHTML = "Time to take a break!"
     }
     }, 1000);
+    $.each( $('*'), function() { 
+    if( $(this).width() > $('body').width()) {
+        console.log("Wide Element: ", $(this), "Width: ", $(this).width()); 
+    } 
+});
     </script>
 </body>
 
