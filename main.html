@@ -77,7 +77,7 @@
             <span id="hours" class="time-element"></span>
             <span id="mins" class="time-element"></span>
             <span id="secs" class="time-element"></span>
-            <!-- <h2 id="end"></h2> -->
+            <h2 id="end"></h2>
         </div>
     </div>
     <div class="bg-light rounded-3">
@@ -118,6 +118,28 @@
         </div>
     </div>
 
+    <!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#myModal').modal('toggle');">
+            <span aria-hidden="true">&times;</span>
+          </button> -->
+        </div>
+        <div class="modal-body text-center" onclick="hide_button()">
+          <p> It's time for a break!</p>
+          <p> Check the breaks page for suggestions.</p>
+          <p> Click anywhere to close</p>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#myModal').modal('hide');" >Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
     
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
         <button class="btn material-icons bg-dark">
@@ -159,8 +181,15 @@
         insertName();
     // The data/time we want to countdown to
     // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-    var frequency = 1800000
-
+    var frequency = 5000
+    
+    function hide_button(){
+        $('#myModal').modal('hide');
+    }
+    
+    function refreshtime(){
+        countDownDate = new Date().getTime() + frequency
+    }
     var countDownDate = new Date().getTime() + frequency;
     // Run myfunc every second
     setInterval(function() {
@@ -182,15 +211,26 @@
     document.getElementById("secs").innerHTML = seconds + "s " 
         
     // Display the message when countdown is over
-    if (timeleft < 0) {
 
-        document.getElementById("days").innerHTML = ""
-        document.getElementById("hours").innerHTML = "" 
-        document.getElementById("mins").innerHTML = ""
-        document.getElementById("secs").innerHTML = ""
-        // document.getElementById("end").innerHTML = "TIME UP!!"
+    if (timeleft < 1) {
+        refreshtime()
+        $('#myModal').modal('show');
+        
+        // document.getElementById("days").innerHTML = ""
+        // document.getElementById("hours").innerHTML = "" 
+        // document.getElementById("mins").innerHTML = ""
+        // document.getElementById("secs").innerHTML = ""
+        // document.getElementById("end").innerHTML = "Time to take a break!"
+        return;
     }
     }, 1000);
+
+    $.each( $('*'), function() { 
+    if( $(this).width() > $('body').width()) {
+        console.log("Wide Element: ", $(this), "Width: ", $(this).width()); 
+    } 
+});
+
     </script>
 </body>
 
