@@ -175,7 +175,6 @@ body{
     margin-left: -40%;
 }
 
-<<<<<<< HEAD
 #CustomProfileImage {
     width: 150px;
     height: 150px;
@@ -191,7 +190,8 @@ body{
 
 #profileImage{
     display: block;
-=======
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -238,5 +238,4 @@ body{
 	animation: gradient 10s ease-in-out infinite;
 	height: 100vh;
     position: relative;
->>>>>>> b63a9c50e03999a4bd9da6c8ef09f90cdc508127
 }
