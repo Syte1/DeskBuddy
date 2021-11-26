@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <title>DeskBuddy|Main</title>
@@ -213,7 +213,7 @@
         insertName();
         // The data/time we want to countdown to
         // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-        var frequency = 30000 + 1500
+        var frequency = 5000
 
         function hide_button() {
             document.getElementById("end").innerHTML = ""
@@ -263,9 +263,10 @@
             const data = await response.text(); //get file response
             const list = data.split('\n').slice(1); //get line 
             list.forEach(row => {
-                const columns = row.split('.'); //get token 
-                const author = columns[0]; // author name
-                const quote = columns[1]; //quote
+                const columns = row.split(','); //get token 
+                const id = columns[0]; // id
+                const author = columns[1]; // author name
+                const quote = columns[2]; //quote
                 console.log(author, quote)
                 db.collection("quotes").add({ //write to firestore
                     name: author,
@@ -274,7 +275,7 @@
             });
         }
 
-        getCSVdata()
+        // getCSVdata()
     </script>
 </body>
 
