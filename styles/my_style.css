@@ -22,6 +22,9 @@ html {
     height: 100vh;
     color: #fff;
     background-color: linear-gradient(-45deg, #EE7752, #E73C7E);
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 .break-page {
 	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
@@ -88,6 +91,7 @@ html {
 .btn{
     white-space: nowrap;
     overflow: hidden;
+
 }
 
 /* Media Query to change toggle buttons text 
@@ -99,8 +103,8 @@ html {
 
 
 .slider {
-    width: 800px;
-    height: 500px;
+    width: 96.5vw;
+    height: 50vh;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -108,8 +112,8 @@ html {
 }
 
 .slides {
-    width: 500%;
-    height: 500px;
+    width: 96.5vw;
+    height: 50vh;
     display: flex;
 }
 
@@ -123,22 +127,23 @@ html {
 }
 
 .slides img {
-    width: 800px;
-    height: 500px;
+    width: 96.5vw;
+    height: 50vh;
 }
 
 .navigation-manual {
     position: absolute;
-    width: 800px;
-    margin-top: -40px;
+    width: 96.5vw;
+    margin-top: 230px;
     display: flex;
     justify-content: center;
 }
 
 .manual-btn {
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 13px;
     cursor: pointer;
     transition: 1s;
 }
