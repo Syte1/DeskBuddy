@@ -17,7 +17,6 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="./styles/my_style.css">
-    <!-- <link rel="stylesheet" href="./styles/login.css"> -->
 
     <!-- Firebase 8 CDNs-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -204,63 +203,65 @@
         // Run myfunc every second
 
         setInterval(function () {
-        // The data/time we want to countdown to
-        // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-        var frequency = 5000
 
-        function hide_button() {
-            $('#myModal').modal('hide');
-        }
+                    // The data/time we want to countdown to
+                    // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
+                    var frequency = 5000
 
-        setInterval(function () {
+                    function hide_button() {
+                        $('#myModal').modal('hide');
+                    }
 
-            var now = new Date().getTime();
-            var timeleft = countDownDate - now;
+                    setInterval(function () {
 
-            // Calculating the days, hours, minutes and seconds left
-            // var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-            // Result is output to the specific element
-            // document.getElementById("days").innerHTML = days + "d "
-            document.getElementById("hours").innerHTML = hours + "h "
-            document.getElementById("mins").innerHTML = minutes + "m "
-            document.getElementById("secs").innerHTML = seconds + "s "
+                        var now = new Date().getTime();
+                        var timeleft = countDownDate - now;
 
-            // Display the message when countdown is over
+                        // Calculating the days, hours, minutes and seconds left
+                        // var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-            if (timeleft < 1) {
-                refreshtime()
-                $('#myModal').modal('show');
+                        // Result is output to the specific element
+                        // document.getElementById("days").innerHTML = days + "d "
+                        document.getElementById("hours").innerHTML = hours + "h "
+                        document.getElementById("mins").innerHTML = minutes + "m "
+                        document.getElementById("secs").innerHTML = seconds + "s "
 
-                // document.getElementById("days").innerHTML = ""
-                // document.getElementById("hours").innerHTML = ""
-                // document.getElementById("mins").innerHTML = ""
-                // document.getElementById("secs").innerHTML = ""
-                // document.getElementById("end").innerHTML = "Time to take a break!"
-                return;
-            }
-        }, 1000)
+                        // Display the message when countdown is over
 
-        async function getCSVdata() {
-            const response = await fetch('quotes.csv'); //send get request
-            const data = await response.text(); //get file response
-            const list = data.split('\n').slice(1); //get line
-            list.forEach(row => {
-                const columns = row.split(','); //get token
-                const author = columns[0]; // author name
-                const quote = columns[1]; //quote
-                console.log(author, quote)
-                db.collection("quotes").add({   //write to firestore
-                   name: author,
-                   details: quote
-                })
-            });
-        }
+                        if (timeleft < 1) {
+                            refreshtime()
+                            $('#myModal').modal('show');
 
-        getCSVdata()
+                            // document.getElementById("days").innerHTML = ""
+                            // document.getElementById("hours").innerHTML = "" 
+                            // document.getElementById("mins").innerHTML = ""
+                            // document.getElementById("secs").innerHTML = ""
+                            // document.getElementById("end").innerHTML = "Time to take a break!"
+                            return;
+                        }
+                    }, 1000)
+
+                    async function getCSVdata() {
+                        const response = await fetch('quotes.csv'); //send get request
+                        const data = await response.text(); //get file response
+                        const list = data.split('\n').slice(1); //get line 
+                        list.forEach(row => {
+                            const columns = row.split('.'); //get token 
+                            const author = columns[0]; // author name
+                            const quote = columns[1]; //quote
+                            console.log(author, quote)
+                            db.collection("quotes").add({   //write to firestore
+                                name: author,
+                                details: quote
+                            })
+                        });
+                    }
+
+                    getCSVdata()
     </script>
 </body>
 
