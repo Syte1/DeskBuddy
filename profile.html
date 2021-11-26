@@ -11,7 +11,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/my_style.css">
+
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -83,36 +83,42 @@
                 <div class="d-flex flex-column align-items-center text-center p-3 py-1">
                     <div id="CustomProfileImage"></div>
                     <img class="rounded-circle mt-5"width="150px" src="images\profile.png" id="profileImage">
-                    <span id="name-goes-here" class="font-weight-bold pt-4">User Name</span></div>
+                    <span id="name-goes-here" class="font-weight-bold pt-4 fw-bold">User Name</span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-1">
                     <div class="row mt-5">
-                        <h4 class="text-center">Profile Settings</h4>
+                        <h4 class="text-center fw-bold">Profile Settings</h4>
                     </div>
                     <div class="row mt-2">
-                        <div class="col-md-6 pb-3"><label class="labels">First Name</label><input id="f_name"
-                                type="text" class="form-control" placeholder="First Name" value=""></div>
-                        <div class="col-md-6 pb-1"><label class="labels">Last Name</label><input id="l_name" type="text"
-                                class="form-control" value="" placeholder="Last Name"></div>
+                        <div class="col-md-6 pb-3 fw-bold "><label class="labels">First Name</label>
+                            <input id="f_name" type="text" class="form-control text-center" placeholder="First Name" value="" disabled>
+                        </div>
+                        <div class="col-md-6 pb-1"><label class="labels fw-bold">Last Name</label><input id="l_name" type="text"
+                                class="form-control text-center" value="" placeholder="Last Name" disabled>
+                            </div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-12 pb-3"><label class="labels">Mobile</label>
-                            <input id="phone_num" type="text" class="form-control" placeholder="604-111-1111" value=""></div>
-                        <div class="col-md-12 pb-1"><label class="labels">Address</label>
-                            <input id="address" type="text" class="form-control" placeholder="555 Seymour St" value=""></div>
+                        <div class="col-md-12 pb-3"><label class="labels fw-bold">Mobile</label>
+                            <input id="phone_num" type="text" class="form-control text-center" placeholder="604-111-1111" value="" disabled></div>
+                        <div class="col-md-12 pb-1"><label class="labels fw-bold">Address</label>
+                            <input id="address" type="text" class="form-control text-center" placeholder="555 Seymour St" value="" disabled></div>
                     </div>
                     <div class="row mt-3">
-                        <div class="col-md-6 pb-3"><label class="labels">City</label>
-                            <input id="city" type="text" class="form-control" placeholder="Vancouver" value=""></div>
-                        <div class="col-md-6 pb-3"><label class="labels">Country</label>
-                            <input id="country" type="text" class="form-control" placeholder="Canada" value=""></div>
-                        <div class="col-md-6 pb-3"><label class="labels">State / Region</label>
-                            <input id="region" type="text" class="form-control" value="" placeholder="British Columbia"></div>
+                        <div class="col-md-6 pb-3"><label class="labels fw-bold">City</label>
+                            <input id="city" type="text" class="form-control text-center" placeholder="Vancouver" value="" disabled></div>
+                        <div class="col-md-6 pb-3"><label class="labels fw-bold">Country</label>
+                            <input id="country" type="text" class="form-control text-center" placeholder="Canada" value="" disabled></div>
+                        <div class="col-md-6 pb-3"><label class="labels fw-bold">State / Region</label>
+                            <input id="region" type="text" class="form-control text-center" value="" placeholder="British Columbia" disabled></div>
                     </div>
                     <div class="mb-5 pb-4 text-center"><button class="btn btn-primary profile-button" type="button"
-                            onclick="profileEdit()">Save</button></div>
-                </div>
+                            onclick="EditButton()">Edit</button>
+                            <button class="btn btn-primary profile-button" type="button"
+                            onclick="profileEdit()">Save</button>
+                        </div>
+                    </div>
+                    
             </div>
         </div>
     </div>
@@ -151,6 +157,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
     <script>
+        var FirstName = document.getElementById("f_name");
+        var LastName = document.getElementById("l_name");
+        var PhoneNum = document.getElementById("phone_num");
+        var Address = document.getElementById("address");
+        var City = document.getElementById("city");
+        var Country = document.getElementById("country");
+        var Region = document.getElementById("region");
+
+        function EditButton() {
+            if (FirstName.disabled == false && LastName.disabled == false && PhoneNum.disabled == false && Address.disabled == false&& City.disabled == false && Country.disabled == false && Region.disabled == false) {
+                FirstName.disabled = true;
+                LastName.disabled = true;
+                PhoneNum.disabled = true;
+                Address.disabled = true;
+                City.disabled = true;
+                Country.disabled = true;
+                Region.disabled = true;
+            } else{
+                FirstName.disabled = false;
+                LastName.disabled = false;
+                PhoneNum.disabled = false;
+                Address.disabled = false;
+                City.disabled = false;
+                Country.disabled = false;
+                Region.disabled = false;
+            };
+
+        };
         function insertName() {
             firebase.auth().onAuthStateChanged(user => {
                 // Check if user is signed in:
@@ -163,10 +197,87 @@
                     currentUser.get()
                         .then(userDoc => {
                             var user_Name = userDoc.data().name;
+                            var First_Name = userDoc.data().FirstName;
                             //console.log(user_Name);
                             document.getElementById("name-goes-here").innerText = user_Name; //using javascript
                             $("#name-goes-here").text(user_Name); //using jquery
                         })
+                        db.collection("Profile").get()
+                            .then(snap=>{
+                                var i = 1;
+                                snap.forEach(doc=>{
+                                    var fname = doc.data().FirstName;
+                                    var lname = doc.data().LastName;
+                                    var address = doc.data().Address;
+                                    var phone = doc.data().PhoneNum;
+                                    var city = doc.data().City;
+                                    var country = doc.data().Country;
+                                    var region = doc.data().Region;
+
+                                    
+                                    //Replaces placeholders with user data
+                                    if(!fname){
+                                        document.getElementById("f_name").placeholder;
+                                    }
+                                    else{
+                                        document.getElementById("f_name").placeholder = fname; 
+                                        $("#f_name").text(fname);
+                                    }
+                                    if(!lname){
+                                        document.getElementById("l_name").placeholder 
+                                    }
+                                    else{
+                                        document.getElementById("l_name").placeholder = lname; 
+                                        $("#l_name").text(lname);
+                                    }
+                                    if(!address){
+                                        document.getElementById("address").placeholder 
+                                    }
+                                    else{
+                                        document.getElementById("address").placeholder = address; 
+                                        $("#address").text(address);
+                                    }
+                                    if(!country){
+                                        document.getElementById("phone_num").placeholder 
+                                    }
+                                    else{
+                                        document.getElementById("phone_num").placeholder = phone;
+                                        $("#phone_num").text(phone);
+                                    }
+                                    if(!city){
+                                        document.getElementById("city").placeholder 
+                                    }
+                                    else{
+                                        document.getElementById("city").placeholder = city;
+                                    $("#city").text(city);
+                                    }
+                                    if(!country){
+                                        document.getElementById("country").placeholder; 
+                                    }else{
+                                        document.getElementById("country").placeholder = country; 
+                                    $("#country").text(country);
+                                    }
+                                    if(!region){
+                                        document.getElementById("region").placeholder; 
+                                    }else{
+                                        document.getElementById("region").placeholder = region; 
+                                    $("#region").text(region);
+                                    }
+
+
+
+                                    // Generates Custom profile image with user initials
+                                    if(!fname && !lname){
+                                        document.getElementById("profileImage").style.display = "block";
+                                    }
+                                    else{
+                                        var initials = fname.charAt(0)+""+lname.charAt(0);
+                                        document.getElementById("CustomProfileImage").innerHTML = initials;
+                                        document.getElementById("profileImage").style.display = "none";
+                                        document.getElementById("CustomProfileImage").style.display = "block";
+                                    }
+                                })
+                            })
                 } else {
                     // No user is signed in.
                     console.log("No user logged in");
@@ -182,36 +293,29 @@
             let City = document.getElementById("city").value;
             let Country = document.getElementById("country").value;
             let Region = document.getElementById("region").value;
-
+            
+            
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     var currentUser = db.collection("users").doc(user.uid);
                     var userID = user.uid;
+                    var userEmail = user.email;
                     //get the document for current user.
                     currentUser.get()
                         .then(userDoc => {
                             //get user Email
-                            var userEmail = userDoc.data().email;
-                            // Start a new collection and add all data in it.
-                            db.collection("Profile").add({
-                                UserID: userID,
-                                UserEmail: userEmail,
-                                FirstName: FirstName,
-                                LastName: LastName,
-                                PhoneNum: PhoneNum,
-                                Address: Address,
-                                City: City,
-                                Country: Country,
-                                Region: Region
-                            });
 
-
-                                var initials = FirstName.charAt(0)+""+LastName.charAt(0);
-                                console.log(initials)
-                                document.getElementById("CustomProfileImage").innerHTML = initials;
-                                document.getElementById("profileImage").style.display = "none";
-                                document.getElementById("CustomProfileImage").style.display = "block";
-                                
+                            db.collection("Profile").doc(userID).set({
+                                            UserID: userID,
+                                            UserEmail: userEmail,
+                                            FirstName: FirstName,
+                                            LastName: LastName,
+                                            PhoneNum: PhoneNum,
+                                            Address: Address,
+                                            City: City,
+                                            Country: Country,
+                                            Region: Region
+                                        });
 
                         })
                 } else {
@@ -226,3 +330,5 @@
 
 
 </html>
+
+
