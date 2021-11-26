@@ -34,6 +34,11 @@
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./styles/my_style.css">
+
 </head>
 
 <body style="text-align: center;">
@@ -75,9 +80,10 @@
     <div class="container rounded bg-white mt-1 mb-1">
         <div class="row">
             <div class="col-md-auto border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-1"><img class="rounded-circle mt-5"
-                        width="150px" src="images\profile.png">
-                        <span id="name-goes-here" class="font-weight-bold pt-4">User Name</span></div>
+                <div class="d-flex flex-column align-items-center text-center p-3 py-1">
+                    <div id="CustomProfileImage"></div>
+                    <img class="rounded-circle mt-5"width="150px" src="images\profile.png" id="profileImage">
+                    <span id="name-goes-here" class="font-weight-bold pt-4">User Name</span></div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-1">
@@ -198,6 +204,15 @@
                                 Country: Country,
                                 Region: Region
                             });
+
+
+                                var initials = FirstName.charAt(0)+""+LastName.charAt(0);
+                                console.log(initials)
+                                document.getElementById("CustomProfileImage").innerHTML = initials;
+                                document.getElementById("profileImage").style.display = "none";
+                                document.getElementById("CustomProfileImage").style.display = "block";
+                                
+
                         })
                 } else {
                     // No user is signed in.
