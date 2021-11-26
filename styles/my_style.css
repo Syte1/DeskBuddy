@@ -175,6 +175,23 @@ body{
     margin-left: -40%;
 }
 
+#CustomProfileImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #512DA8;
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    line-height: 150px;
+    margin-top: 50px;
+    display: None;
+  }
+
+#profileImage{
+    display: block;
+}
+
 * {
     margin: 0;
     padding: 0;

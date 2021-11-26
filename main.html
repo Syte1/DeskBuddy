@@ -17,6 +17,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="./styles/my_style.css">
+    <!-- <link rel="stylesheet" href="./styles/login.css"> -->
 
     <!-- Firebase 8 CDNs-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -58,7 +59,6 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
                             <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
-                            <li><a class="dropdown-item text-dark" href="#">Profile</a></li>
                             <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
                         </ul>
                     </li>
@@ -70,7 +70,7 @@
             </div>
         </div>
     </nav>
-    <div class="bg-light rounded-3">
+    <div class="rounded-3" style="background-color: #F9F3DF;">
         <div class="container-fluid bg-gradient bg-warning bg-secondary rounded-3 py-2 col-10">
             <span class="col-md-12 fs-4" style="color:black;">Your next notification is in </span>
             <span id="days" class="time-element"></span>
@@ -80,12 +80,12 @@
             <h2 id="end"></h2>
         </div>
     </div>
-    <div class="bg-light rounded-3">
-        <div class="p-5 bg-light rounded-3">
+    <div class="rounded-3">
+        <div class="p-5 rounded-3" style="background-color: #F9F3DF;">
             <img src="images/DeskBuddy logo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
-            <p class="pt-5 pb-0" style="font-size: 30px">Welcome Back,</p>
-            <p class="pb-2 pt-0" id="username" style="font-size: 30px">Username</p>
+            <h1 class="display-5 pt-5">Welcome Back,</h1>
+            <p class="display-5" id="username">Username</p>
             <p class="col-md-12 fs-4">Looking to change up your reminders?</p>
             <br>
             <a href="notificationtime.html" class="display-5 btn btn-primary btn-lg " role="button"
@@ -143,18 +143,25 @@
         </div>
     </div>
 
-    <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
-        <button class="btn material-icons bg-dark">
-            <a href="break-page.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+    <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
+        <button class="btn bg-dark">
+            <div>
+                <a href="break-page.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+                <p style="color: white;">Breaks</p>
+            </div>
         </button>
-        <button class="btn material-icons bg-dark">
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+        <button class="btn bg-dark">
+            <div>
+                <a href="main.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+                <p style="color: whitesmoke;">Home</p>
+            </div>
         </button>
-        <button class="btn material-icons bg-dark">
+        <button class="btn bg-dark">
             <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
                 onclick="history.back()">arrow_back</a>
+            <p style="color: whitesmoke;">Back</p>
         </button>
     </footer>
 
@@ -197,7 +204,15 @@
         // Run myfunc every second
 
         setInterval(function () {
+        // The data/time we want to countdown to
+        // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
+        var frequency = 5000
 
+        function hide_button() {
+            $('#myModal').modal('hide');
+        }
+
+        setInterval(function () {
 
             var now = new Date().getTime();
             var timeleft = countDownDate - now;
@@ -221,7 +236,7 @@
                 $('#myModal').modal('show');
 
                 // document.getElementById("days").innerHTML = ""
-                // document.getElementById("hours").innerHTML = "" 
+                // document.getElementById("hours").innerHTML = ""
                 // document.getElementById("mins").innerHTML = ""
                 // document.getElementById("secs").innerHTML = ""
                 // document.getElementById("end").innerHTML = "Time to take a break!"
@@ -232,9 +247,9 @@
         async function getCSVdata() {
             const response = await fetch('quotes.csv'); //send get request
             const data = await response.text(); //get file response
-            const list = data.split('\n').slice(1); //get line 
+            const list = data.split('\n').slice(1); //get line
             list.forEach(row => {
-                const columns = row.split(','); //get token 
+                const columns = row.split(','); //get token
                 const author = columns[0]; // author name
                 const quote = columns[1]; //quote
                 console.log(author, quote)
