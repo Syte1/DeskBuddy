@@ -20,9 +20,12 @@ body{
     font-family: 'Manrope', sans-serif;
 }
 .accordion-button.collapsed {
-    background-color: rgb(207, 228, 225);
+    background-color: rgb(218, 236, 233);
     border-radius: 3%;
     font-size: 15pt;
+}
+#break-title {
+    font-size: 50pt;;
 }
 #main-body{
     width: 100vw;

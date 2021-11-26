@@ -58,6 +58,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
                             <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
+                            <li><a class="dropdown-item text-dark" href="#">Profile</a></li>
                             <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
                         </ul>
                     </li>
@@ -69,7 +70,7 @@
             </div>
         </div>
     </nav>
-    <div class="rounded-3" style="background-color: #F9F3DF;">
+    <div class="bg-light rounded-3">
         <div class="container-fluid bg-gradient bg-warning bg-secondary rounded-3 py-2 col-10">
             <span class="col-md-12 fs-4" style="color:black;">Your next notification is in </span>
             <span id="days" class="time-element"></span>
@@ -79,12 +80,12 @@
             <!-- <h2 id="end"></h2> -->
         </div>
     </div>
-    <div class="rounded-3">
-        <div class="p-5 rounded-3" style="background-color: #F9F3DF;">
+    <div class="bg-light rounded-3">
+        <div class="p-5 bg-light rounded-3">
             <img src="images/DeskBuddy logo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
-            <h1 class="display-5 pt-5">Welcome Back,</h1>
-            <p class="display-5" id="username">Username</p>
+            <p class="pt-5 pb-0" style="font-size: 30px">Welcome Back,</p>
+            <p class="pb-2 pt-0" id="username" style="font-size: 30px">Username</p>
             <p class="col-md-12 fs-4">Looking to change up your reminders?</p>
             <br>
             <a href="notificationtime.html" class="display-5 btn btn-primary btn-lg " role="button" aria-pressed="true">Change Notifications</a>
@@ -96,10 +97,10 @@
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <div class="slide first">
-                <img src="images\exercise.jpg" alt="exercise" id="first-picture">
+                <img src="images\exercise.jpg" alt="exercise">
             </div>
-            <div class="slide" id="pictures2">
-                <img src="images\stretch.jpg" alt="stretching" id="second-picture">
+            <div class="slide">
+                <img src="images\stretch.jpg" alt="stretching">
             </div>
             <div class="slide">
                 <img src="images\meditation.jpg" alt="meditation">
@@ -118,25 +119,18 @@
     </div>
 
     
-    <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark">
-            <div>
-            <a href="break-page.html" class="material-icons"
+    <footer class="fixed-bottom navbar justify-content-evenly bg-dark">
+        <button class="btn material-icons bg-dark">
+            <a href="break-types.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
-            <p style="color: white;">Breaks</p>
-            </div>
         </button>
-        <button class="btn bg-dark">
-            <div>
+        <button class="btn material-icons bg-dark">
             <a href="main.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
-                <p style="color: whitesmoke;">Home</p>
-            </div>
         </button>
-        <button class="btn bg-dark">
-                <a class="material-icons"
+        <button class="btn material-icons bg-dark">
+            <a class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
-                <p style="color: whitesmoke;">Back</p>
         </button>
     </footer>
     
@@ -165,12 +159,12 @@
         insertName();
     // The data/time we want to countdown to
     // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-    var frequency = 10000
+    var frequency = 1800000
 
     var countDownDate = new Date().getTime() + frequency;
     // Run myfunc every second
     setInterval(function() {
-        
+
     
     var now = new Date().getTime();
     var timeleft = countDownDate - now;
@@ -182,26 +176,21 @@
     var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
         
     // Result is output to the specific element
+    // document.getElementById("days").innerHTML = days + "d "
     document.getElementById("hours").innerHTML = hours + "h " 
     document.getElementById("mins").innerHTML = minutes + "m " 
     document.getElementById("secs").innerHTML = seconds + "s " 
-    
+        
     // Display the message when countdown is over
     if (timeleft < 0) {
-        timeleft = 0;
-        
+
         document.getElementById("days").innerHTML = ""
         document.getElementById("hours").innerHTML = "" 
         document.getElementById("mins").innerHTML = ""
         document.getElementById("secs").innerHTML = ""
-        document.getElementById("end").innerHTML = "Time to take a break!"
+        // document.getElementById("end").innerHTML = "TIME UP!!"
     }
     }, 1000);
-    $.each( $('*'), function() { 
-    if( $(this).width() > $('body').width()) {
-        console.log("Wide Element: ", $(this), "Width: ", $(this).width()); 
-    } 
-});
     </script>
 </body>
 
