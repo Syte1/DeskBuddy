@@ -2,11 +2,11 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <title>DeskBuddy|Main</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -81,7 +81,7 @@
     </div>
     <div class="rounded-3">
         <div class="p-5 rounded-3" style="background-color: #F9F3DF;">
-            <img src="images/DeskBuddy logo.png" class="img-fluid" alt="Responsive image"
+            <img src="images/DeskBuddylogo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
             <h1 class="display-5 pt-5">Welcome Back,</h1>
             <p class="display-5" id="username">Username</p>
@@ -97,13 +97,13 @@
             <input type="radio" name="radio-btn" id="radio2">
             <input type="radio" name="radio-btn" id="radio3">
             <div class="slide first">
-                <img src="images\exercise.jpg" alt="exercise">
+                <img src="./images/exercise.jpg" alt="exercise">
             </div>
             <div class="slide">
-                <img src="images\stretch.jpg" alt="stretching">
+                <img src="./images/stretch.jpg" alt="stretching">
             </div>
             <div class="slide">
-                <img src="images\meditation.jpg" alt="meditation">
+                <img src="./images/meditation.jpg" alt="meditation">
             </div>
             <div class="navigation-auto">
                 <div class="auto-btn1"></div>
@@ -119,7 +119,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -143,25 +143,21 @@
     </div>
 
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark">
-            <div>
-                <a href="break-page.html" class="material-icons"
-                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
-                <p style="color: white;">Breaks</p>
-            </div>
-        </button>
-        <button class="btn bg-dark">
-            <div>
-                <a href="main.html" class="material-icons"
-                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
-                <p style="color: whitesmoke;">Home</p>
-            </div>
-        </button>
-        <button class="btn bg-dark">
+        <div class="btn bg-dark btn">
+            <a href="break-page.html" class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+            <p style="color: white;">Breaks</p>
+        </div>
+        <div class="btn bg-dark btn">
+            <a href="main.html" class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+            <p style="color: whitesmoke;">Home</p>
+        </div>
+        <div class="btn bg-dark">
             <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
                 onclick="history.back()">arrow_back</a>
             <p style="color: whitesmoke;">Back</p>
-        </button>
+        </div>
     </footer>
 
     <script>
@@ -196,6 +192,10 @@
             $('#myModal').modal('hide');
         }
 
+        function hide_button() {
+            $('#myModal').modal('hide');
+        }
+
         function refreshtime() {
             countDownDate = new Date().getTime() + frequency
         }
@@ -204,64 +204,53 @@
 
         setInterval(function () {
 
-                    // The data/time we want to countdown to
-                    // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-                    var frequency = 5000
+            var now = new Date().getTime();
+            var timeleft = countDownDate - now;
 
-                    function hide_button() {
-                        $('#myModal').modal('hide');
-                    }
+            // Calculating the days, hours, minutes and seconds left
+            // var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
 
-                    setInterval(function () {
+            // Result is output to the specific element
+            // document.getElementById("days").innerHTML = days + "d "
+            document.getElementById("hours").innerHTML = hours + "h "
+            document.getElementById("mins").innerHTML = minutes + "m "
+            document.getElementById("secs").innerHTML = seconds + "s "
 
+            // Display the message when countdown is over
 
-                        var now = new Date().getTime();
-                        var timeleft = countDownDate - now;
+            if (timeleft < 1) {
+                refreshtime()
+                $('#myModal').modal('show');
 
-                        // Calculating the days, hours, minutes and seconds left
-                        // var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-                        var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                        var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-                        var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+                // document.getElementById("days").innerHTML = ""
+                // document.getElementById("hours").innerHTML = "" 
+                // document.getElementById("mins").innerHTML = ""
+                // document.getElementById("secs").innerHTML = ""
+                // document.getElementById("end").innerHTML = "Time to take a break!"
+                return;
+            }
+        }, 1000)
 
-                        // Result is output to the specific element
-                        // document.getElementById("days").innerHTML = days + "d "
-                        document.getElementById("hours").innerHTML = hours + "h "
-                        document.getElementById("mins").innerHTML = minutes + "m "
-                        document.getElementById("secs").innerHTML = seconds + "s "
+        async function getCSVdata() {
+            const response = await fetch('quotes.csv'); //send get request
+            const data = await response.text(); //get file response
+            const list = data.split('\n').slice(1); //get line 
+            list.forEach(row => {
+                const columns = row.split('.'); //get token 
+                const author = columns[0]; // author name
+                const quote = columns[1]; //quote
+                console.log(author, quote)
+                db.collection("quotes").add({ //write to firestore
+                    name: author,
+                    details: quote
+                })
+            });
+        }
 
-                        // Display the message when countdown is over
-
-                        if (timeleft < 1) {
-                            refreshtime()
-                            $('#myModal').modal('show');
-
-                            // document.getElementById("days").innerHTML = ""
-                            // document.getElementById("hours").innerHTML = "" 
-                            // document.getElementById("mins").innerHTML = ""
-                            // document.getElementById("secs").innerHTML = ""
-                            // document.getElementById("end").innerHTML = "Time to take a break!"
-                            return;
-                        }
-                    }, 1000)
-
-                    async function getCSVdata() {
-                        const response = await fetch('quotes.csv'); //send get request
-                        const data = await response.text(); //get file response
-                        const list = data.split('\n').slice(1); //get line 
-                        list.forEach(row => {
-                            const columns = row.split('.'); //get token 
-                            const author = columns[0]; // author name
-                            const quote = columns[1]; //quote
-                            console.log(author, quote)
-                            db.collection("quotes").add({   //write to firestore
-                                name: author,
-                                details: quote
-                            })
-                        });
-                    }
-
-                    getCSVdata()
+        getCSVdata()
     </script>
 </body>
 
