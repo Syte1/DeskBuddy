@@ -120,7 +120,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
-        aria-hidden="true">
+        aria-hidden="true" onclick="hide_button()">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -129,7 +129,7 @@
             <span aria-hidden="true">&times;</span>
           </button> -->
                 </div>
-                <div class="modal-body text-center" onclick="hide_button()">
+                <div class="modal-body text-center">
                     <p> It's time for a break!</p>
                     <p> Check the breaks page for suggestions.</p>
                     <p> Click anywhere to close</p>
@@ -189,13 +189,9 @@
         var frequency = 5000
 
         function hide_button() {
+            document.getElementById("end").innerHTML = ""
             $('#myModal').modal('hide');
         }
-
-        function hide_button() {
-            $('#myModal').modal('hide');
-        }
-
         function refreshtime() {
             countDownDate = new Date().getTime() + frequency
         }
@@ -225,11 +221,11 @@
                 refreshtime()
                 $('#myModal').modal('show');
 
-                // document.getElementById("days").innerHTML = ""
-                // document.getElementById("hours").innerHTML = "" 
-                // document.getElementById("mins").innerHTML = ""
-                // document.getElementById("secs").innerHTML = ""
-                // document.getElementById("end").innerHTML = "Time to take a break!"
+                document.getElementById("days").innerHTML = ""
+                document.getElementById("hours").innerHTML = "" 
+                document.getElementById("mins").innerHTML = ""
+                document.getElementById("secs").innerHTML = ""
+                document.getElementById("end").innerHTML = "Time to take a break!"
                 return;
             }
         }, 1000)
