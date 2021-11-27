@@ -45,7 +45,7 @@
     <script src="./scripts/mdtimepicker.js"></script>
 </head>
 
-<body style="text-align: center;">
+<body style="text-align: center; background-image: url('images/clockbanner1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -81,7 +81,7 @@
             </div>
         </div>
     </nav>
-    <div style="background-image: url('images/clockbanner1.png'); background-size: cover; background-position: center;">
+    <div">
     <container id="bigGrid">
 
         <h1 class="fw-bold" id="bigHeader">Notification Time:</h1>
@@ -93,16 +93,10 @@
         grid-row: 6;" id="secondclock" placeholder="11:59 PM"/>
 
 
-        <div class="btn-group btn-group-toggle" data-toggle="buttons"></div>
+        <div class="btn-group btn-group-toggle" gw data-toggle="buttons"></div>
             <input type="checkbox" class="btn-check" id="btn-check-1-outlined" autocomplete="off" name="Monday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-1-outlined"
                 style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%;">M</label>
-
-            <!-- Note to Self: Ask Hoda/Carly about inheriting button state/property for media query
-                <label class="btn btn-outline-dark fw-bold border-2 longText" for="btn-check-1-outlined"
-                style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%;">Mon
-            </label>
-            -->
                 <br>
             <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off" name="Tuesday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-2-outlined"
