@@ -178,6 +178,7 @@
     var mute = document.getElementById("mute");
     var text = document.getElementById("testcolor");
 
+    //Function to enable or disable the toggle switch
     function enablebtn() {
         if (vibrateSound.disabled == false && sound.disabled == false && vibrate.disabled == false && mute.disabled == false) {
             vibrateSound.disabled = true;
@@ -195,6 +196,7 @@
 
     };
 
+    //Function that saves the value of radio buttons to Firestore
     function saveUserInfo() {
         let NotificationType = document.querySelector('input[name="type"]:checked').value;
 

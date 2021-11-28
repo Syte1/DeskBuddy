@@ -157,6 +157,7 @@
             $('.timepicker').mdtimepicker(); //Initializes the time picker
         });
 
+        //Function to check which days have been checked off to store
         function SubmitInformation() {
             console.log('test')
             if (document.querySelector('input[name="Monday"]:checked') != null) {
@@ -194,14 +195,15 @@
                 value;
             } else var Sunday = "off"
 
+            //Check for time data and store
             if (document.getElementById('firstclock') != undefined) {
                 console.log("this is not null")
                 var starttime = document.getElementById('firstclock').value;
             } else document.getElementById('firstclock').value.update = "pick a time"
             var starttime = document.getElementById('firstclock').value;
             var endtime = document.getElementById('secondclock').value;
-            console.log(starttime)
-            console.log(endtime)
+            //console.log(starttime)
+            //console.log(endtime)
             if (!starttime) {
                 document.getElementById('firstclock').value = "Please enter a time";
             }
@@ -209,25 +211,25 @@
                 document.getElementById('secondclock').value = "Please enter a time";
             }
 
-            console.log(Monday)
-            console.log(Tuesday)
-            console.log(Wednesday)
-            console.log(Thursday)
-            console.log(Friday)
-            console.log(Saturday)
-            console.log(Sunday)
+            //console.log(Monday)
+            //console.log(Tuesday)
+            //console.log(Wednesday)
+            //console.log(Thursday)
+            //console.log(Friday)
+            //console.log(Saturday)
+            //console.log(Sunday)
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     var currentUser = db.collection("users").doc(user.uid)
                     var userID = user.uid;
-                    console.log(userID)
+                    //console.log(userID)
                     //get the document for current user.
                     currentUser.get()
                         .then(userDoc => {
                             //get user Email
                             // var userEmail = userDoc.data().email;
-                            // Start a new collection and add all data in it.
-                            db.collection("Days Notified").doc(userID).set({
+                            // Start a new collection and add all days and time data in it.
+                            db.collection("DaysNotified").doc(userID).set({
                                 "UserID": userID,
                                 "Monday": Monday,
                                 "Tuesday": Tuesday,
@@ -243,6 +245,7 @@
                     console.log("no user signed in");
                 }
             })
+            //Change page to notificationtype.html when button is pressed
             window.location.href = "notificationtype.html";
         }
     </script>
