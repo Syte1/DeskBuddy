@@ -24,14 +24,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
-    <!-- Firebase 8 related JS CDN -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-
     <!-- Link to the api keys for your Firebase project -->
     <script src="scripts/firebaseAPI.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -82,8 +76,9 @@
             <div class="col-md-auto border-right">
                 <div class="d-flex flex-column align-items-center text-center p-3 py-1">
                     <div id="CustomProfileImage"></div>
-                    <img class="rounded-circle mt-5"width="150px" src="images\profile.png" id="profileImage">
-                    <span id="name-goes-here" class="font-weight-bold pt-4 fw-bold">User Name</span></div>
+                    <img class="rounded-circle mt-5" width="150px" src="images\profile.png" id="profileImage">
+                    <span id="name-goes-here" class="font-weight-bold pt-4 fw-bold">User Name</span>
+                </div>
             </div>
             <div class="col-md-5 border-right">
                 <div class="p-3 py-1">
@@ -92,55 +87,61 @@
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-6 pb-3 fw-bold "><label class="labels">First Name</label>
-                            <input id="f_name" type="text" class="form-control text-center" placeholder="First Name" value="" disabled>
+                            <input id="f_name" type="text" class="form-control text-center" placeholder="First Name"
+                                value="" disabled>
                         </div>
-                        <div class="col-md-6 pb-1"><label class="labels fw-bold">Last Name</label><input id="l_name" type="text"
-                                class="form-control text-center" value="" placeholder="Last Name" disabled>
-                            </div>
+                        <div class="col-md-6 pb-1"><label class="labels fw-bold">Last Name</label><input id="l_name"
+                                type="text" class="form-control text-center" value="" placeholder="Last Name" disabled>
+                        </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-12 pb-3"><label class="labels fw-bold">Mobile</label>
-                            <input id="phone_num" type="text" class="form-control text-center" placeholder="604-111-1111" value="" disabled></div>
+                            <input id="phone_num" type="text" class="form-control text-center"
+                                placeholder="604-111-1111" value="" disabled></div>
                         <div class="col-md-12 pb-1"><label class="labels fw-bold">Address</label>
-                            <input id="address" type="text" class="form-control text-center" placeholder="555 Seymour St" value="" disabled></div>
+                            <input id="address" type="text" class="form-control text-center"
+                                placeholder="555 Seymour St" value="" disabled></div>
                     </div>
                     <div class="row mt-3">
                         <div class="col-md-6 pb-3"><label class="labels fw-bold">City</label>
-                            <input id="city" type="text" class="form-control text-center" placeholder="Vancouver" value="" disabled></div>
+                            <input id="city" type="text" class="form-control text-center" placeholder="Vancouver"
+                                value="" disabled></div>
                         <div class="col-md-6 pb-3"><label class="labels fw-bold">Country</label>
-                            <input id="country" type="text" class="form-control text-center" placeholder="Canada" value="" disabled></div>
+                            <input id="country" type="text" class="form-control text-center" placeholder="Canada"
+                                value="" disabled></div>
                         <div class="col-md-6 pb-3"><label class="labels fw-bold">State / Region</label>
-                            <input id="region" type="text" class="form-control text-center" value="" placeholder="British Columbia" disabled></div>
+                            <input id="region" type="text" class="form-control text-center" value=""
+                                placeholder="British Columbia" disabled></div>
                     </div>
                     <div class="mb-5 pb-4 text-center"><button class="btn btn-primary profile-button" type="button"
                             onclick="EditButton()">Edit</button>
-                            <button class="btn btn-primary profile-button" type="button"
+                        <button class="btn btn-primary profile-button" type="button"
                             onclick="profileEdit()">Save</button>
-                        </div>
                     </div>
-                    
+                </div>
+
             </div>
         </div>
     </div>
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
         <button class="btn bg-dark">
             <div>
-            <a href="break-page.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
-            <p style="color: white;">Breaks</p>
+                <a href="break-page.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+                <p style="color: white;">Breaks</p>
             </div>
         </button>
         <button class="btn bg-dark">
             <div>
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+                <a href="main.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
                 <p style="color: whitesmoke;">Home</p>
             </div>
         </button>
         <button class="btn bg-dark">
-                <a class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
-                <p style="color: whitesmoke;">Back</p>
+            <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
+                onclick="history.back()">arrow_back</a>
+            <p style="color: whitesmoke;">Back</p>
         </button>
     </footer>
 
@@ -165,8 +166,10 @@
         var Country = document.getElementById("country");
         var Region = document.getElementById("region");
 
+        //Function that allows button to disable or enable the input text boxes
         function EditButton() {
-            if (FirstName.disabled == false && LastName.disabled == false && PhoneNum.disabled == false && Address.disabled == false&& City.disabled == false && Country.disabled == false && Region.disabled == false) {
+            if (FirstName.disabled == false && LastName.disabled == false && PhoneNum.disabled == false && Address
+                .disabled == false && City.disabled == false && Country.disabled == false && Region.disabled == false) {
                 FirstName.disabled = true;
                 LastName.disabled = true;
                 PhoneNum.disabled = true;
@@ -174,7 +177,7 @@
                 City.disabled = true;
                 Country.disabled = true;
                 Region.disabled = true;
-            } else{
+            } else {
                 FirstName.disabled = false;
                 LastName.disabled = false;
                 PhoneNum.disabled = false;
@@ -185,7 +188,9 @@
             };
 
         };
-        function insertName() {
+
+        //Reads data from Firestore to populate the text fields as placeholders
+        function insertInfo() {
             firebase.auth().onAuthStateChanged(user => {
                 // Check if user is signed in:
                 if (user) {
@@ -199,85 +204,79 @@
                             var user_Name = userDoc.data().name;
                             var First_Name = userDoc.data().FirstName;
                             //console.log(user_Name);
-                            document.getElementById("name-goes-here").innerText = user_Name; //using javascript
+                            document.getElementById("name-goes-here").innerText =
+                                user_Name; //using javascript
                             $("#name-goes-here").text(user_Name); //using jquery
                         })
-                        db.collection("Profile").get()
-                            .then(snap=>{
-                                var i = 1;
-                                snap.forEach(doc=>{
-                                    var fname = doc.data().FirstName;
-                                    var lname = doc.data().LastName;
-                                    var address = doc.data().Address;
-                                    var phone = doc.data().PhoneNum;
-                                    var city = doc.data().City;
-                                    var country = doc.data().Country;
-                                    var region = doc.data().Region;
+                    db.collection("users").get()
+                        .then(snap => {
+                            var i = 1;
+                            snap.forEach(doc => {
+                                var fname = doc.data().FirstName;
+                                var lname = doc.data().LastName;
+                                var address = doc.data().Address;
+                                var phone = doc.data().PhoneNum;
+                                var city = doc.data().City;
+                                var country = doc.data().Country;
+                                var region = doc.data().Region;
 
-                                    
-                                    //Replaces placeholders with user data
-                                    if(!fname){
-                                        document.getElementById("f_name").placeholder;
-                                    }
-                                    else{
-                                        document.getElementById("f_name").placeholder = fname; 
-                                        $("#f_name").text(fname);
-                                    }
-                                    if(!lname){
-                                        document.getElementById("l_name").placeholder 
-                                    }
-                                    else{
-                                        document.getElementById("l_name").placeholder = lname; 
-                                        $("#l_name").text(lname);
-                                    }
-                                    if(!address){
-                                        document.getElementById("address").placeholder 
-                                    }
-                                    else{
-                                        document.getElementById("address").placeholder = address; 
-                                        $("#address").text(address);
-                                    }
-                                    if(!country){
-                                        document.getElementById("phone_num").placeholder 
-                                    }
-                                    else{
-                                        document.getElementById("phone_num").placeholder = phone;
-                                        $("#phone_num").text(phone);
-                                    }
-                                    if(!city){
-                                        document.getElementById("city").placeholder 
-                                    }
-                                    else{
-                                        document.getElementById("city").placeholder = city;
+
+                                //Replaces placeholders with user data
+                                if (!fname) {
+                                    document.getElementById("f_name").placeholder;
+                                } else {
+                                    document.getElementById("f_name").placeholder = fname;
+                                    $("#f_name").text(fname);
+                                }
+                                if (!lname) {
+                                    document.getElementById("l_name").placeholder
+                                } else {
+                                    document.getElementById("l_name").placeholder = lname;
+                                    $("#l_name").text(lname);
+                                }
+                                if (!address) {
+                                    document.getElementById("address").placeholder
+                                } else {
+                                    document.getElementById("address").placeholder = address;
+                                    $("#address").text(address);
+                                }
+                                if (!country) {
+                                    document.getElementById("phone_num").placeholder
+                                } else {
+                                    document.getElementById("phone_num").placeholder = phone;
+                                    $("#phone_num").text(phone);
+                                }
+                                if (!city) {
+                                    document.getElementById("city").placeholder
+                                } else {
+                                    document.getElementById("city").placeholder = city;
                                     $("#city").text(city);
-                                    }
-                                    if(!country){
-                                        document.getElementById("country").placeholder; 
-                                    }else{
-                                        document.getElementById("country").placeholder = country; 
+                                }
+                                if (!country) {
+                                    document.getElementById("country").placeholder;
+                                } else {
+                                    document.getElementById("country").placeholder = country;
                                     $("#country").text(country);
-                                    }
-                                    if(!region){
-                                        document.getElementById("region").placeholder; 
-                                    }else{
-                                        document.getElementById("region").placeholder = region; 
+                                }
+                                if (!region) {
+                                    document.getElementById("region").placeholder;
+                                } else {
+                                    document.getElementById("region").placeholder = region;
                                     $("#region").text(region);
-                                    }
+                                }
 
-
-
-                                    // Generates Custom profile image with user initials
-                                    if(!fname && !lname){
-                                        document.getElementById("profileImage").style.display = "block";
-                                    }
-                                    else{
-                                        var initials = fname.charAt(0)+""+lname.charAt(0);
-                                        document.getElementById("CustomProfileImage").innerHTML = initials;
-                                        document.getElementById("profileImage").style.display = "none";
-                                        document.getElementById("CustomProfileImage").style.display = "block";
-                                    }
-                                })
+                                // Generates Custom profile image with user initials
+                                if (!fname && !lname) {
+                                    document.getElementById("profileImage").style.display = "block";
+                                    //document.getElementById("CustomProfileImage").style.display = "none";
+                                } else {
+                                    var initials = fname.charAt(0) + "" + lname.charAt(0);
+                                    document.getElementById("profileImage").style.display = "none";
+                                    document.getElementById("CustomProfileImage").innerHTML = initials;
+                                    document.getElementById("CustomProfileImage").style.display = "block";
+                                }
                             })
+                        })
                 } else {
                     // No user is signed in.
                     console.log("No user logged in");
@@ -285,6 +284,7 @@
             });
         }
 
+        //Writes data to Firestore based on user input
         function profileEdit() {
             let FirstName = document.getElementById("f_name").value;
             let LastName = document.getElementById("l_name").value;
@@ -293,8 +293,8 @@
             let City = document.getElementById("city").value;
             let Country = document.getElementById("country").value;
             let Region = document.getElementById("region").value;
-            
-            
+
+
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     var currentUser = db.collection("users").doc(user.uid);
@@ -305,17 +305,17 @@
                         .then(userDoc => {
                             //get user Email
 
-                            db.collection("Profile").doc(userID).set({
-                                            UserID: userID,
-                                            UserEmail: userEmail,
-                                            FirstName: FirstName,
-                                            LastName: LastName,
-                                            PhoneNum: PhoneNum,
-                                            Address: Address,
-                                            City: City,
-                                            Country: Country,
-                                            Region: Region
-                                        });
+                            db.collection("users").doc(userID).update({
+                                UserID: userID,
+                                UserEmail: userEmail,
+                                FirstName: FirstName,
+                                LastName: LastName,
+                                PhoneNum: PhoneNum,
+                                Address: Address,
+                                City: City,
+                                Country: Country,
+                                Region: Region
+                            });
 
                         })
                 } else {
@@ -324,11 +324,9 @@
                 }
             });
         }
-        insertName();
+        insertInfo();
     </script>
 </body>
 
 
 </html>
-
-
