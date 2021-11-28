@@ -34,8 +34,8 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 </head>
 
-<body style="text-align: center;" >
-    <div style="background-image: url('images/surface.png'); background-size: cover; background-position: center">
+<body style="text-align: center; background-image: url('./images/surface.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh" >
+    <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -72,9 +72,9 @@
             </div>
         </nav>
     
-    <h1 style="padding-top: 5%; padding-bottom: 5%; position: center;">Notification Method:</h1>
+    <h1 style="padding-top: 3%; padding-bottom: 8%; position: center; font-weight: bold">Notification Method:</h1>
     <div
-        style="border: 1px solid rgb(103, 103, 105); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: rgb(104, 104, 109); ">
+        style="border: 1px solid rgb(103, 103, 105); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: rgb(104, 104, 109);  opacity: 0.8">
         <h1 style="font-size: 15px; float: left; padding-left: 5vw; color: white">Notifications On/Off Toggle</h1>
 
         <div class="form-check form-switch" style="width: 50px; margin: 0 2px; padding-left: 80%">
@@ -85,7 +85,7 @@
 
     <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
 
-    <div class="container" id="testcolor" style="color:grey;">
+    <div class="container" id="testcolor" style="color:rgb(122, 121, 121);">
         <div class="row row-cols-4">
             <div class="col">
                 <label class="form-check-label pt-5" for="inlineRadio1">
@@ -117,16 +117,16 @@
                 </label>
             </div>
             <div class="col">
-                <label class="form-check-label p-3" for="inlineRadio1">Vibrate & Sound</label>
+                <label class="form-check-label p-3 fw-bold" for="inlineRadio1">Vibrate & Sound</label>
             </div>
             <div class="col">
-                <label class="form-check-label p-3" for="inlineRadio2">Sound Only</label>
+                <label class="form-check-label p-3 fw-bold" for="inlineRadio2">Sound Only</label>
             </div>
             <div class="col">
-                <label class="form-check-label p-3" for="inlineRadio3">Vibrate Only</label>
+                <label class="form-check-label p-3 fw-bold" for="inlineRadio3">Vibrate Only</label>
             </div>
             <div class="col">
-                <label class="form-check-label p-3" for="inlineRadio4">Silent</label>
+                <label class="form-check-label p-3 fw-bold" for="inlineRadio4">Silent</label>
             </div>
             <div class="col">
                 <input class="form-check-input p-3" type="radio" id="vibrateSound" value="vibrate_sound" name="type"
@@ -144,9 +144,10 @@
         </div>
     </div>
 </div>
-    <div style="padding-top: 100px; position: center">
-        <button type="submit" class="btn btn-primary btn-lg active" onclick="saveUserInfo()"> Next </button>
+    <div style="padding-top: 18.5vh; position: center">
+        <button type="submit" class="btn btn-primary btn-lg" onclick="saveUserInfo()"> Next </button>
     </div>
+    
 
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
         <button class="btn bg-dark">
