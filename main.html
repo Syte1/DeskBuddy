@@ -194,26 +194,29 @@
         //     })
         // }
         // readquote();
+        // Math.floor(Math.random() * 20)
         function displayRandomQuote() {
+            // console.log("display calls")
             db.collection("quotes")
-                .where("position", ">", Math.floor(Math.random() * 70))
-                .limit(1)
+                .where("id", "==", Math.floor(Math.random() * 100))
                 .get()
                 .then(function (snap) {
                     snap.forEach(function (doc) {
-                        var n = doc.data().name;
-                        console.log(n);
-                        var quote = "<p> " + n + "</p";
-                        $("#quote-goes-here").append(quote);
+                        let n = doc.data().quote;
+                        let quote = "<p> " + n + "</p>";
+                        let author = doc.data().name;
+                        $("#author-goes-here").html(author);
+                        $("#quote-goes-here").html(quote);
                     })
                 })
         }
-        displayRandomQuote();
+        
 
         insertName();
         // The data/time we want to countdown to
         // var countDownDate = new Date("Nov 19, 2021 00:00").getTime();
-        var frequency = 1.8e+6 + 1500
+        // var frequency = 1.8e+6 + 1500
+        var frequency = 5000 + 1500
 
         function hide_button() {
             document.getElementById("end").innerHTML = ""
@@ -247,6 +250,7 @@
 
             if (timeleft < 1) {
                 refreshtime()
+                displayRandomQuote();
                 $('#myModal').modal('show');
 
                 document.getElementById("days").innerHTML = ""
@@ -259,18 +263,19 @@
         }, 1000)
 
         async function getCSVdata() {
-            const response = await fetch('quotes.csv'); //send get request
+            const response = await fetch("quotes.csv"); //send get request
             const data = await response.text(); //get file response
             const list = data.split('\n').slice(1); //get line 
             list.forEach(row => {
-                const columns = row.split(','); //get token 
-                const id = columns[0]; // id
+                const columns = row.split(","); //get token 
+                const id = parseInt(columns[0]); // id
                 const author = columns[1]; // author name
                 const quote = columns[2]; //quote
                 console.log(author, quote)
                 db.collection("quotes").add({ //write to firestore
+                    id: id,
                     name: author,
-                    details: quote
+                    quote: quote
                 })
             });
         }
