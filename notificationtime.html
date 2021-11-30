@@ -45,7 +45,8 @@
     <script src="./scripts/mdtimepicker.js"></script>
 </head>
 
-<body style="text-align: center; background-image: url('images/clockbanner1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
+<body
+    style="text-align: center; background-image: url('images/clockbanner.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -53,7 +54,7 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand text-dark bg" id="desk-buddy" href="#">DeskBuddy</a>
+            <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
@@ -81,23 +82,23 @@
             </div>
         </div>
     </nav>
-    <div">
-    <container id="bigGrid">
+    <div>
+        <container id="bigGrid">
 
-        <h1 class="fw-bold" id="bigHeader">Notification Time:</h1>
-        <h1 id="from">From:</h1>
-        <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
-        grid-row: 4;" id="firstclock" placeholder="12:01 AM"/>
-        <h1 id="to">To:</h1>
-        <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
-        grid-row: 6;" id="secondclock" placeholder="11:59 PM"/>
+            <h1 class="fw-bold" id="bigHeader">Notification Time:</h1>
+            <h1 id="from">From:</h1>
+            <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
+        grid-row: 4;" id="firstclock" placeholder="12:01 AM" />
+            <h1 id="to">To:</h1>
+            <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
+        grid-row: 6;" id="secondclock" placeholder="11:59 PM" />
 
 
-        <div class="btn-group btn-group-toggle" gw data-toggle="buttons"></div>
+            <div class="btn-group btn-group-toggle" gw data-toggle="buttons"></div>
             <input type="checkbox" class="btn-check" id="btn-check-1-outlined" autocomplete="off" name="Monday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-1-outlined"
                 style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%;">M</label>
-                <br>
+            <br>
             <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off" name="Tuesday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-2-outlined"
                 style="grid-row: 8; grid-column: 2; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
@@ -122,33 +123,33 @@
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-7-outlined"
                 style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label>
 
-        <br>
- 
-        <a href="#" style="grid-row: 11; grid-column: 2 /span 5;">
-            <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
-            </button>
-        </a>
-    </container>
+            <br>
+
+            <a href="#" style="grid-row: 11; grid-column: 2 /span 5;">
+                <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
+                </button>
+            </a>
+        </container>
     </div>
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
         <button class="btn bg-dark">
             <div>
-            <a href="break-page.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
-            <p style="color: white;">Breaks</p>
+                <a href="break-page.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+                <p style="color: white;">Breaks</p>
             </div>
         </button>
         <button class="btn bg-dark">
             <div>
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+                <a href="main.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
                 <p style="color: whitesmoke;">Home</p>
             </div>
         </button>
         <button class="btn bg-dark">
-                <a class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
-                <p style="color: whitesmoke;">Back</p>
+            <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
+                onclick="history.back()">arrow_back</a>
+            <p style="color: whitesmoke;">Back</p>
         </button>
     </footer>
 
