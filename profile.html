@@ -189,8 +189,49 @@
 
         };
 
-        //Reads data from Firestore to populate the text fields as placeholders
-        function insertInfo() {
+        //Writes data to Firestore based on user input
+        function profileEdit() {
+            let FirstName = document.getElementById("f_name").value;
+            let LastName = document.getElementById("l_name").value;
+            let PhoneNum = document.getElementById("phone_num").value;
+            let Address = document.getElementById("address").value;
+            let City = document.getElementById("city").value;
+            let Country = document.getElementById("country").value;
+            let Region = document.getElementById("region").value;
+
+
+            firebase.auth().onAuthStateChanged(user => {
+                if (user) {
+                    var currentUser = db.collection("users").doc(user.uid);
+                    var userID = user.uid;
+                    var userEmail = user.email;
+                    //get the document for current user.
+                    currentUser.get()
+                        .then(userDoc => {
+                            //get user Email
+
+                            db.collection("users").doc(userID).update({
+                                UserID: userID,
+                                UserEmail: userEmail,
+                                FirstName: FirstName,
+                                LastName: LastName,
+                                name: FirstName + " "+ LastName,
+                                PhoneNum: PhoneNum,
+                                Address: Address,
+                                City: City,
+                                Country: Country,
+                                Region: Region
+                            });
+
+                        })
+                } else {
+                    // No user is signed in.
+                    console.log("No user signed in");
+                }
+            });
+        }
+                //Reads data from Firestore to populate the text fields as placeholders
+                function insertInfo() {
             firebase.auth().onAuthStateChanged(user => {
                 // Check if user is signed in:
                 if (user) {
@@ -284,46 +325,6 @@
             });
         }
 
-        //Writes data to Firestore based on user input
-        function profileEdit() {
-            let FirstName = document.getElementById("f_name").value;
-            let LastName = document.getElementById("l_name").value;
-            let PhoneNum = document.getElementById("phone_num").value;
-            let Address = document.getElementById("address").value;
-            let City = document.getElementById("city").value;
-            let Country = document.getElementById("country").value;
-            let Region = document.getElementById("region").value;
-
-
-            firebase.auth().onAuthStateChanged(user => {
-                if (user) {
-                    var currentUser = db.collection("users").doc(user.uid);
-                    var userID = user.uid;
-                    var userEmail = user.email;
-                    //get the document for current user.
-                    currentUser.get()
-                        .then(userDoc => {
-                            //get user Email
-
-                            db.collection("users").doc(userID).update({
-                                UserID: userID,
-                                UserEmail: userEmail,
-                                FirstName: FirstName,
-                                LastName: LastName,
-                                PhoneNum: PhoneNum,
-                                Address: Address,
-                                City: City,
-                                Country: Country,
-                                Region: Region
-                            });
-
-                        })
-                } else {
-                    // No user is signed in.
-                    console.log("No user signed in");
-                }
-            });
-        }
         insertInfo();
     </script>
 </body>
