@@ -188,7 +188,7 @@ body{
     text-align: center;
     line-height: 150px;
     margin-top: 50px;
-    display: None;
+    display: block;
   }
 
 #profileImage{
