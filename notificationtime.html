@@ -199,8 +199,8 @@
             } else document.getElementById('firstclock').value.update = "pick a time"
             var starttime = document.getElementById('firstclock').value;
             var endtime = document.getElementById('secondclock').value;
-            //console.log(starttime)
-            //console.log(endtime)
+            console.log(starttime)
+            console.log(endtime)
             if (!starttime) {
                 document.getElementById('firstclock').value = "Please enter a time";
             }
@@ -234,8 +234,11 @@
                                 "Thursday": Thursday,
                                 "Friday": Friday,
                                 "Saturday": Saturday,
-                                "Sunday": Sunday
+                                "Sunday": Sunday,
+                                "StartTime": starttime,
+                                "EndTime": endtime
                             });
+                            setTimeout(() => {  window.location.href='notificationtype.html'; }, 200);
                         })
                 } else {
                     // No user is signed in.
@@ -243,7 +246,7 @@
                 }
             })
             //Change page to notificationtype.html when button is pressed
-            window.location.href = "notificationtype.html";
+            // 
         }
     </script>
 </body>
