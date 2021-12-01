@@ -212,13 +212,13 @@
                         //get user Email
                         var userEmail = userDoc.data().email;
                         // Start a new collection and add all data in it.
-                        db.collection("Notifications").add({
+                        db.collection("Notifications").doc(userID).set({
                             NotificationType: NotificationType,
                             UserID: userID,
                             UserEmail: userEmail,
                             ToggleOnOff: ToggleOnOff
                         });
-                        setTimeout(() => {  window.location.href='completed-setup.html'; }, 200);
+                        setTimeout(() => {  window.location.href='completed-setup.html'; }, 500);
                     })
             } else {
                 // No user is signed in.
