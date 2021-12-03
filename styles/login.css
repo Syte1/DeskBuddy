@@ -44,3 +44,7 @@
 	font-family: 'Andada Pro', serif;
 	font-family: 'Lato', sans-serif;
 }
+
+.bottom-nav-button:hover {
+    opacity: 0.5;
+}

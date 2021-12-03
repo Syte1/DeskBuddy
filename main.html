@@ -123,41 +123,40 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="$('#myModal').modal('toggle');">
-            <span aria-hidden="true">&times;</span>
-          </button> -->
                 </div>
                 <div class="modal-body text-center" onclick="hide_button()">
                     <p id="quote-goes-here" style="font-weight: bold; font-size: 15pt;"></p>
                     <p id="author-goes-here" style="font-style: italic; text-align: center;"></p>
                     <p>Check the breaks page for suggestions</p>
                     <p style="font-size: 8pt;"> Click anywhere to close</p>
-
                 </div>
-                <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="$('#myModal').modal('hide');" >Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div> -->
+
             </div>
         </div>
     </div>
 
+    <!-- Standard footer -->
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
-            <a href="break-page.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
-            <p style="color: white;">Breaks</p>
-        </button>
-        <button class="btn bg-dark" onclick="window.location.href='main.html'">
-            <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
-            <p style="color: whitesmoke;">Home</p>
-        </button>
-        <button class="btn bg-dark" onclick="history.back()">
-            <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
-                onclick="history.back()">arrow_back</a>
-            <p style="color: whitesmoke;">Back</p>
-        </button>
+        <div class="bottom-nav-button">
+            <div class="btn bg-dark" onclick="window.location.href='break-page.html'">
+                <a href="break-page.html" class="material-icons"
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+                <p style="color: white;">Breaks</p>
+            </div>
+        </div>
+        <div class="bottom-nav-button">
+            <div class="btn bg-dark" onclick="window.location.href='main.html'">
+                <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
+                <p style="color: whitesmoke;">Home</p>
+            </div>
+        </div>
+        <div class="bottom-nav-button">
+            <div class="btn bg-dark" onclick="history.back()">
+                <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
+                    onclick="history.back()">arrow_back</a>
+                <p style="color: whitesmoke;">Back</p>
+            </div>
+        </div>
     </footer>
 
     <script src="scripts/main.js"></script>
