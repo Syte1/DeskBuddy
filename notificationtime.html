@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+
     <title>DeskBuddy|Notification time</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -39,7 +39,7 @@
     <!-- Import JQuery -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet">
 
     <!-- Import our JS -->
     <script src="./scripts/mdtimepicker.js"></script>
@@ -96,7 +96,7 @@
     </nav>
     <div>
         <!-- CSS grid for most of the page -->
-        <container id="bigGrid">
+        <div id="bigGrid">
             <!-- title -->
             <h1 class="fw-bold" id="bigHeader">Notification Time:</h1>
             <!-- from time -->
@@ -111,38 +111,38 @@
 
             <!-- Days of the week go here -->
             <!-- Monday -->
-            <div class="btn-group btn-group-toggle" gw data-toggle="buttons"></div>
-            <input type="checkbox" class="btn-check" id="btn-check-1-outlined" autocomplete="off" name="Monday">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons"></div>
+            <input type="checkbox" class="btn-check" id="btn-check-1-outlined" name="Monday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-1-outlined"
                 style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%;">M</label>
             <br>
             <!-- Tuesday -->
-            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off" name="Tuesday">
+            <input type="checkbox" class="btn-check" id="btn-check-2-outlined" name="Tuesday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-2-outlined"
                 style="grid-row: 8; grid-column: 2; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
 
             <!-- Wednesday -->
-            <input type="checkbox" class="btn-check" id="btn-check-3-outlined" autocomplete="off" name="Wednesday">
+            <input type="checkbox" class="btn-check" id="btn-check-3-outlined" name="Wednesday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-3-outlined"
                 style="grid-row: 8; grid-column: 3; margin-left: 5px; margin-right: 5px; font-size: 150%;">W</label><br>
 
             <!-- Thursday -->
-            <input type="checkbox" class="btn-check" id="btn-check-4-outlined" autocomplete="off" name="Thursday">
+            <input type="checkbox" class="btn-check" id="btn-check-4-outlined" name="Thursday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-4-outlined"
                 style="grid-row: 8; grid-column: 4; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
 
             <!-- Friday -->
-            <input type="checkbox" class="btn-check" id="btn-check-5-outlined" autocomplete="off" name="Friday">
+            <input type="checkbox" class="btn-check" id="btn-check-5-outlined" name="Friday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-5-outlined"
                 style="grid-row: 8; grid-column: 5; margin-left: 5px; margin-right: 5px; font-size: 150%">F</label><br>
 
             <!-- Saturday -->
-            <input type="checkbox" class="btn-check" id="btn-check-6-outlined" autocomplete="off" name="Saturday">
+            <input type="checkbox" class="btn-check" id="btn-check-6-outlined" name="Saturday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-6-outlined"
                 style="grid-row: 8; grid-column: 6; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
             <!-- Sunday -->
-            <input type="checkbox" class="btn-check" id="btn-check-7-outlined" autocomplete="off" name="Sunday">
+            <input type="checkbox" class="btn-check" id="btn-check-7-outlined" name="Sunday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-7-outlined"
                 style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label>
 
@@ -150,30 +150,30 @@
 
             <!-- Next button -->
             <a href="#" style="grid-row: 11; grid-column: 2 /span 5;">
-                <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
-                </button>
+                <div class="button btn btn-primary btn-lg" onclick="SubmitInformation()">Next
+                </div>
             </a>
-        </container>
+        </div>
     </div>
     <!-- Standard footer -->
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
+        <div class="btn bg-dark button" onclick="window.location.href='break-page.html'">
             <!-- Breaks page -->
             <a href="break-page.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
             <p style="color: white;">Breaks</p>
-        </button>
+        </div>
         <!-- Home button -->
-        <button class="btn bg-dark" onclick="window.location.href='main.html'">
+        <div class="btn bg-dark button" onclick="window.location.href='main.html'">
             <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
             <p style="color: whitesmoke;">Home</p>
-        </button>
+        </div>
         <!-- Back button -->
-        <button class="btn bg-dark" onclick="history.back()">
+        <div class="btn bg-dark button" onclick="history.back()">
             <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
                 onclick="history.back()">arrow_back</a>
             <p style="color: whitesmoke;">Back</p>
-        </button>
+        </div>
     </footer>
     <!-- Custom JS for this page -->
     <script src="scripts/notificationtime.js"></script>
