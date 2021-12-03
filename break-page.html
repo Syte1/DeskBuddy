@@ -142,48 +142,23 @@
   </div>
 
   <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-    <button class="btn bg-dark">
-        <div>
+    <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
         <a href="break-page.html" class="material-icons"
             style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
         <p style="color: white;">Breaks</p>
-        </div>
     </button>
-    <button class="btn bg-dark">
-        <div>
-        <a href="main.html" class="material-icons"
-            style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+    <button class="btn bg-dark" onclick="window.location.href='main.html'">
+        <p class="material-icons"
+            style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
             <p style="color: whitesmoke;">Home</p>
-        </div>
     </button>
-    <button class="btn bg-dark">
+    <button class="btn bg-dark" onclick="history.back()">
             <a class="material-icons"
             style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
             <p style="color: whitesmoke;">Back</p>
     </button>
 </footer>
 </body>
-<script>
-  function displayBreaks() {
-    // pull information from nutritional breaks
-    db.collection("BreakTypes").doc("NutritionalBreaks")
-      .onSnapshot(BreaksDoc => {
-        document.getElementById("water").innerText = BreaksDoc.data().water;
-        document.getElementById("food").innerText = BreaksDoc.data().food;
-      })
-    // pull information from exercise breaks
-    db.collection("BreakTypes").doc("ExerciseBreaks")
-      .onSnapshot(BreaksDoc => {
-        document.getElementById("stretch").innerText = BreaksDoc.data().stretch;
-      })
-    // pull information from relaxation breaks
-    db.collection("BreakTypes").doc("RelaxationBreaks")
-    .onSnapshot(BreaksDoc => {
-      document.getElementById("meditation").innerText = BreaksDoc.data().meditation;
-    })
-
-  }
-  displayBreaks();
-</script>
+<script src="scripts/break-page.js"></script>
 
 </html>

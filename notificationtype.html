@@ -34,13 +34,14 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 </head>
 
-<body style="text-align: center; background-image: url('./images/surface.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh" >
+<body
+    style="text-align: center; background-image: url('./images/surface.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
@@ -71,165 +72,104 @@
                 </div>
             </div>
         </nav>
-    
-    <h1 style="padding-top: 3%; padding-bottom: 8%; position: center; font-weight: bold">Notification Method:</h1>
-    <div
-        style="border: 1px solid rgb(103, 103, 105); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: rgb(104, 104, 109);  opacity: 0.8">
-        <h1 style="font-size: 15px; float: left; padding-left: 5vw; color: white">Notifications On/Off Toggle</h1>
 
-        <div class="form-check form-switch" style="width: 50px; margin: 0 2px; padding-left: 80%">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
-                style="height: 30px; width: 65px;" name="toggle" value="off" onchange="enablebtn()">
-        </div>
-    </div>
+        <h1 style="padding-top: 3%; padding-bottom: 8%; position: center; font-weight: bold">Notification Method:</h1>
+        <div
+            style="border: 1px solid rgb(103, 103, 105); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: rgb(104, 104, 109);  opacity: 0.8">
+            <h1 style="font-size: 15px; float: left; padding-left: 5vw; color: white">Notifications On/Off Toggle</h1>
 
-    <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
-
-    <div class="container" id="testcolor" style="color:rgb(122, 121, 121);">
-        <div class="row row-cols-4">
-            <div class="col">
-                <label class="form-check-label pt-5" for="inlineRadio1">
-                    <span class="material-icons" style="font-size: 25px;">
-                        volume_up
-                        vibration
-                    </span>
-                </label>
-            </div>
-            <div class="col">
-                <label class="form-check-label pt-5" for="inlineRadio2">
-                    <span class="material-icons" style="font-size: 30px;">
-                        volume_up
-                    </span>
-                </label>
-            </div>
-            <div class="col">
-                <label class="form-check-label pt-5" for="inlineRadio3">
-                    <span class="material-icons" style="font-size: 30px;">
-                        vibration
-                    </span>
-                </label>
-            </div>
-            <div class="col">
-                <label class="form-check-label pt-5" for="inlineRadio4">
-                    <span class="material-icons" style="font-size: 30px;">
-                        volume_off
-                    </span>
-                </label>
-            </div>
-            <div class="col">
-                <label class="form-check-label p-3 fw-bold" for="inlineRadio1">Vibrate & Sound</label>
-            </div>
-            <div class="col">
-                <label class="form-check-label p-3 fw-bold" for="inlineRadio2">Sound Only</label>
-            </div>
-            <div class="col">
-                <label class="form-check-label p-3 fw-bold" for="inlineRadio3">Vibrate Only</label>
-            </div>
-            <div class="col">
-                <label class="form-check-label p-3 fw-bold" for="inlineRadio4">Silent</label>
-            </div>
-            <div class="col">
-                <input class="form-check-input p-3" type="radio" id="vibrateSound" value="vibrate_sound" name="type"
-                style="border: 2px solid rgb(145, 144, 144)" disabled>
-            </div>
-            <div class="col">
-                <input class="form-check-input p-3" type="radio" id="soundOnly" value="sound" name="type"  style="border: 2px solid rgb(145, 144, 144)" disabled>
-            </div>
-            <div class="col">
-                <input class="form-check-input p-3" type="radio" id="vibrateOnly" value="vibrate" name="type"  style="border: 2px solid rgb(145, 144, 144)" disabled>
-            </div>
-            <div class="col">
-                <input class="form-check-input p-3" type="radio" id="mute" value="silent" name="type" style="border: 2px solid rgb(145, 144, 144)" disabled>
+            <div class="form-check form-switch" style="width: 50px; margin: 0 2px; padding-left: 80%">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"
+                    style="height: 30px; width: 65px;" name="toggle" value="off" onchange="enablebtn()">
             </div>
         </div>
+
+        <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
+
+        <div class="container" id="testcolor" style="color:rgb(122, 121, 121);">
+            <div class="row row-cols-4">
+                <div class="col">
+                    <label class="form-check-label pt-5" for="inlineRadio1">
+                        <span class="material-icons" style="font-size: 25px;">
+                            volume_up
+                            vibration
+                        </span>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label pt-5" for="inlineRadio2">
+                        <span class="material-icons" style="font-size: 30px;">
+                            volume_up
+                        </span>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label pt-5" for="inlineRadio3">
+                        <span class="material-icons" style="font-size: 30px;">
+                            vibration
+                        </span>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label pt-5" for="inlineRadio4">
+                        <span class="material-icons" style="font-size: 30px;">
+                            volume_off
+                        </span>
+                    </label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label p-3 fw-bold" for="inlineRadio1">Vibrate & Sound</label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label p-3 fw-bold" for="inlineRadio2">Sound Only</label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label p-3 fw-bold" for="inlineRadio3">Vibrate Only</label>
+                </div>
+                <div class="col">
+                    <label class="form-check-label p-3 fw-bold" for="inlineRadio4">Silent</label>
+                </div>
+                <div class="col">
+                    <input class="form-check-input p-3" type="radio" id="vibrateSound" value="vibrate_sound" name="type"
+                        style="border: 2px solid rgb(145, 144, 144)" disabled>
+                </div>
+                <div class="col">
+                    <input class="form-check-input p-3" type="radio" id="soundOnly" value="sound" name="type"
+                        style="border: 2px solid rgb(145, 144, 144)" disabled>
+                </div>
+                <div class="col">
+                    <input class="form-check-input p-3" type="radio" id="vibrateOnly" value="vibrate" name="type"
+                        style="border: 2px solid rgb(145, 144, 144)" disabled>
+                </div>
+                <div class="col">
+                    <input class="form-check-input p-3" type="radio" id="mute" value="silent" name="type"
+                        style="border: 2px solid rgb(145, 144, 144)" disabled>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
     <div style="padding-top: 18.5vh; position: center">
         <button type="submit" class="btn btn-primary btn-lg" onclick="saveUserInfo()"> Next </button>
     </div>
-    
+
 
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark">
-            <div>
+        <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
             <a href="break-page.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
             <p style="color: white;">Breaks</p>
-            </div>
         </button>
-        <button class="btn bg-dark">
-            <div>
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
-                <p style="color: whitesmoke;">Home</p>
-            </div>
+        <button class="btn bg-dark" onclick="window.location.href='main.html'">
+            <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
+            <p style="color: whitesmoke;">Home</p>
         </button>
-        <button class="btn bg-dark">
-                <a class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
-                <p style="color: whitesmoke;">Back</p>
+        <button class="btn bg-dark" onclick="history.back()">
+            <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
+                onclick="history.back()">arrow_back</a>
+            <p style="color: whitesmoke;">Back</p>
         </button>
     </footer>
 </body>
-<script>
-    var vibrateSound = document.getElementById("vibrateSound");
-    var sound = document.getElementById("soundOnly");
-    var vibrate = document.getElementById("vibrateOnly");
-    var mute = document.getElementById("mute");
-    var text = document.getElementById("testcolor");
-
-    //Function to enable or disable the toggle switch
-    function enablebtn() {
-        if (vibrateSound.disabled == false && sound.disabled == false && vibrate.disabled == false && mute.disabled == false) {
-            vibrateSound.disabled = true;
-            sound.disabled = true;
-            vibrate.disabled = true;
-            mute.disabled = true;
-            text.style.color = "grey";
-        } else{
-            vibrateSound.disabled = false;
-            sound.disabled = false;
-            vibrate.disabled = false;
-            mute.disabled = false;
-            text.style.color = "black";
-        };
-
-    };
-
-    //Function that saves the value of radio buttons to Firestore
-    function saveUserInfo() {
-        let NotificationType = document.querySelector('input[name="type"]:checked').value;
-
-        if (document.querySelector('input[name="toggle"]:checked') != null) {
-            var ToggleOnOff = document.querySelector('input[name="toggle"]:checked').value;
-        } else {
-            var ToggleOnOff = "off"
-        }
-
-        firebase.auth().onAuthStateChanged(user => {
-            if (user) {
-                var currentUser = db.collection("users").doc(user.uid)
-                var userID = user.uid;
-                //get the document for current user.
-                currentUser.get()
-                    .then(userDoc => {
-                        //get user Email
-                        var userEmail = userDoc.data().email;
-                        // Start a new collection and add all data in it.
-                        db.collection("Notifications").add({
-                            NotificationType: NotificationType,
-                            UserID: userID,
-                            UserEmail: userEmail,
-                            ToggleOnOff: ToggleOnOff
-                        });
-                    })
-            } else {
-                // No user is signed in.
-                console.log("No user signed in");
-            }
-        });
-        window.location.href = "completed-setup.html";
-    }
-</script>
+<script src="scripts/notificationtype.js"></script>
 
 </html>

@@ -17,7 +17,7 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="/scripts/my_script.js"></script>
+        <!-- <script src="/scripts/my_script.js"></script> -->
 
         <!-- Firebase 8 CDNs-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -82,21 +82,17 @@
         </div>
     </div>
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark">
-            <div>
+        <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
             <a href="break-page.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
             <p style="color: white;">Breaks</p>
-            </div>
         </button>
-        <button class="btn bg-dark">
-            <div>
-            <a href="main.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
+        <button class="btn bg-dark" onclick="window.location.href='main.html'">
+            <p class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
                 <p style="color: whitesmoke;">Home</p>
-            </div>
         </button>
-        <button class="btn bg-dark">
+        <button class="btn bg-dark" onclick="history.back()">
                 <a class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
                 <p style="color: whitesmoke;">Back</p>

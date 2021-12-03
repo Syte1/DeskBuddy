@@ -46,3 +46,10 @@ Tips for file naming files and folders:
 * use lowercase with no spaces
 * use dashes (not underscore) for word separation
 
+
+## Acknowledgements
+* <a href="https://unsplash.com/"> Photos and Images </a>
+* <a href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css"> Firebase CSS </a>
+* <a href="https://fonts.googleapis.com/icon?family=Material+Icons"> Google Fonts </a>
+* <a href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"> Bootstrap CSS </a>
+* <a href="https://unsplash.com"> Stock Images </a>
