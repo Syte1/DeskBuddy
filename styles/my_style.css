@@ -5,39 +5,39 @@
     font-size: 56px;
 }
 
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; */
-/* } */
 .time-element {
     font-size: 25px;
 }
 
-body{
+body {
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: 'Manrope', sans-serif;
 }
+
 .accordion-button.collapsed {
     background-color: rgb(218, 236, 233);
     border-radius: 3%;
     font-size: 15pt;
 }
+
 #break-title {
-    font-size: 50pt;;
+    font-size: 50pt;
+    ;
 }
+
 .break-page {
-	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
-	background-size: 200% 200%;
-	animation: gradient 10s ease-in-out infinite;
-	height: 100vh;
+    background: linear-gradient(-45deg, #ffd89b, #ffd89b, #1e6594, #1e6594);
+    background-size: 200% 200%;
+    animation: gradient 10s ease-in-out infinite;
+    height: 100vh;
     position: relative;
 }
+
 #bigGrid {
     height: 70vh;
     width: 100vw;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(7, 14.2%);
     grid-template-rows: repeat(10, 10%);
 }
@@ -53,6 +53,7 @@ body{
     grid-row: 4;
     padding-top: 12%;
 }
+
 #to {
     grid-column: 2;
     grid-row: 6;
@@ -89,7 +90,7 @@ body{
 
 
 /* Toggle buttons for notificationtime.html */
-.btn{
+.btn {
     white-space: nowrap;
     overflow: hidden;
 
@@ -144,26 +145,29 @@ body{
     transition: 1s;
 }
 
-.manual-btn:not(:last-child){
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
 
-.manual-btn:hover{
+.manual-btn:hover {
     background: #40D3DC;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked~.first {
     margin-left: 0%;
 }
 
-#radio2:checked ~ .first{
+#radio2:checked~.first {
     margin-left: -20%;
 }
 
-#radio3:checked ~ .first{
+#radio3:checked~.first {
     margin-left: -40%;
 }
-#profileImage{
+
+/* CSS for profile.html */
+
+#profileImage {
     display: block;
 }
 
@@ -178,9 +182,9 @@ body{
     line-height: 150px;
     margin-top: 50px;
     display: block;
-  }
+}
 
-#profileImage{
+#profileImage {
     display: none;
 }
 
@@ -188,46 +192,29 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-	font-family: 'Manrope', sans-serif;
-}
-
-#main-body {
-	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
-	background-size: 200% 200%;
-	animation: gradient 10s ease-in-out infinite;
-	height: 100vh;
-    position: relative;
-}
-
-#log-in-title {
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-family: 'Andada Pro', serif;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-#desk-buddy {
-	font-family: 'Andada Pro', serif;
-    font-family: 'Lato', sans-serif;
-	font-weight: bold;
-}
 
+/* Gradient for completed-setup.html*/
 #completed-body {
-	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
+	background: linear-gradient(-45deg, #ffd89b, #ffd89b, #1e6594, #1e6594);
 	background-size: 200% 200%;
 	animation: gradient 10s ease-in-out infinite;
 	height: 100vh;
-    position: relative;
+	position: relative;
 }
