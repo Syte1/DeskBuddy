@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>DeskBuddy|Index</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
-            <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        rel="stylesheet">
 
-        <!-- Firebase 8 related CSS CDN -->
-        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-        
-        <!-- Firebase 8 related JS CDN -->
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-        
-        <!-- Link to the api keys for your Firebase project -->
-        
-        <script src="scripts/firebaseAPI.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-        
-        <link rel="stylesheet" href="/styles/my_style.css">
-    
+    <title>DeskBuddy|Index</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Firebase 8 related CSS CDN -->
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+    <!-- Firebase 8 related JS CDN -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- Link to the api keys for your Firebase project -->
+
+    <script src="scripts/firebaseAPI.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+    <link rel="stylesheet" href="/styles/my_style.css">
+
 </head>
+
 <body style="text-align: center;">
+    <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -68,43 +69,45 @@
             </div>
         </div>
     </nav>
-    <div class="p-5 mb-4 bg-light rounded-3" style="background-image: url('images/desk.jpg'); background-size: cover; background-position: center">
+
+    <!-- Main body -->
+    <div class="p-5 mb-4 bg-light rounded-3"
+        style="background-image: url('images/desk.jpg'); background-size: cover; background-position: center">
         <div class="container-fluid">
-            <img src="./images/DeskBuddylogo.png" class="img-fluid " alt="Responsive image" style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
+            <img src="./images/DeskBuddylogo.png" class="img-fluid " alt="Responsive image"
+                style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
             <br>
             <br>
             <br>
-            <h1 class="display-5 fw-bold" style="text-shadow: 2px 2px rgb(209, 208, 208); font-family: Verdana, Geneva, Tahoma, sans-serif">Welcome to Desk Buddy</h1>
+            <h1 class="display-5 fw-bold"
+                style="text-shadow: 2px 2px rgb(209, 208, 208); font-family: Verdana, Geneva, Tahoma, sans-serif">
+                Welcome to Desk Buddy</h1>
             <br>
             <h4 class="display-5 fs-4">Are you ready to conquer the desk life?</h4>
             <h4 class="display-5 fs-4">Join us now to learn more!</h4>
             <br>
-            <a href="login.html" class="display-5 btn btn-primary btn-lg " role="button" aria-pressed="true">Login / Sign Up</a>
+            <!-- Login Button -->
+            <a href="login.html" class="display-5 btn btn-primary btn-lg " role="button" aria-pressed="true">Login /
+                Sign Up</a>
         </div>
+
+        <!-- Standard footer -->
         <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-            <button class="btn bg-dark">
-                <div>
-                    <a href="index.html" class="material-icons"
-                        style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</a>
-                        <p style="color: whitesmoke;">Home</p>
-                    </div>
+            <button class="btn bg-dark" onclick="window.location.href='index.html'">
+                <!-- Home button -->
+                <p class="material-icons"
+                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
+                <p style="color: whitesmoke;">Home</p>
             </button>
         </footer>
     </div>
 
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
 </body>
 
 
