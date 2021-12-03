@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
     <title>DeskBuddy|Notification Type</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -34,8 +33,8 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 </head>
 
-<body
-    style="text-align: center; background-image: url('./images/surface.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
+<body style="text-align: center; background-image: url('./images/surface.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
+    <!-- Top navigation bar-->
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -73,7 +72,8 @@
             </div>
         </nav>
 
-        <h1 style="padding-top: 3%; padding-bottom: 8%; position: center; font-weight: bold">Notification Method:</h1>
+        <!-- Toggle button that enables or disables the radio buttons for method of reminders -->
+        <h1 style="padding-top: 3%; padding-bottom: 8%; font-weight: bold">Notification Method:</h1>
         <div
             style="border: 1px solid rgb(103, 103, 105); padding-top: 6vh; padding-bottom: 6vh; border-radius: 2%; background-color: rgb(104, 104, 109);  opacity: 0.8">
             <h1 style="font-size: 15px; float: left; padding-left: 5vw; color: white">Notifications On/Off Toggle</h1>
@@ -84,12 +84,11 @@
             </div>
         </div>
 
-        <!-- Note to self: Learn and make bootstrap grid to orient radio buttons and corresponding labels-->
-
         <div class="container" id="testcolor" style="color:rgb(122, 121, 121);">
+            <!-- Icons to give users visual label to radio buttons -->
             <div class="row row-cols-4">
                 <div class="col">
-                    <label class="form-check-label pt-5" for="inlineRadio1">
+                    <label class="form-check-label pt-5">
                         <span class="material-icons" style="font-size: 25px;">
                             volume_up
                             vibration
@@ -97,38 +96,42 @@
                     </label>
                 </div>
                 <div class="col">
-                    <label class="form-check-label pt-5" for="inlineRadio2">
+                    <label class="form-check-label pt-5">
                         <span class="material-icons" style="font-size: 30px;">
                             volume_up
                         </span>
                     </label>
                 </div>
                 <div class="col">
-                    <label class="form-check-label pt-5" for="inlineRadio3">
+                    <label class="form-check-label pt-5">
                         <span class="material-icons" style="font-size: 30px;">
                             vibration
                         </span>
                     </label>
                 </div>
                 <div class="col">
-                    <label class="form-check-label pt-5" for="inlineRadio4">
+                    <label class="form-check-label pt-5">
                         <span class="material-icons" style="font-size: 30px;">
                             volume_off
                         </span>
                     </label>
                 </div>
+
+                <!-- Labels for the radio buttons -->
                 <div class="col">
-                    <label class="form-check-label p-3 fw-bold" for="inlineRadio1">Vibrate & Sound</label>
+                    <label class="form-check-label p-3 fw-bold" for="vibrateSound">Vibrate & Sound</label>
                 </div>
                 <div class="col">
-                    <label class="form-check-label p-3 fw-bold" for="inlineRadio2">Sound Only</label>
+                    <label class="form-check-label p-3 fw-bold" for="soundOnly">Sound Only</label>
                 </div>
                 <div class="col">
-                    <label class="form-check-label p-3 fw-bold" for="inlineRadio3">Vibrate Only</label>
+                    <label class="form-check-label p-3 fw-bold" for="vibrateOnly">Vibrate Only</label>
                 </div>
                 <div class="col">
-                    <label class="form-check-label p-3 fw-bold" for="inlineRadio4">Silent</label>
+                    <label class="form-check-label p-3 fw-bold" for="mute">Silent</label>
                 </div>
+                
+                <!-- Radio buttons for method of reminder -->
                 <div class="col">
                     <input class="form-check-input p-3" type="radio" id="vibrateSound" value="vibrate_sound" name="type"
                         style="border: 2px solid rgb(145, 144, 144)" disabled>
@@ -148,28 +151,30 @@
             </div>
         </div>
     </div>
-    <div style="padding-top: 18.5vh; position: center">
+
+    <!-- Next button that saves data to saveUserInfo() and proceeds to the next page -->
+    <div style="padding-top: 18.5vh;">
         <button type="submit" class="btn btn-primary btn-lg" onclick="saveUserInfo()"> Next </button>
     </div>
 
 
+    <!-- Bottom Navigation bar that includes Home, Back button, and button that leads to break activities-->
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
-        <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
-            <a href="break-page.html" class="material-icons"
-                style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+        <div class="btn bg-dark" onclick="window.location.href='break-page.html'">
+            <a href="break-page.html" class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
             <p style="color: white;">Breaks</p>
-        </button>
-        <button class="btn bg-dark" onclick="window.location.href='main.html'">
+        </div>
+        <div class="btn bg-dark" onclick="window.location.href='main.html'">
             <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
             <p style="color: whitesmoke;">Home</p>
-        </button>
-        <button class="btn bg-dark" onclick="history.back()">
-            <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
-                onclick="history.back()">arrow_back</a>
+        </div>
+        <div class="btn bg-dark" onclick="history.back()">
+            <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;" onclick="history.back()">arrow_back</a>
             <p style="color: whitesmoke;">Back</p>
-        </button>
+        </div>
     </footer>
+
+    <script src="scripts/notificationtype.js"></script>
 </body>
-<script src="scripts/notificationtype.js"></script>
 
 </html>
