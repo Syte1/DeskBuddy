@@ -9,12 +9,20 @@
     font-size: 25px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
 body {
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: 'Manrope', sans-serif;
 }
 
+/*Break Types CSS */
 .accordion-button.collapsed {
     background-color: rgb(218, 236, 233);
     border-radius: 3%;
@@ -96,6 +104,7 @@ body {
 
 }
 
+/* Carousel CSS */
 .slider {
     width: 500%;
     height: 50vh;
@@ -187,28 +196,6 @@ body {
 #profileImage {
     display: none;
 }
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Manrope', sans-serif;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 
 /* Gradient for completed-setup.html*/
 #completed-body {
