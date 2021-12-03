@@ -47,6 +47,9 @@
 
 <body
     style="text-align: center; background-image: url('images/clockbanner.png'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh">
+
+    <!-- NAV BAR HERE -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -54,27 +57,36 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Top-right of navbar -->
             <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
+            <!-- Collapseable menu -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
+                        <!-- Profile -->
                         <a class="nav-link active text-dark" aria-current="page" href="profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
+                        <!-- Progress -->
                         <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
                     </li>
                     <li class="nav-item dropdown">
+                        <!-- Settings drop down -->
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Settings
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Notifications -->
                             <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
+                            <!-- Calendar sync -->
                             <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
+                            <!-- User's manual -->
                             <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
                         </ul>
                     </li>
                 </ul>
+                <!-- Search box -->
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
@@ -83,71 +95,87 @@
         </div>
     </nav>
     <div>
+        <!-- CSS grid for most of the page -->
         <container id="bigGrid">
-
+            <!-- title -->
             <h1 class="fw-bold" id="bigHeader">Notification Time:</h1>
+            <!-- from time -->
             <h1 id="from">From:</h1>
             <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
         grid-row: 4;" id="firstclock" placeholder="3:00 PM" />
+            <!-- to time -->
             <h1 id="to">To:</h1>
             <input type="text" class="timepicker text-center fw-bold" style="grid-column: 4 / 7;
         grid-row: 6;" id="secondclock" placeholder="11:00 PM" />
 
 
+            <!-- Days of the week go here -->
+            <!-- Monday -->
             <div class="btn-group btn-group-toggle" gw data-toggle="buttons"></div>
             <input type="checkbox" class="btn-check" id="btn-check-1-outlined" autocomplete="off" name="Monday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-1-outlined"
                 style="grid-row: 8; grid-column: 1; margin-left: 5px; margin-right: 5px; font-size: 150%;">M</label>
             <br>
+            <!-- Tuesday -->
             <input type="checkbox" class="btn-check" id="btn-check-2-outlined" autocomplete="off" name="Tuesday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-2-outlined"
                 style="grid-row: 8; grid-column: 2; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
 
+            <!-- Wednesday -->
             <input type="checkbox" class="btn-check" id="btn-check-3-outlined" autocomplete="off" name="Wednesday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-3-outlined"
                 style="grid-row: 8; grid-column: 3; margin-left: 5px; margin-right: 5px; font-size: 150%;">W</label><br>
 
+            <!-- Thursday -->
             <input type="checkbox" class="btn-check" id="btn-check-4-outlined" autocomplete="off" name="Thursday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-4-outlined"
                 style="grid-row: 8; grid-column: 4; margin-left: 5px; margin-right: 5px; font-size: 150%">T</label><br>
 
+            <!-- Friday -->
             <input type="checkbox" class="btn-check" id="btn-check-5-outlined" autocomplete="off" name="Friday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-5-outlined"
                 style="grid-row: 8; grid-column: 5; margin-left: 5px; margin-right: 5px; font-size: 150%">F</label><br>
 
+            <!-- Saturday -->
             <input type="checkbox" class="btn-check" id="btn-check-6-outlined" autocomplete="off" name="Saturday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-6-outlined"
                 style="grid-row: 8; grid-column: 6; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label><br>
 
+            <!-- Sunday -->
             <input type="checkbox" class="btn-check" id="btn-check-7-outlined" autocomplete="off" name="Sunday">
             <label class="btn btn-outline-dark fw-bold border-2 shortText" for="btn-check-7-outlined"
                 style="grid-row: 8; grid-column: 7; margin-left: 5px; margin-right: 5px; font-size: 150%">S</label>
 
             <br>
 
+            <!-- Next button -->
             <a href="#" style="grid-row: 11; grid-column: 2 /span 5;">
                 <button class="btn btn-primary btn-lg" onclick="SubmitInformation()">Next
                 </button>
             </a>
         </container>
     </div>
+    <!-- Standard footer -->
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
         <button class="btn bg-dark" onclick="window.location.href='break-page.html'">
+            <!-- Breaks page -->
             <a href="break-page.html" class="material-icons"
                 style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
             <p style="color: white;">Breaks</p>
         </button>
+        <!-- Home button -->
         <button class="btn bg-dark" onclick="window.location.href='main.html'">
             <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
             <p style="color: whitesmoke;">Home</p>
         </button>
+        <!-- Back button -->
         <button class="btn bg-dark" onclick="history.back()">
             <a class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;"
                 onclick="history.back()">arrow_back</a>
             <p style="color: whitesmoke;">Back</p>
         </button>
     </footer>
-
+    <!-- Custom JS for this page -->
     <script src="scripts/notificationtime.js"></script>
 </body>
 
