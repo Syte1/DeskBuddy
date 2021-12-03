@@ -33,6 +33,10 @@ body {
     font-size: 50pt;
     ;
 }
+#end {
+    font-size: 30px;
+    font-weight:800;
+}
 
 .break-page {
     background: linear-gradient(-45deg, #ffd89b, #ffd89b, #1e6594, #1e6594);
