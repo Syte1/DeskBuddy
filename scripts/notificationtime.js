@@ -1,4 +1,4 @@
-function notificationTypeDrive(){
+
         $(document).ready(function () {
             $('.timepicker').mdtimepicker(); //Initializes the time picker
         });
@@ -57,13 +57,6 @@ function notificationTypeDrive(){
                 document.getElementById('secondclock').value = "Please enter a time";
             }
 
-            //console.log(Monday)
-            //console.log(Tuesday)
-            //console.log(Wednesday)
-            //console.log(Thursday)
-            //console.log(Friday)
-            //console.log(Saturday)
-            //console.log(Sunday)
             firebase.auth().onAuthStateChanged(user => {
                 if (user) {
                     var currentUser = db.collection("users").doc(user.uid)
@@ -99,4 +92,3 @@ function notificationTypeDrive(){
             //Change page to notificationtype.html when button is pressed
             // 
         }
-}
