@@ -27,17 +27,6 @@ body{
 #break-title {
     font-size: 50pt;;
 }
-#main-body{
-    width: 100vw;
-    height: 100vh;
-    color: rgb(151, 151, 151);
-    background-color: linear-gradient(-45deg, #EE7752, #E73C7E);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: scroll;
-}
 .break-page {
 	background: linear-gradient(-45deg, #ffd89b , #ffd89b, #1e6594, #1e6594);
 	background-size: 200% 200%;
@@ -131,17 +120,17 @@ body{
 }
 
 .slides img {
-    width: 80vw;
-    height: 50vh;
-    padding-bottom: 10vh;
+    width: 85%;
+    height: 65%;
+    padding-bottom: 2%;
     border-radius: 2%;
 }
 
 .navigation-manual {
     position: absolute;
     width: 96.5vw;
-    margin-top: 230px;
-    margin-left: -1920px;
+    margin-top: 375px;
+    margin-left: -2500px;
     display: flex;
     justify-content: center;
 }
@@ -164,7 +153,7 @@ body{
 }
 
 #radio1:checked ~ .first{
-    margin-left: 50;
+    margin-left: 0%;
 }
 
 #radio2:checked ~ .first{
