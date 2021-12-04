@@ -35,44 +35,55 @@
 
 <body class="break-page" style="text-align: center;">
 
-  <!-- Standardized top navigation bar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <!-- NAV BAR HERE -->
+
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-          <li class="nav-item">
-            <a class="nav-link active text-dark" aria-current="page" href="profile.html">Profile</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Settings
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
-              <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
-              <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Top-right of navbar -->
+        <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
+        <!-- Collapseable menu -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                <li class="nav-item">
+                    <!-- Profile -->
+                    <a class="nav-link active text-dark" aria-current="page" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <!-- Progress -->
+                    <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <!-- Settings drop down -->
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Settings
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <!-- Notifications -->
+                        <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
+                        <!-- Calendar sync -->
+                        <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
+                        <!-- User's manual -->
+                        <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+            <!-- Search box -->
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
 </nav>
   <h1 style="padding-top: 7%; padding-bottom: 8%; color:rgb(255, 255, 255); font-size: 25pt;">Break Suggestions:</h1>
 
-  <!-- Break activities nested inside collapsible accordions-->
+  <!-- Nutritional Breaks Accordion -->
   <div class="accordion" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingOne">
@@ -85,22 +96,30 @@
         data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
           <div class="accordion-filler accordiongrid">
+            <!-- Right side of accordion body -->
             <section style="grid-column: 2;">
+              <!-- Title of break -->
               <h2>Water Break</h2>
+              <!-- Description of break pulled from Firestore -->
               <p id="water" style="text-align: left; margin-left: 10px;">empty</p>
             </section>
+            <!-- Image of break on the left -->
             <img class="accordionpic" src="./images/water.jpg" alt="deskbuddy" width="100" style="grid-row: 1;">
 
             <section style="grid-column: 2;">
+              <!-- Title of break -->
               <h2>Food Break</h2>
+              <!-- Description of break pulled from Firestore -->
               <p id="food" style="text-align: left; margin-left: 10px;">empty</p>
             </section>
+            <!-- Image of break on the left -->
             <img class="accordionpic" src="./images/nutrition.jpg" alt="deskbuddy" width="100" style="grid-row: 2;">
           </div>
         </div>
       </div>
     </div>
   </div>
+  <!-- Excercise Breaks Accordion -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -112,15 +131,20 @@
       data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
         <div class="accordion-filler accordiongrid">
+          <!-- Right side of accordion body -->
           <section style="grid-column: 2;">
+            <!-- Title of break -->
             <h2>Stretch Break</h2>
+            <!-- Description of break pulled from Firestore -->
             <span id="stretch" style="text-align: left; margin-left: 10px;">empty</span>
           </section>
+          <!-- Image of break on the left -->
           <img class="accordionpic" src="./images/stretch.jpg" alt="deskbuddy" width="100" style="grid-row: 1;">
         </div>
       </div>
     </div>
   </div>
+  <!-- Relaxation Breaks Accordion -->
   <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -132,10 +156,14 @@
       data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">
         <div class="accordion-filler accordiongrid">
+          <!-- Right side of accordion body -->
           <section style="grid-column: 2;">
+            <!-- Title of break -->
             <h2>Meditation Break</h2>
+            <!-- Description of break pulled from Firestore -->
             <p id="meditation" style="text-align: left; margin-left: 10px;">empty</p>
           </section>
+          <!-- Image of break on the left -->
           <img class="accordionpic" src="./images/meditation.jpg" alt="deskbuddy" width="100" style="grid-row: 1;">
         </div>
       </div>
