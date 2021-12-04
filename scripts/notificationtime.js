@@ -5,7 +5,6 @@
 
         //Function to check which days have been checked off to store
         function SubmitInformation() {
-            console.log('test')
             if (document.querySelector('input[name="Monday"]:checked') != null) {
                 var Monday = document.querySelector('input[name="Monday"]:checked').
                 value;
@@ -41,15 +40,13 @@
                 value;
             } else var Sunday = "off"
 
-            //Check for time data and store
+            //Check for time data and write to database
             if (document.getElementById('firstclock') != undefined) {
                 console.log("this is not null")
                 var starttime = document.getElementById('firstclock').value;
             } else document.getElementById('firstclock').value.update = "pick a time"
             var starttime = document.getElementById('firstclock').value;
             var endtime = document.getElementById('secondclock').value;
-            console.log(starttime)
-            console.log(endtime)
             if (!starttime) {
                 document.getElementById('firstclock').value = "Please enter a time";
             }

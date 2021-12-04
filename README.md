@@ -15,8 +15,9 @@ from a free stock photo website at: https://unsplash.com.
 Technologies used for this project:
 * HTML, CSS
 * JavaScript
-* Bootstrap 
-* ...
+* Bootstrap
+* JQuery
+* Node
 	
 ## Content
 Content of the project folder:
@@ -25,20 +26,41 @@ Content of the project folder:
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
-└── README.md
+├── README.md                # README
+├── 404.html                 # 404 page HTML, this is displayed when the site is unavailable
+├── break-page.html          # Break page HTML, this is where breaks a read from the database
+├── completed-setup.html     # Completed Setup HTML, this is the finish page for setup
+├── login.html               # Login page HTML, this is where users log in
+├── main.html                # Main HTML page, Deskbuddy home menu
+├── notificationtime.html    # Notification time setter HTML, this is where time and day is selected
+├── notificationtype.html    # Notification type setting HTML, this is where method of reminder set
+├── profile.html             # Profile HTML, this is where users view and change their profile
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # 
+    /desk.jpg                # index HTML background
+    /DeskBuddylogo.png       # Desk Buddy Logo
+    /exercise.jpg            # Exercise thumbnail
+    /meditation.jpg          # Meditation thumbnail
+    /nutrition.jpg           # Food thumbnail
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /break-page.js           # JS for break-page
+    /firebaseAPI.js          # API keys
+    /login.js                # JS for login
+    /main.js                 # JS for main
+    /mdtimepicker.js         # JS for time picker
+    /notificationtime.js     # JS for notification times
+    /notificationtype.js     # JS for notification types
+    /profile.js              # JS for profile
 ├── styles                   # Folder for styles
-    /blah.css                # 
-
+    /login.css               # CSS for login page
+    /mdtimepicker.css        # CSS for time picker
+    /my_style.css            # General CSS for all HTML pages
 Firebase hosting files: 
 ├── .firebaserc...
-
+├── firebase.json
+├── Deskbuddy.code-workspace
 
 ```
 
