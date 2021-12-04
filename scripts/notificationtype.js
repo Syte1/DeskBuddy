@@ -50,7 +50,7 @@ function saveUserInfo() {
                         ToggleOnOff: ToggleOnOff
                     });
                     setTimeout(() => {
-                        window.location.href = 'completed-setup.html';
+                        window.location.href = 'html/completed-setup.html';
                     }, 1000);
                 })
         } else {
