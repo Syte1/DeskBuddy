@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>DeskBuddy|Type</title>
+  <title>DeskBuddy| Break Activities</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,13 +28,14 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <!-- Link to the api keys for your firebase project -->
-
   <script src="scripts/firebaseAPI.js"></script>
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 </head>
 
 <body class="break-page" style="text-align: center;">
+
+  <!-- Standardized top navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -69,9 +69,10 @@
         </form>
       </div>
     </div>
-  </nav>
-  <h1 style="padding-top: 7%; padding-bottom: 8%; position: center; color:rgb(255, 255, 255); font-size: 25pt;">Break
-    Suggestions:</h1>
+</nav>
+  <h1 style="padding-top: 7%; padding-bottom: 8%; color:rgb(255, 255, 255); font-size: 25pt;">Break Suggestions:</h1>
+
+  <!-- Break activities nested inside collapsible accordions-->
   <div class="accordion" id="accordionFlushExample">
     <div class="accordion-item">
       <h2 class="accordion-header" id="flush-headingOne">
@@ -85,16 +86,16 @@
         <div class="accordion-body">
           <div class="accordion-filler accordiongrid">
             <section style="grid-column: 2;">
-              <h1>Water Break</h1>
+              <h2>Water Break</h2>
               <p id="water" style="text-align: left; margin-left: 10px;">empty</p>
             </section>
-            <img class="accordionpic" src="./images/water.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
+            <img class="accordionpic" src="./images/water.jpg" alt="deskbuddy" width="100" style="grid-row: 1;">
 
             <section style="grid-column: 2;">
-              <h1>Food Break</h1>
+              <h2>Food Break</h2>
               <p id="food" style="text-align: left; margin-left: 10px;">empty</p>
             </section>
-            <img class="accordionpic" src="./images/nutrition.jpg" alt="deskbuddy" width="100%" style="grid-row: 2;">
+            <img class="accordionpic" src="./images/nutrition.jpg" alt="deskbuddy" width="100" style="grid-row: 2;">
           </div>
         </div>
       </div>
@@ -112,10 +113,10 @@
       <div class="accordion-body">
         <div class="accordion-filler accordiongrid">
           <section style="grid-column: 2;">
-            <h1>Stretch Break</h1>
+            <h2>Stretch Break</h2>
             <span id="stretch" style="text-align: left; margin-left: 10px;">empty</span>
           </section>
-          <img class="accordionpic" src="./images/stretch.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
+          <img class="accordionpic" src="./images/stretch.jpg" alt="deskbuddy" width="100" style="grid-row: 1;">
         </div>
       </div>
     </div>
@@ -132,10 +133,10 @@
       <div class="accordion-body">
         <div class="accordion-filler accordiongrid">
           <section style="grid-column: 2;">
-            <h1>Meditation Break</h1>
+            <h2>Meditation Break</h2>
             <p id="meditation" style="text-align: left; margin-left: 10px;">empty</p>
           </section>
-          <img class="accordionpic" src="./images/meditation.jpg" alt="deskbuddy" width="100%" style="grid-row: 1;">
+          <img class="accordionpic" src="./images/meditation.jpg" alt="deskbuddy" width="100" style="grid-row: 1;">
         </div>
       </div>
     </div>
@@ -164,7 +165,7 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/break-page.js"></script>
 </body>
-<script src="scripts/break-page.js"></script>
 
 </html>
