@@ -143,32 +143,6 @@ body {
     border-radius: 2%;
 }
 
-.navigation-manual {
-    position: absolute;
-    width: 96.5vw;
-    margin-top: -20px;
-    margin-left: -2430px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn {
-    border: 2px solid rgb(190, 189, 192);
-    background-color: rgb(255, 255, 255);
-    padding: 5px;
-    border-radius: 13px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.manual-btn:hover {
-    background: #40D3DC;
-}
-
 #radio1:checked~.first {
     margin-left: 0%;
 }
