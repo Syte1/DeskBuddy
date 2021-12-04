@@ -2,21 +2,21 @@
 <html lang="en">
 
 <head>
-    <title>DeskBuddy|Completed Setup!</title>
+    <title>DeskBuddy|Main</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- External CSS-->
-    <link rel="stylesheet" href="./styles/my_style.css">
-
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- <script src="/scripts/my_script.js"></script> -->
+
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./styles/my-style.css">
 
     <!-- Firebase 8 CDNs-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -31,11 +31,11 @@
     <script src="scripts/firebaseAPI.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
 </head>
 
-<body style="text-align: center;" id="completed-body">
-    <!-- Top Navigation Bar-->
+<body style="text-align: center;">
+
+    <!-- Top Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -72,26 +72,83 @@
         </div>
     </nav>
 
-    <!-- Logo with setup complete message-->
-    <div class="mb-4">
-        <div class="p-5 mb-1 rounded-3">
+    <!-- Pop up notification -->
+    <div class="rounded-3" style="background-color: #F9F3DF;">
+        <div class="container-fluid bg-gradient bg-warning bg-secondary rounded-3 py-2 col-10">
+            <span class="col-md-12 fs-4" style="color:black;">Your next notification is in </span>
+            <span id="days" class="time-element"></span>
+            <span id="hours" class="time-element"></span>
+            <span id="mins" class="time-element"></span>
+            <span id="secs" class="time-element"></span>
+            <div id="end"></div>
+        </div>
+    </div>
+
+    <!-- Main body -->
+    <div class="rounded-3">
+        <div class="p-5 rounded-3" style="background-color: #F9F3DF;">
             <img src="images/DeskBuddylogo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
-            <h1 class="display-5 fw-bold pt-5">That was easy!</h1>
+            <h1 class="display-5 pt-5">Welcome Back,</h1>
+            <p class="display-5" id="username">Username</p>
+            <p class="col-md-12 fs-4">Looking to change up your reminders?</p>
             <br>
+            <a href="notificationtime.html" class="display-5 btn btn-primary btn-lg " role="button"
+                aria-pressed="true">Set Notifications</a>
         </div>
-        <div>
-            <a href="main.html" class="display-5 btn btn-primary btn-lg " role="button" aria-pressed="true">Return to
-                Main Menu</a>
+    </div>
+
+    <!-- Carousel -->
+    <div class="slider" style="background-color: #F9F3DF;">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <div class="slide first">
+                <img src="./images/exercise.jpg" alt="exercise">
+            </div>
+            <div class="slide">
+                <img src="./images/stretch.jpg" alt="stretching">
+            </div>
+            <div class="slide">
+                <img src="./images/meditation.jpg" alt="meditation">
+            </div>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true" onclick="hide_button()">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body text-center" onclick="hide_button()">
+                    <p id="quote-goes-here" style="font-weight: bold; font-size: 15pt;"></p>
+                    <p id="author-goes-here" style="font-style: italic; text-align: center;"></p>
+                    <p>Check the breaks page for suggestions</p>
+                    <p style="font-size: 8pt;"> Click anywhere to close</p>
+                </div>
+
+            </div>
         </div>
     </div>
 
     <!-- Bottom Navigation bar that includes Home, Back button, and button that leads to break activities-->
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
         <div class="bottom-nav-button">
-            <div class="btn bg-dark" onclick="window.location.href='break-page.html'">
+            <div class="btn bg-dark" onclick="window.location.href='html/break-page.html'">
                 <a href="html/break-page.html" class="material-icons"
-                   style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
+                    style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
                 <p style="color: white;">Breaks</p>
             </div>
         </div>
@@ -109,7 +166,9 @@
             </div>
         </div>
     </footer>
-</body>
 
+    <script src="scripts/main.js"></script>
+
+</body>
 
 </html>
