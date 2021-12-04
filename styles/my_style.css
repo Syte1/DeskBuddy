@@ -22,6 +22,10 @@ body {
     font-family: 'Manrope', sans-serif;
 }
 
+.bottom-nav-button:hover {
+    opacity: 0.5;
+}
+
 /*Break Types CSS */
 .accordion-button.collapsed {
     background-color: rgb(218, 236, 233);
