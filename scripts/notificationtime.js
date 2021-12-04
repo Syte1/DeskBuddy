@@ -78,7 +78,7 @@
                                 "EndTime": endtime
                             });
                             setTimeout(() => {
-                                window.location.href = 'html/notificationtype.html';
+                                window.location.href = 'notificationtype.html';
                             }, 1000);
                         })
                 } else {
