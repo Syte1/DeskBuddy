@@ -89,9 +89,8 @@ function profileEdit() {
                             user_Name; //using javascript
                         $("#name-goes-here").text(user_Name); //using jquery
                     })
-                db.collection("users").get()
+                    db.collection("users").doc(user.uid).get()
                     .then(snap => {
-                        var i = 1;
                         snap.forEach(doc => {
                             var fname = doc.data().FirstName;
                             var lname = doc.data().LastName;
