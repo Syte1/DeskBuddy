@@ -5,7 +5,7 @@
     <title>DeskBuddy|Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="..styles/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -32,6 +32,42 @@
 </head>
 
 <body style="text-align: center;" id="gradientbody">
+    <script>
+        // Initialize the FirebaseUI Widget using Firebase.
+        var ui = new firebaseui.auth.AuthUI(firebase.auth());
+
+        var uiConfig = {
+            callbacks: {
+                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
+                    // User successfully signed in.
+                    // Return type determines whether we continue the redirect automatically
+                    // or whether we leave that to developer to handle.
+                    return true;
+                },
+                uiShown: function () {
+                    // The widget is rendered.
+                    // Hide the loader.
+                    document.getElementById('loader').style.display = 'none';
+                }
+            },
+            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+            signInFlow: 'popup',
+            signInSuccessUrl: 'main.html',
+            signInOptions: [
+                // Leave the lines as is for the providers you want to offer your users.
+                // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+                // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+                // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
+                // firebase.auth.GithubAuthProvider.PROVIDER_ID,
+                firebase.auth.EmailAuthProvider.PROVIDER_ID,
+                // firebase.auth.PhoneAuthProvider.PROVIDER_ID
+            ],
+            // Terms of service url.
+            tosUrl: '<your-tos-url>',
+            // Privacy policy url.
+            privacyPolicyUrl: '<your-privacy-policy-url>'
+        };
+    </script>
 
     <!-- NAV BAR HERE -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -42,13 +78,13 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Top-right of navbar -->
-            <a class="navbar-brand text-dark bg" id="desk-buddy" href="html/main.html">DeskBuddy</a>
+            <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
             <!-- Collapsable menu -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
                         <!-- Profile -->
-                        <a class="nav-link active text-dark" aria-current="page" href="html/profile.html">Profile</a>
+                        <a class="nav-link active text-dark" aria-current="page" href="profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
                         <!-- Progress -->
@@ -81,7 +117,7 @@
     <div class="p-5 mb-4 rounded-3" id="main-body">
         <div class="container-fluid text-center">
             <!-- Logo at the top of the page -->
-            <img src="images/DeskBuddylogo.png" class="img-fluid" alt="Responsive image"
+            <img src="../images/DeskBuddylogo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
             <h1 class="display-5 fw-bold mx-auto pt-5 pb-3" style="text-align: center;" id="log-in-title">Log in</h1>
         </div>
@@ -92,7 +128,7 @@
     <!-- Standard footer -->
     <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
         <div class="bottom-nav-button">
-            <div class="btn bg-dark button" onclick="window.location.href='index.html'" data-mdb-ripple-color="light">
+            <div class="btn bg-dark button" onclick="window.location.href= './index.html'">
                 <!-- Home button -->
                 <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home
                 </p>
@@ -100,7 +136,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- Custom JS for this page -->
     <script src="scripts/login.js"></script>
 </body>
