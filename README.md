@@ -1,14 +1,12 @@
 ## My Web Application (DeskBuddy)
 
-- [My Web Application (DeskBuddy)](#my-web-application-deskbuddy)
-- [General Info](#general-info)
-- [Technologies](#technologies)
-- [Content](#content)
-- [Acknowledgements](#acknowledgements)
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Contents](#content)
 
 ## General Info
-The contents in this folder is used by Belal Kourkmas, Christie Tsang, and Stan Hung to create a browser based web application to remind users to take a break during their busy work schedule. In order to create this web application, we used HTML, CSS, Javascript, jQuery, Bootstrap, and Firestore.
-
+The contents in this folder is used by Belal Kourkmas, Christie Tsang, and Stan Hung to create a browser based web application to remind users to take
+a break during their busy work schedule. In order to create this web application, we used HTML, CSS, Javascript, jQuery, Bootstrap, and Firestore.
 An API from Google, and Firebase was used for implementing specific functionalities in our project. All photos used in our project were downloaded
 from a free stock photo website at: https://unsplash.com.
 
@@ -29,18 +27,17 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 
 ├── README.md                # README
-
+    /404.html                # 404 page HTML, this is displayed when the site is unavailable
+    /index.html              # landing HTML file, this is what users see when you first come to the website
 
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── html                     # Folder for HTML files
-    /index.html              # landing HTML file, this is what users see when you first come to the website
     /break-page.html         # Break page HTML, this is where users get ideas for break activities
     /profile.html            # Profile HTML, this is where users view and change their profile information
     /notificationtype.html   # Notification type setting HTML, this is where users set how they want to receive notifications
     /notificationtime.html   # Notification time setter HTML, this is where users select the time and day they want to receive notifications
-    /404.html                # 404 page HTML, this is displayed when the site is unavailable
     /completed-setup.html    # Completed Setup HTML, this is the page users see when they complete the setup process
     /login.html              # Login page HTML, this is where users log into DeskBuddy
     /main.html               # Main HTML page, this is DeskBuddy's home page
