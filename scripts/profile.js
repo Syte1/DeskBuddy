@@ -81,6 +81,7 @@ function insertInfo() {
             //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
             //get the document for current user.
+            console.log(user.uid)
             currentUser.get()
                 .then(userDoc => {
                     var user_Name = userDoc.data().name;
@@ -95,6 +96,7 @@ function insertInfo() {
                 .then(snap => {
                     var i = 1;
                     snap.forEach(doc => {
+                        console.log(user.uid)
                         var fname = doc.data().FirstName;
                         var lname = doc.data().LastName;
                         var address = doc.data().Address;
@@ -111,6 +113,7 @@ function insertInfo() {
                             document.getElementById("f_name").placeholder = fname;
                             $("#f_name").text(fname);
                         }
+                        console.log(user.uid)
                         if (!lname) {
                             document.getElementById("l_name").placeholder
                         } else {
@@ -149,6 +152,7 @@ function insertInfo() {
                         }
 
                         // Generates Custom profile image with user initials
+                        console.log(user.uid)
 
                         var initials = fname.charAt(0) + "" + lname.charAt(0);
 
