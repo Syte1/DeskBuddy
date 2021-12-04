@@ -35,52 +35,51 @@
 
 <body class="break-page" style="text-align: center;">
 
-   <!-- NAV BAR HERE -->
+  <!-- NAV BAR HERE -->
 
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Top-right of navbar -->
-        <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
-        <!-- Collapsable menu -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-                <li class="nav-item">
-                    <!-- Profile -->
-                    <a class="nav-link active text-dark" aria-current="page" href="profile.html">Profile</a>
-                </li>
-                <li class="nav-item">
-                    <!-- Progress -->
-                    <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <!-- Settings drop down -->
-                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Settings
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <!-- Notifications -->
-                        <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
-                        <!-- Calendar sync -->
-                        <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
-                        <!-- User's manual -->
-                        <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
-                    </ul>
-                </li>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Top-right of navbar -->
+      <a class="navbar-brand text-dark bg" id="desk-buddy" href="html/main.html">DeskBuddy</a>
+      <!-- Collapsable menu -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <!-- Profile -->
+            <a class="nav-link active text-dark" aria-current="page" href="html/profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <!-- Progress -->
+            <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
+          </li>
+          <li class="nav-item dropdown">
+            <!-- Settings drop down -->
+            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Settings
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <!-- Notifications -->
+              <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
+              <!-- Calendar sync -->
+              <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
+              <!-- User's manual -->
+              <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
             </ul>
-            <!-- Search box -->
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+          </li>
+        </ul>
+        <!-- Search box -->
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
     </div>
-</nav>
+  </nav>
   <h1 style="padding-top: 7%; padding-bottom: 8%; color:rgb(255, 255, 255); font-size: 25pt;">Break Suggestions:</h1>
 
   <!-- Nutritional Breaks Accordion -->
@@ -173,14 +172,14 @@
   <!-- Bottom Navigation bar that includes Home, Back button, and button that leads to break activities-->
   <footer class="fixed-bottom navbar justify-content-evenly bg-dark" style="height: 75px; padding: 0px;">
     <div class="bottom-nav-button">
-      <div class="btn bg-dark" onclick="window.location.href='break-page.html'">
-        <a href="break-page.html" class="material-icons"
+      <div class="btn bg-dark" onclick="window.location.href='html/break-page.html'">
+        <a href="html/break-page.html" class="material-icons"
           style="color: whitesmoke; text-decoration: unset; font-size: 35px;">self_improvement</a>
         <p style="color: white;">Breaks</p>
       </div>
     </div>
     <div class="bottom-nav-button">
-      <div class="btn bg-dark" onclick="window.location.href='main.html'">
+      <div class="btn bg-dark" onclick="window.location.href='html/main.html'">
         <p class="material-icons" style="color: whitesmoke; text-decoration: unset; font-size: 35px;">home</p>
         <p style="color: whitesmoke;">Home</p>
       </div>
@@ -193,6 +192,8 @@
       </div>
     </div>
   </footer>
+
+  <!-- Custom JS for this page -->
   <script src="../scripts/break-page.js"></script>
 </body>
 
