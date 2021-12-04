@@ -1,3 +1,4 @@
+// Returns element object with matching string id
 var FirstName = document.getElementById("f_name");
 var LastName = document.getElementById("l_name");
 var PhoneNum = document.getElementById("phone_num");
@@ -25,7 +26,7 @@ function EditButton() {
         City.disabled = false;
         Country.disabled = false;
         Region.disabled = false;
-    };
+    }
 
 };
 
@@ -89,6 +90,7 @@ function insertInfo() {
                         user_Name; //using javascript
                     $("#name-goes-here").text(user_Name); //using jquery
                 })
+            //Gets the data appropriate data from Firestore
             db.collection("users").get()
                 .then(snap => {
                     var i = 1;

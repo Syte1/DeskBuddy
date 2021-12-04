@@ -89,6 +89,4 @@
                     console.log("no user signed in");
                 }
             })
-            //Change page to notificationtype.html when button is pressed
-            // 
         }

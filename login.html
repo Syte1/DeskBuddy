@@ -2,11 +2,10 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <title>DeskBuddy|Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <link rel="stylesheet" href="styles\login.css">
+    <link rel="stylesheet" href="styles/login.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -69,6 +68,8 @@
             privacyPolicyUrl: '<your-privacy-policy-url>'
         };
     </script>
+    <!-- NAV BAR HERE -->
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -76,28 +77,36 @@
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Top-right of navbar -->
             <a class="navbar-brand text-dark bg" id="desk-buddy" href="main.html">DeskBuddy</a>
+            <!-- Collapseable menu -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
                     <li class="nav-item">
-                        <a class="nav-link active text-dark" aria-current="page" href="#">Profile</a>
+                        <!-- Profile -->
+                        <a class="nav-link active text-dark" aria-current="page" href="profile.html">Profile</a>
                     </li>
                     <li class="nav-item">
+                        <!-- Progress -->
                         <a class="nav-link active text-dark" aria-current="page" href="#">Progress</a>
                     </li>
                     <li class="nav-item dropdown">
+                        <!-- Settings drop down -->
                         <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Settings
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Notifications -->
                             <li><a class="dropdown-item text-dark" href="#">Notifications</a></li>
+                            <!-- Calendar sync -->
                             <li><a class="dropdown-item text-dark" href="#">Sync your Calendar</a></li>
-                            <li><a class="dropdown-item text-dark" href="#">Profile</a></li>
+                            <!-- User's manual -->
                             <li><a class="dropdown-item text-dark" href="#">How to Use</a></li>
                         </ul>
                     </li>
                 </ul>
+                <!-- Search box -->
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
@@ -107,6 +116,7 @@
     </nav>
     <div class="p-5 mb-4 rounded-3" id="main-body">
         <div class="container-fluid text-center">
+            <!-- Logo at the top of the page -->
             <img src="images/DeskBuddylogo.png" class="img-fluid" alt="Responsive image"
                 style="width: 50%; height: auto; max-height: 200px; max-width: 200px;">
             <h1 class="display-5 fw-bold mx-auto pt-5 pb-3" style="text-align: center;" id="log-in-title">Log in</h1>
