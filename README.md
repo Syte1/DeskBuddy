@@ -1,8 +1,10 @@
-## My Web Application (Title)
+## My Web Application (DeskBuddy)
 
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Contents](#content)
+- [My Web Application (DeskBuddy)](#my-web-application-deskbuddy)
+- [General Info](#general-info)
+- [Technologies](#technologies)
+- [Content](#content)
+- [Acknowledgements](#acknowledgements)
 
 ## General Info
 The contents in this folder is used by Belal Kourkmas, Christie Tsang, and Stan Hung to create a browser based web application to remind users to take a break during their busy work schedule. In order to create this web application, we used HTML, CSS, Javascript, jQuery, Bootstrap, and Firestore.
@@ -25,21 +27,25 @@ Content of the project folder:
 ```
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
-├── index.html               # landing HTML file, this is what users see when you come to url
+
 ├── README.md                # README
-├── 404.html                 # 404 page HTML, this is displayed when the site is unavailable
-├── break-page.html          # Break page HTML, this is where breaks a read from the database
-├── completed-setup.html     # Completed Setup HTML, this is the finish page for setup
-├── login.html               # Login page HTML, this is where users log in
-├── main.html                # Main HTML page, Deskbuddy home menu
-├── notificationtime.html    # Notification time setter HTML, this is where time and day is selected
-├── notificationtype.html    # Notification type setting HTML, this is where method of reminder set
-├── profile.html             # Profile HTML, this is where users view and change their profile
+
+
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
-├── images                   # Folder to store images
-    /desk.jpg                # Index HTML background
+├── html                     # Folder for HTML files
+    /index.html              # landing HTML file, this is what users see when you first come to the website
+    /break-page.html         # Break page HTML, this is where users get ideas for break activities
+    /profile.html            # Profile HTML, this is where users view and change their profile information
+    /notificationtype.html   # Notification type setting HTML, this is where users set how they want to receive notifications
+    /notificationtime.html   # Notification time setter HTML, this is where users select the time and day they want to receive notifications
+    /404.html                # 404 page HTML, this is displayed when the site is unavailable
+    /completed-setup.html    # Completed Setup HTML, this is the page users see when they complete the setup process
+    /login.html              # Login page HTML, this is where users log into DeskBuddy
+    /main.html               # Main HTML page, this is DeskBuddy's home page
+├── images                   # Folder for images
+    /desk.jpg                # index HTML background
     /DeskBuddylogo.png       # Desk Buddy Logo
     /exercise.jpg            # Exercise thumbnail
     /meditation.jpg          # Meditation thumbnail
@@ -51,28 +57,31 @@ It has the following subfolders and files:
 ├── scripts                  # Folder for scripts
     /break-page.js           # JS for break-page
     /firebaseAPI.js          # API keys
-    /login.js                # JS for the sign in process and to create and access user data in Firestore
+    /login.js                # JS for the sign in process and to create and access user 
     /main.js                 # JS for main page to handle reading and querying from Firestore, as well as the notification countdown
     /mdtimepicker.js         # JS for the pop up clock interface to select time
     /notificationtime.js     # JS to write information for selected times to Firestore
     /notificationtype.js     # JS to write information for selected notification type to Firestore
-    /profile.js              # JS for profile
-├── styles                   # Folder for styles
+    /profile.js              # JS to read and write information from user profile to Firestore
+├── styles                   # Folder for CSS files
     /login.css               # CSS for login page
     /mdtimepicker.css        # CSS for time picker
-    /my-style.css            # General CSS for all HTML pages
-    ├──.vscode
-    settings.json
+    /my_style.css            # General CSS for all other HTML pages
+├──.vscode
+    /settings.json
+    
+    
 Firebase hosting files: 
 ├── .firebaserc...
 ├── firebase.json
 ├── Deskbuddy.code-workspace
 ├── .firebase
-    hosting..cache
+    /hosting..cache
 ├── .github
     ├── workflows
-        firebase-hosting-merge.yml
-        firebase-hosting-pull-request.yml
+        /firebase-hosting-merge.yml
+        /firebase-hosting-pull-request.yml
+├── node.modules...          # All installed node modules
 ```
 
 Tips for file naming files and folders:
@@ -86,3 +95,5 @@ Tips for file naming files and folders:
 * <a href="https://fonts.googleapis.com/icon?family=Material+Icons"> Google Fonts </a>
 * <a href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"> Bootstrap CSS </a>
 * <a href="https://unsplash.com"> Stock Images </a>
+* <a href="https://www.jqueryscript.net/time-clock/Material-Time-Picker-Plugin-jQuery-MDTimePicker.html"> Time picker </a>
+* <a href="https://www.educative.io/edpresso/how-to-create-a-countdown-timer-using-javascript"> Timer tutorial </a>
