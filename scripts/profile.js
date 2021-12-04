@@ -1,3 +1,4 @@
+// Set elements to variable names
 var FirstName = document.getElementById("f_name");
 var LastName = document.getElementById("l_name");
 var PhoneNum = document.getElementById("phone_num");
@@ -6,7 +7,7 @@ var City = document.getElementById("city");
 var Country = document.getElementById("country");
 var Region = document.getElementById("region");
 
-//Function that allows button to disable or enable the input text boxes
+// Function that toggles text box input for all fields
 function EditButton() {
     if (FirstName.disabled == false && LastName.disabled == false && PhoneNum.disabled == false && Address
         .disabled == false && City.disabled == false && Country.disabled == false && Region.disabled == false) {
@@ -29,7 +30,7 @@ function EditButton() {
 
 };
 
-//Writes data to Firestore based on user input
+// Writes data to Firestore based on user input
 function profileEdit() {
     let FirstName = document.getElementById("f_name").value;
     let LastName = document.getElementById("l_name").value;
@@ -45,11 +46,11 @@ function profileEdit() {
             var currentUser = db.collection("users").doc(user.uid);
             var userID = user.uid;
             var userEmail = user.email;
-            //get the document for current user.
+            // Get the document for current user.
             currentUser.get()
                 .then(userDoc => {
-                    //get user Email
-
+                    // Get user Email
+                    // Update user collection with new info
                     db.collection("users").doc(userID).update({
                         UserID: userID,
                         UserEmail: userEmail,
@@ -70,26 +71,24 @@ function profileEdit() {
         }
     });
 }
-//Reads data from Firestore to populate the text fields as placeholders
+// Read data from Firestore to populate the text fields as placeholders
 function insertInfo() {
     firebase.auth().onAuthStateChanged(user => {
         // Check if user is signed in:
         if (user) {
             // Do something for the current logged-in user here: 
-            //console.log(user.uid);
-            //go to the correct user document by referencing to the user uid
+            // Go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
-            //get the document for current user.
+            // Get the document for current user.
             currentUser.get()
                 .then(userDoc => {
                     var user_Name = userDoc.data().name;
                     var First_Name = userDoc.data().FirstName;
-                    //console.log(user_Name);
                     document.getElementById("name-goes-here").innerText =
-                        user_Name; //using javascript
-                    $("#name-goes-here").text(user_Name); //using jquery
+                        user_Name; // Using javascript
+                    $("#name-goes-here").text(user_Name); // Using jquery
                 })
-            db.collection("users").get()
+            db.collection("users").doc(user.uid).get()
                 .then(snap => {
                     var i = 1;
                     snap.forEach(doc => {
@@ -102,7 +101,7 @@ function insertInfo() {
                         var region = doc.data().Region;
 
 
-                        //Replaces placeholders with user data
+                        // Replace placeholders with user data
                         if (!fname) {
                             document.getElementById("f_name").placeholder;
                         } else {
@@ -146,7 +145,7 @@ function insertInfo() {
                             $("#region").text(region);
                         }
 
-                        // Generates Custom profile image with user initials
+                        // Generate Custom profile image with user initials
 
                         var initials = fname.charAt(0) + "" + lname.charAt(0);
 
