@@ -3,7 +3,6 @@ function insertName() {
         // Check if user is signed in:
         if (user) {
             // Do something for the current logged-in user here: 
-            //console.log(user.uid);
             //go to the correct user document by referencing to the user uid
             currentUser = db.collection("users").doc(user.uid)
             //get the document for current user.
@@ -50,14 +49,14 @@ function hide_button() {
 }
 
 // Refresh the timer
-function refreshtime() {
+function refreshTime() {
     countDownDate = new Date().getTime() + frequency
 }
 var countDownDate = new Date().getTime() + frequency;
 // Run myfunc every second
 
 setInterval(function () {
-
+    // Get the current time.
     var now = new Date().getTime();
     var timeleft = countDownDate - now;
 
@@ -77,7 +76,7 @@ setInterval(function () {
 
     if (timeleft < 1) {
         // If time left is under 0, refresh the timer and display a quote
-        refreshtime()
+        refreshTime()
         displayRandomQuote();
         $('#myModal').modal('show');
 
@@ -91,7 +90,7 @@ setInterval(function () {
     }
 }, 1000)
 
-// Pull data from CSV
+// READ data from CSV and WRITE to database
 async function getCSVdata() {
     const response = await fetch("quotes.csv"); //send get request
     const data = await response.text(); //get file response
