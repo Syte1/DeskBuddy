@@ -32,8 +32,8 @@ Content of the project folder:
 ├── completed-setup.html     # Completed Setup HTML, this is the finish page for setup
 ├── login.html               # Login page HTML, this is where users log in
 ├── main.html                # Main HTML page, Deskbuddy home menu
-├── notificationtime.html    # Notification time setter HTML, this is where time and day is    selected
-├── notificationtype.html    # Notification type setting HTML, this is where method of      reminder set
+├── notificationtime.html    # Notification time setter HTML, this is where time and day is selected
+├── notificationtype.html    # Notification type setting HTML, this is where method of reminder set
 ├── profile.html             # Profile HTML, this is where users view and change their profile
 
 It has the following subfolders and files:
@@ -51,17 +51,17 @@ It has the following subfolders and files:
 ├── scripts                  # Folder for scripts
     /break-page.js           # JS for break-page
     /firebaseAPI.js          # API keys
-    /login.js                # JS for login
-    /main.js                 # JS for main
-    /mdtimepicker.js         # JS for time picker
-    /notificationtime.js     # JS for notification times
-    /notificationtype.js     # JS for notification types
+    /login.js                # JS for the sign in process and to create and access user data in Firestore
+    /main.js                 # JS for main page to handle reading and querying from Firestore, as well as the notification countdown
+    /mdtimepicker.js         # JS for the pop up clock interface to select time
+    /notificationtime.js     # JS to write information for selected times to Firestore
+    /notificationtype.js     # JS to write information for selected notification type to Firestore
     /profile.js              # JS for profile
 ├── styles                   # Folder for styles
     /login.css               # CSS for login page
     /mdtimepicker.css        # CSS for time picker
-    /my_style.css            # General CSS for all HTML pages
-├──.vscode
+    /my-style.css            # General CSS for all HTML pages
+    ├──.vscode
     settings.json
 Firebase hosting files: 
 ├── .firebaserc...
