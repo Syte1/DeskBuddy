@@ -44,6 +44,10 @@ It has the following subfolders and files:
     /exercise.jpg            # Exercise thumbnail
     /meditation.jpg          # Meditation thumbnail
     /nutrition.jpg           # Food thumbnail
+    /profile.png             # Default profile picture
+    /stretch.jpg             # Stretch thumbnail
+    /surface.png             # Notification time background
+    /water.jpg               # Water thumbnail
 ├── scripts                  # Folder for scripts
     /break-page.js           # JS for break-page
     /firebaseAPI.js          # API keys
@@ -57,11 +61,18 @@ It has the following subfolders and files:
     /login.css               # CSS for login page
     /mdtimepicker.css        # CSS for time picker
     /my_style.css            # General CSS for all HTML pages
+├──.vscode
+    settings.json
 Firebase hosting files: 
 ├── .firebaserc...
 ├── firebase.json
 ├── Deskbuddy.code-workspace
-
+├── .firebase
+    hosting..cache
+├── .github
+    ├── workflows
+        firebase-hosting-merge.yml
+        firebase-hosting-pull-request.yml
 ```
 
 Tips for file naming files and folders:
