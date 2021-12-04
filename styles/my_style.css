@@ -124,7 +124,7 @@ body {
 
 .slides {
     width: 100%;
-    height: 50vh;
+    height: 75%;
     display: flex;
 }
 
@@ -140,21 +140,20 @@ body {
 .slides img {
     width: 85%;
     height: 65%;
-    padding-bottom: 2%;
     border-radius: 2%;
 }
 
 .navigation-manual {
     position: absolute;
     width: 96.5vw;
-    margin-top: 375px;
-    margin-left: -2500px;
+    margin-top: -20px;
+    margin-left: -2430px;
     display: flex;
     justify-content: center;
 }
 
 .manual-btn {
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid rgb(190, 189, 192);
     background-color: rgb(255, 255, 255);
     padding: 5px;
     border-radius: 13px;
