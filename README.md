@@ -5,8 +5,8 @@
 * [Contents](#content)
 
 ## General Info
-The contents in this folder is used by Belal Kourkmas, Christie Tsang, and Stan Hung to create a browser based web application to remind users to take
-a break during their busy work schedule. In order to create this web application, we used HTML, CSS, Javascript, jQuery, Bootstrap, and Firestore.
+The contents in this folder is used by Belal Kourkmas, Christie Tsang, and Stan Hung to create a browser based web application to remind users to take a break during their busy work schedule. In order to create this web application, we used HTML, CSS, Javascript, jQuery, Bootstrap, and Firestore.
+
 An API from Google, and Firebase was used for implementing specific functionalities in our project. All photos used in our project were downloaded
 from a free stock photo website at: https://unsplash.com.
 
@@ -32,14 +32,14 @@ Content of the project folder:
 ├── completed-setup.html     # Completed Setup HTML, this is the finish page for setup
 ├── login.html               # Login page HTML, this is where users log in
 ├── main.html                # Main HTML page, Deskbuddy home menu
-├── notificationtime.html    # Notification time setter HTML, this is where time and day is selected
-├── notificationtype.html    # Notification type setting HTML, this is where method of reminder set
+├── notificationtime.html    # Notification time setter HTML, this is where time and day is    selected
+├── notificationtype.html    # Notification type setting HTML, this is where method of      reminder set
 ├── profile.html             # Profile HTML, this is where users view and change their profile
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
-├── images                   # Folder for images
-    /desk.jpg                # index HTML background
+├── images                   # Folder to store images
+    /desk.jpg                # Index HTML background
     /DeskBuddylogo.png       # Desk Buddy Logo
     /exercise.jpg            # Exercise thumbnail
     /meditation.jpg          # Meditation thumbnail
