@@ -27,8 +27,9 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 
 ├── README.md                # README
-    /404.html                # 404 page HTML, this is displayed when the site is unavailable
-    /index.html              # landing HTML file, this is what users see when you first come to the website
+├── /404.html                # 404 page HTML, this is displayed when the site is unavailable
+├── /index.html              # Landing HTML file, this is what users see when you first come to the website
+├── quotes.csv               # csv file containing motivational quotes  
 
 
 It has the following subfolders and files:
@@ -42,7 +43,7 @@ It has the following subfolders and files:
     /login.html              # Login page HTML, this is where users log into DeskBuddy
     /main.html               # Main HTML page, this is DeskBuddy's home page
 ├── images                   # Folder for images
-    /desk.jpg                # index HTML background
+    /desk.jpg                # Index HTML background
     /DeskBuddylogo.png       # Desk Buddy Logo
     /exercise.jpg            # Exercise thumbnail
     /meditation.jpg          # Meditation thumbnail
@@ -79,6 +80,10 @@ Firebase hosting files:
         /firebase-hosting-merge.yml
         /firebase-hosting-pull-request.yml
 ├── node.modules...          # All installed node modules
+
+NPM modules: 
+├── package-lock.json
+├── package.json
 ```
 
 Tips for file naming files and folders:
