@@ -10,8 +10,8 @@ function insertName() {
             currentUser.get()
                 .then(userDoc => {
                     var user_Name = userDoc.data().name;
-                    //console.log(user_Name);
-                    document.getElementById("username").innerText = user_Name; //using javascript
+                    // Insert name into username
+                    document.getElementById("username").innerText = user_Name;
                     $("#name-goes-here").text(user_Name); //using jquery
                 })
         } else {
@@ -19,9 +19,10 @@ function insertName() {
         }
     });
 }
+// Query a random quote from the firestore database
 function displayRandomQuote() {
-    // console.log("display calls")
     db.collection("quotes")
+        // search 1-99 quotes
         .where("id", "==", Math.floor(Math.random() * 100))
         .get()
         .then(function (snap) {
@@ -42,11 +43,13 @@ insertName();
 // var frequency = 1.8e+6 + 1500
 var frequency = 30000 + 1500
 
+// Hide modal
 function hide_button() {
     document.getElementById("end").innerHTML = ""
     $('#myModal').modal('hide');
 }
 
+// Refresh the timer
 function refreshtime() {
     countDownDate = new Date().getTime() + frequency
 }
@@ -73,10 +76,12 @@ setInterval(function () {
     // Display the message when countdown is over
 
     if (timeleft < 1) {
+        // If time left is under 0, refresh the timer and display a quote
         refreshtime()
         displayRandomQuote();
         $('#myModal').modal('show');
 
+        // Change all the timer values to nothing and replace the end with message
         document.getElementById("days").innerHTML = ""
         document.getElementById("hours").innerHTML = ""
         document.getElementById("mins").innerHTML = ""
@@ -86,6 +91,7 @@ setInterval(function () {
     }
 }, 1000)
 
+// Pull data from CSV
 async function getCSVdata() {
     const response = await fetch("quotes.csv"); //send get request
     const data = await response.text(); //get file response
